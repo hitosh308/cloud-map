@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Google Cloud サービスマップ</title>
+    <title>クラウドサービス マップ</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,23 +11,40 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script defer src="script.js"></script>
   </head>
-  <body
-    class="theme-gcp"
-    data-data-file="data/google-cloud-services.json"
-    data-provider-name="Google Cloud"
-  >
-    <header class="page-header">
-      <h1 class="headline">Google Cloud サービスマップ</h1>
-      <p class="tagline">
-        Google Cloud が提供するサービスをカテゴリごとに整理し、概要と特徴をひと目で
-        確認できます。
+  <body class="theme-home">
+    <header class="page-header home-header">
+      <p class="hero-label">CLOUD LANDSCAPE GUIDE</p>
+      <h1 class="hero-title">クラウドサービス マップ</h1>
+      <p class="hero-lead">
+        Google Cloud、Microsoft Azure、Amazon Web Services を横断して、主要サービスの概要と
+        強みを俯瞰できるリソースです。マルチクラウドの比較検討や学習の入口としてご活用ください。
       </p>
+      <div class="hero-actions">
+        <a class="hero-button" href="google-cloud.html">Google Cloud を見る</a>
+        <a class="hero-button hero-button--secondary" href="#features">使い方を確認する</a>
+      </div>
+      <dl class="hero-metrics">
+        <div class="hero-metric">
+          <dt>掲載サービス</dt>
+          <dd>150+ 件</dd>
+        </div>
+        <div class="hero-metric">
+          <dt>カテゴリ</dt>
+          <dd>30 分野</dd>
+        </div>
+        <div class="hero-metric">
+          <dt>データ最終更新</dt>
+          <dd>2024 年</dd>
+        </div>
+      </dl>
       <nav class="page-nav" aria-label="クラウドプロバイダー">
         <ul class="nav-list">
           <li class="nav-item">
-            <a class="nav-link" href="index.html" aria-current="page">Google Cloud</a>
+            <a class="nav-link" href="index.html" aria-current="page">ホーム</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="google-cloud.html">Google Cloud</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="azure.html">Microsoft Azure</a>
@@ -39,17 +56,101 @@
       </nav>
     </header>
 
-    <main class="page-main">
-      <div class="toolbar">
-        <h2 id="viewTitle" class="view-title">カテゴリ一覧</h2>
-      </div>
+    <main class="home-main">
+      <section class="home-section" id="providers">
+        <h2 class="section-title">クラウドプロバイダー別ハイライト</h2>
+        <p class="section-intro">
+          各クラウドで提供されている主要サービス領域をコンパクトに把握できます。気になるプロバイダーを選んで詳細なカテゴリやサービス情報をチェックしましょう。
+        </p>
+        <div class="provider-grid">
+          <article class="provider-card provider-card--gcp">
+            <h3 class="provider-card__title">Google Cloud</h3>
+            <p class="provider-card__description">
+              データ分析と機械学習に強みを持つ Google のクラウドプラットフォーム。スケーラブルなコンテナ基盤とグローバルなネットワークが特徴です。
+            </p>
+            <ul class="provider-card__list">
+              <li>BigQuery や Vertex AI などの分析・AI サービス</li>
+              <li>Anthos をはじめとしたマルチクラウド運用</li>
+              <li>セキュアで開発者フレンドリーな環境</li>
+            </ul>
+            <a class="provider-card__link" href="google-cloud.html">Google Cloud のマップを見る</a>
+          </article>
+          <article class="provider-card provider-card--azure">
+            <h3 class="provider-card__title">Microsoft Azure</h3>
+            <p class="provider-card__description">
+              企業システムとの親和性が高く、ハイブリッド構成を得意とする Microsoft のクラウド。豊富な PaaS サービスで業務アプリ構築を支援します。
+            </p>
+            <ul class="provider-card__list">
+              <li>Azure OpenAI Service など最新の AI 機能</li>
+              <li>Active Directory 連携によるセキュリティ管理</li>
+              <li>オンプレミスとのシームレスな連携</li>
+            </ul>
+            <a class="provider-card__link" href="azure.html">Microsoft Azure のマップを見る</a>
+          </article>
+          <article class="provider-card provider-card--aws">
+            <h3 class="provider-card__title">Amazon Web Services</h3>
+            <p class="provider-card__description">
+              業界最多のサービス群を備えた AWS。スタートアップからエンタープライズまで幅広いユースケースをカバーする柔軟性が魅力です。
+            </p>
+            <ul class="provider-card__list">
+              <li>コンピューティングから機械学習まで豊富な選択肢</li>
+              <li>Well-Architected Framework に基づくベストプラクティス</li>
+              <li>世界各地のリージョンでグローバル展開</li>
+            </ul>
+            <a class="provider-card__link" href="aws.html">Amazon Web Services のマップを見る</a>
+          </article>
+        </div>
+      </section>
 
-      <section id="tileContainer" class="tile-grid" aria-live="polite"></section>
+      <section class="home-section" id="features">
+        <h2 class="section-title">クラウド選定・学習をスムーズにする 3 ステップ</h2>
+        <p class="section-intro">
+          カテゴリからサービスの概要・活用ポイントを素早く確認できるように設計しています。初めてクラウドを触れる方にも、比較検討中の方にもおすすめです。
+        </p>
+        <ol class="steps-list">
+          <li>
+            <h3>カテゴリから絞り込む</h3>
+            <p>
+              コンピューティング、データベース、AI などのカテゴリ単位でサービスを整理。目的に応じて関連サービスを一覧できます。
+            </p>
+          </li>
+          <li>
+            <h3>カードで概要を把握</h3>
+            <p>
+              各サービスの特徴や代表的なユースケースをカード形式で掲載。クリックすると詳細情報や活用のヒントが表示されます。
+            </p>
+          </li>
+          <li>
+            <h3>公式ドキュメントへアクセス</h3>
+            <p>
+              より詳しい情報が必要なときは公式サイトへのリンクを用意。学習や導入検討を次のステップに進められます。
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="home-section" id="updates">
+        <h2 class="section-title">最新の更新情報</h2>
+        <ul class="updates-list">
+          <li>
+            <time datetime="2024-04">2024 年 4 月</time>
+            Google Cloud / Azure / AWS の主要サービスデータをアップデートしました。
+          </li>
+          <li>
+            <time datetime="2024-03">2024 年 3 月</time>
+            サービスカードの詳細表示に使いやすい UI を導入しました。
+          </li>
+          <li>
+            <time datetime="2024-02">2024 年 2 月</time>
+            マルチクラウド比較のためのカテゴリ整理を再構成しました。
+          </li>
+        </ul>
+      </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer home-footer">
       <p>
-        ※ 掲載している情報は Google Cloud の公開情報をもとに作成しています。より詳細な情報は各サービスの公式ページをご参照ください。
+        クラウドサービスマップは主要クラウドプロバイダーの公開情報をもとに構成されています。最新情報は各サービスの公式ドキュメントをご確認ください。
       </p>
     </footer>
   </body>
