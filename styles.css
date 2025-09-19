@@ -183,7 +183,7 @@ body {
   background: var(--card-bg);
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(var(--accent-rgb), 0.12);
-  overflow: auto;
+  overflow-x: auto;
 }
 
 .comparison-table {
