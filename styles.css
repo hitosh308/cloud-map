@@ -43,6 +43,14 @@ body.theme-aws {
   --shadow-sm: 0 10px 30px rgba(var(--accent-rgb), 0.08);
 }
 
+body.theme-compare {
+  --bg-color: #f3f6ff;
+  --accent: #0ea5e9;
+  --accent-dark: #0284c7;
+  --accent-rgb: 14, 165, 233;
+  --shadow-sm: 0 16px 44px rgba(var(--accent-rgb), 0.16);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -131,6 +139,143 @@ body {
   flex: 1;
   width: min(1100px, 92vw);
   margin: 0 auto 48px;
+}
+
+.comparison-main {
+  padding: 48px 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.comparison-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+  border-radius: 24px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(var(--accent-rgb), 0.12);
+}
+
+.comparison-summary .section-intro {
+  margin: 0;
+}
+
+.comparison-points {
+  margin: 0;
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.comparison-table-section .section-intro {
+  margin-bottom: 16px;
+}
+
+.comparison-table-section .table-wrapper {
+  margin-top: 16px;
+  border-radius: 24px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(var(--accent-rgb), 0.12);
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.comparison-table caption {
+  padding: 24px 28px 18px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--accent-dark);
+  text-align: left;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 18px 28px;
+  font-size: 0.95rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.12);
+}
+
+.comparison-table thead th {
+  background: rgba(var(--accent-rgb), 0.12);
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background: rgba(var(--accent-rgb), 0.04);
+}
+
+.comparison-table tbody tr:last-child th,
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table .category-cell {
+  width: 18%;
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+.comparison-table .service-cell {
+  width: 17%;
+  font-weight: 600;
+}
+
+.comparison-table .note-cell {
+  width: 31%;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.comparison-next {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.comparison-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.comparison-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: rgba(var(--accent-rgb), 0.12);
+  color: var(--accent-dark);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--transition), transform 0.2s ease;
+}
+
+.comparison-link:hover,
+.comparison-link:focus {
+  background: rgba(var(--accent-rgb), 0.22);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.comparison-link:focus-visible {
+  outline: 3px solid rgba(var(--accent-rgb), 0.4);
+  outline-offset: 3px;
 }
 
 .toolbar {
@@ -701,6 +846,32 @@ body {
   line-height: 1.6;
 }
 
+@media (max-width: 900px) {
+  .comparison-main {
+    padding: 40px 0 64px;
+    gap: 52px;
+  }
+
+  .comparison-summary {
+    padding: 28px;
+    border-radius: 20px;
+  }
+
+  .comparison-table-section .table-wrapper {
+    border-radius: 20px;
+  }
+
+  .comparison-table caption {
+    padding: 20px 24px 16px;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 16px 24px;
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 720px) {
   .hero-metrics {
     margin-top: 36px;
@@ -728,5 +899,31 @@ body {
 @media (max-width: 600px) {
   .service-tile {
     height: 300px;
+  }
+
+  .comparison-summary {
+    padding: 24px;
+  }
+
+  .comparison-table caption {
+    padding: 18px 20px 14px;
+  }
+
+  .comparison-table {
+    min-width: 560px;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 14px 18px;
+  }
+
+  .comparison-links {
+    flex-direction: column;
+  }
+
+  .comparison-link {
+    width: 100%;
+    justify-content: center;
   }
 }
