@@ -165,6 +165,7 @@ body {
   padding: 0;
   height: 260px;
   perspective: 1200px;
+  overflow: hidden;
 }
 
 .service-tile .tile-inner {
@@ -191,6 +192,7 @@ body {
   border-radius: var(--border-radius);
   background: var(--card-bg);
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
 }
 
 .tile-front {
@@ -212,10 +214,25 @@ body {
   font-weight: 600;
 }
 
+
 .tile-back {
   transform: rotateY(180deg);
   justify-content: flex-start;
   gap: 12px;
+  overflow: hidden;
+}
+
+.tile-back-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 6px;
+  scrollbar-gutter: stable;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .tile-back p {

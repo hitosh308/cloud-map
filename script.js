@@ -118,8 +118,12 @@ function showServices(category) {
     const back = document.createElement('div');
     back.className = 'tile-face tile-back';
 
+    const backBody = document.createElement('div');
+    backBody.className = 'tile-back-body';
+
     const details = document.createElement('p');
     details.textContent = service.details || '';
+    backBody.appendChild(details);
 
     const featureList = document.createElement('ul');
     (service.features || []).forEach((feature) => {
@@ -127,6 +131,7 @@ function showServices(category) {
       item.textContent = feature;
       featureList.appendChild(item);
     });
+    backBody.appendChild(featureList);
 
     const link = document.createElement('a');
     link.href = service.link || '#';
@@ -135,7 +140,7 @@ function showServices(category) {
     link.textContent = '公式サイトを見る';
     link.addEventListener('click', (event) => event.stopPropagation());
 
-    back.append(details, featureList, link);
+    back.append(backBody, link);
 
     inner.append(front, back);
     tile.appendChild(inner);
