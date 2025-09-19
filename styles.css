@@ -235,9 +235,25 @@ body {
   font-weight: 600;
 }
 
+.comparison-table .service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.comparison-table .service-list li {
+  display: flex;
+  align-items: flex-start;
+}
+
 .comparison-table .service-cell a {
   display: inline-flex;
   align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 6px;
   padding: 4px 12px;
   border-radius: 12px;
