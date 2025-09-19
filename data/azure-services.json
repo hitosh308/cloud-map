@@ -1,0 +1,305 @@
+{
+  "categories": [
+    {
+      "id": "compute",
+      "name": "コンピューティング",
+      "description": "汎用 VM から HPC ワークロードまで幅広い計算需要を支えるサービス群。",
+      "services": [
+        {
+          "name": "Azure Virtual Machines",
+          "summary": "Windows / Linux 仮想マシンを柔軟に構成できる IaaS サービス。",
+          "details": "Azure Virtual Machines は、必要なサイズや OS を選択して高速に VM を展開できる IaaS。可用性セットや可用性ゾーンを利用して高可用構成を実現し、運用の自動化とセキュリティ統制を Azure 標準で組み込めます。",
+          "features": [
+            "数百種類の VM サイズと最新世代 CPU / GPU に対応",
+            "秒単位課金と予約インスタンスによるコスト最適化",
+            "拡張機能による自動構成・パッチ適用",
+            "Azure Storage や Virtual Network とシームレスに連携"
+          ],
+          "link": "https://azure.microsoft.com/products/virtual-machines/"
+        },
+        {
+          "name": "Azure Virtual Machine Scale Sets",
+          "summary": "同一構成の VM を自動スケールさせるためのマネージドサービス。",
+          "details": "Scale Sets は、均一な VM グループを一元管理し、負荷やスケジュールに応じて自動的にスケールイン / アウトするための仕組み。ローリング アップグレードやヘルス プローブを備え、可用性の高いアプリケーションをシンプルに運用できます。",
+          "features": [
+            "CPU / メモリ利用率やキュー長などに基づく自動スケーリング",
+            "ゾーン冗長構成とロード バランサー連携を標準サポート",
+            "カスタム イメージや Azure Image Builder と統合",
+            "デプロイ スロットリングやローリング更新による安定したリリース"
+          ],
+          "link": "https://azure.microsoft.com/products/virtual-machine-scale-sets/"
+        },
+        {
+          "name": "Azure Batch",
+          "summary": "大規模なバッチ計算をマネージドで実行できるクラウドレンダリング基盤。",
+          "details": "Azure Batch は、HPC やレンダリング、ETL などの大量ジョブを大規模に実行するためのサービス。ジョブ スケジューラとプール管理を備え、ジョブ投入から結果取得までを自動化しつつ、コスト効率の良いスポット VM も組み合わせられます。",
+          "features": [
+            "ジョブ / タスク単位の管理と再試行制御",
+            "Auto-scale 式による柔軟なコンピューティングプール制御",
+            "Azure Storage との高速なデータ連携",
+            "コンテナ化ワークロードや Linux / Windows の混在にも対応"
+          ],
+          "link": "https://azure.microsoft.com/services/batch/"
+        }
+      ]
+    },
+    {
+      "id": "app-platform",
+      "name": "アプリケーション実行基盤",
+      "description": "Web / API / コンテナ アプリをマネージドで提供し、開発に集中できるプラットフォーム。",
+      "services": [
+        {
+          "name": "Azure App Service",
+          "summary": "Web アプリや API を自動スケールで提供する PaaS。",
+          "details": "Azure App Service は、インフラ管理を意識せずに Web アプリやモバイルバックエンド、API をホストできる実行環境。継続的デプロイや自動スケール、バックアップを備え、セキュアなアプリ提供を迅速に行えます。",
+          "features": [
+            "GitHub Actions や Azure DevOps と連携した継続的デプロイ",
+            "インスタンス数とプラン別の自動スケール",
+            "VNet 統合とプライベートエンドポイントによる閉域接続",
+            "App Service Environment による高度な分離とスケール"
+          ],
+          "link": "https://azure.microsoft.com/products/app-service/"
+        },
+        {
+          "name": "Azure Functions",
+          "summary": "イベント駆動でコードを実行できるサーバレス基盤。",
+          "details": "Azure Functions は、トリガーに反応してコードを実行するサーバレス実行環境。消費プランではリクエストに応じて自動スケールし、料金は実行時間に応じた従量課金。Durable Functions によるワークフロー連携も可能です。",
+          "features": [
+            "HTTP / Queue / Event Grid など多彩なトリガー",
+            "C#・JavaScript・Python など複数言語をサポート",
+            "Azure Monitor と統合したログ・メトリクス収集",
+            "VNet 統合とマネージド ID による安全なリソースアクセス"
+          ],
+          "link": "https://azure.microsoft.com/products/functions/"
+        },
+        {
+          "name": "Azure Container Apps",
+          "summary": "マイクロサービスをマネージドコンテナで実行するサーバレス コンテナサービス。",
+          "details": "Azure Container Apps は、Kubernetes の知識がなくてもマイクロサービスやイベント駆動アプリを実行できるフルマネージド環境。KEDA によるイベントベースのスケーリングや Dapr のビルディングブロックを活用できます。",
+          "features": [
+            "ゼロまでスケールダウンする消費ベース課金",
+            "HTTP / キュー / カスタムメトリクスによる柔軟なスケーリング",
+            "リビジョン管理とトラフィックスプリットで段階的リリース",
+            "マネージド ID とシークレット管理で安全なサービス連携"
+          ],
+          "link": "https://azure.microsoft.com/products/container-apps/"
+        }
+      ]
+    },
+    {
+      "id": "storage",
+      "name": "ストレージ",
+      "description": "オブジェクト、ファイル、ビッグデータ解析向けストレージサービス。",
+      "services": [
+        {
+          "name": "Azure Blob Storage",
+          "summary": "非構造化データを安全に保存できるオブジェクトストレージ。",
+          "details": "Azure Blob Storage は、画像やログ、バックアップなど大容量の非構造化データを耐久性高く保存。アクセス頻度に応じた階層化ストレージときめ細かなアクセス制御でコストとセキュリティを両立します。",
+          "features": [
+            "ホット / クール / アーカイブのアクセス階層を柔軟に選択",
+            "SAS とロールベースアクセス制御によるセキュアな共有",
+            "ライフサイクル管理で自動的に階層移行や削除を実行",
+            "静的ウェブサイト ホスティングやイベントトリガーに対応"
+          ],
+          "link": "https://azure.microsoft.com/products/storage/blobs/"
+        },
+        {
+          "name": "Azure Files",
+          "summary": "SMB / NFS で提供されるフルマネージド ファイル共有サービス。",
+          "details": "Azure Files は、Windows や Linux から SMB / NFS でマウントできるクラウドファイル共有を提供。オンプレミスとの同期や AD ベースの認証に対応し、アプリの Lift & Shift を容易にします。",
+          "features": [
+            "Standard / Premium のパフォーマンス層を選択可能",
+            "Azure File Sync によるオンプレとの双方向同期",
+            "AD DS / AAD DS と連携したアイデンティティ管理",
+            "スナップショットとバックアップによるデータ保護"
+          ],
+          "link": "https://azure.microsoft.com/products/storage/files/"
+        },
+        {
+          "name": "Azure Data Lake Storage Gen2",
+          "summary": "ビッグデータ分析向けの階層型ネームスペースを備えたストレージ基盤。",
+          "details": "Data Lake Storage Gen2 は、Azure Blob Storage をベースにビッグデータ分析に最適化されたストレージ。階層型ネームスペースと POSIX 互換 ACL を備え、Spark や Synapse Analytics から高速にアクセスできます。",
+          "features": [
+            "大規模データセットに最適な階層型ネームスペース",
+            "Azure AD ベースの細やかなアクセス制御",
+            "Synapse / Databricks / HDInsight とのネイティブ統合",
+            "高いスループットを実現するマルチプロトコルアクセス"
+          ],
+          "link": "https://azure.microsoft.com/products/storage/data-lake-storage/"
+        }
+      ]
+    },
+    {
+      "id": "networking",
+      "name": "ネットワーク / 配信",
+      "description": "仮想ネットワーク、負荷分散、グローバル配信を実現するサービス群。",
+      "services": [
+        {
+          "name": "Azure Virtual Network",
+          "summary": "クラウド上に論理的なネットワークを構成する基盤サービス。",
+          "details": "Virtual Network (VNet) は、クラウド内にプライベートなネットワーク空間を構成し、サブネットやセキュリティグループでトラフィックを制御。オンプレミスとの VPN / ExpressRoute 接続も柔軟に構成できます。",
+          "features": [
+            "サブネット分割とネットワーク セキュリティ グループによるアクセス制御",
+            "VPN Gateway や ExpressRoute でのハイブリッド接続",
+            "サービス エンドポイント / プライベートリンクによる安全な PaaS 接続",
+            "DNS サービスや Bastion などネットワーク機能との統合"
+          ],
+          "link": "https://azure.microsoft.com/products/virtual-network/"
+        },
+        {
+          "name": "Azure Load Balancer",
+          "summary": "L4 レベルの負荷分散と高可用性を提供するネットワークサービス。",
+          "details": "Azure Load Balancer は、仮想マシンや仮想マシンスケールセットにトラフィックを分散し、高可用性を実現。内部 / パブリックどちらのシナリオにも対応し、ヘルスプローブによる監視を備えています。",
+          "features": [
+            "マルチゾーン配置による冗長性確保",
+            "アウトバウンド接続の SNAT を自動的に提供",
+            "TCP / UDP のロードバランシングをサポート",
+            "Azure Monitor と統合したメトリクス・診断ログ"
+          ],
+          "link": "https://azure.microsoft.com/products/load-balancer/"
+        },
+        {
+          "name": "Azure Front Door",
+          "summary": "グローバルなアプリ配信と WAF を備えたエッジ ネットワークサービス。",
+          "details": "Azure Front Door は、Microsoft のグローバル エッジ ネットワークからアプリを高速配信し、WAF や BOT 防御でセキュアに保護。ルール エンジンで柔軟なルーティングと A/B テストを実現できます。",
+          "features": [
+            "動的サイトアクセラレーションとグローバル負荷分散",
+            "WAF ポリシーによるアプリケーション防御",
+            "URL ベース / モバイル アプリ向けのルーティング制御",
+            "Custom Domains と Azure AD 認証をサポート"
+          ],
+          "link": "https://azure.microsoft.com/products/frontdoor/"
+        }
+      ]
+    },
+    {
+      "id": "database",
+      "name": "データベース",
+      "description": "リレーショナルからグローバル分散 NoSQL まで対応するデータベース サービス。",
+      "services": [
+        {
+          "name": "Azure SQL Database",
+          "summary": "フルマネージドな SQL Server 互換データベース。",
+          "details": "Azure SQL Database は、SQL Server ベースの PaaS データベースで、自動バックアップやポイントインタイムリストア、高可用性を標準で提供。サーバレスやハイパースケールなど柔軟な展開モデルを選択できます。",
+          "features": [
+            "自動チューニングと脆弱性評価による性能・セキュリティ最適化",
+            "自動スケール対応のサーバレスコンピュート層",
+            "Always Encrypted や AAD 認証によるセキュリティ強化",
+            "Azure Synapse / Power BI との統合で分析基盤を構築"
+          ],
+          "link": "https://azure.microsoft.com/products/azure-sql/database/"
+        },
+        {
+          "name": "Azure Cosmos DB",
+          "summary": "マルチモデル・グローバル分散型の NoSQL データベース。",
+          "details": "Azure Cosmos DB は、ドキュメント、キー・値、グラフなど複数モデルをサポートするフルマネージド NoSQL。任意のリージョンにスケールアウトし、ミリ秒のレイテンシと 99 パーセンタイル SLA を提供します。",
+          "features": [
+            "グローバル分散と自動マルチマスター レプリケーション",
+            "5 種類の整合性レベルを選択可能",
+            "自動インデックス作成とサーバレス コンピュート",
+            "SDK とネイティブ API (Core / MongoDB / Cassandra 等) を提供"
+          ],
+          "link": "https://azure.microsoft.com/products/cosmos-db/"
+        },
+        {
+          "name": "Azure Database for PostgreSQL",
+          "summary": "PostgreSQL を完全マネージドで提供する PaaS。",
+          "details": "Azure Database for PostgreSQL は、PostgreSQL を高可用かつセキュアに運用できるマネージドサービス。フレキシブル サーバー モデルではゾーン冗長や停止時のコスト最適化が可能です。",
+          "features": [
+            "フレキシブル サーバーでのきめ細かなスケールとメンテナンス制御",
+            "ポイントインタイム リストアと自動バックアップ",
+            "仮想ネットワーク統合とファイアウォールによる保護",
+            "Azure Monitor と統合したメトリクス / ログ収集"
+          ],
+          "link": "https://azure.microsoft.com/products/postgresql/"
+        }
+      ]
+    },
+    {
+      "id": "ai-ml",
+      "name": "AI / 機械学習",
+      "description": "機械学習モデルの構築から推論、AI API までをカバーするサービス。",
+      "services": [
+        {
+          "name": "Azure Machine Learning",
+          "summary": "ML モデルの開発・学習・推論をエンドツーエンドで支援するプラットフォーム。",
+          "details": "Azure Machine Learning は、データ準備からモデルトレーニング、MLOps までを支える包括的なサービス。コンピュート クラスタや自動 ML、Responsible AI ツールを提供します。",
+          "features": [
+            "AutoML とドラッグ & ドロップ Designer による素早い検証",
+            "Kubernetes / AML エンドポイントへの一貫したデプロイ",
+            "MLflow / Git 連携によるモデルバージョン管理",
+            "Responsible AI ダッシュボードでのバイアス / 解釈性チェック"
+          ],
+          "link": "https://azure.microsoft.com/products/machine-learning/"
+        },
+        {
+          "name": "Azure Cognitive Services",
+          "summary": "視覚・音声・言語などの AI 機能を API として提供。",
+          "details": "Cognitive Services は、画像認識、音声合成、翻訳などの AI 機能を REST API として提供。アプリに簡単に組み込み、エンタープライズ水準のセキュリティと可用性を確保できます。",
+          "features": [
+            "Vision / Speech / Language / Decision の幅広い API 群",
+            "Custom Vision や Language Studio でモデルをカスタマイズ",
+            "Azure AD とロールベースアクセス制御で安全に利用",
+            "コンテナ化してオンプレミスやエッジでも実行可能"
+          ],
+          "link": "https://azure.microsoft.com/products/cognitive-services/"
+        },
+        {
+          "name": "Azure OpenAI Service",
+          "summary": "GPT や DALL·E などの大規模言語モデルを企業向けに提供。",
+          "details": "Azure OpenAI Service は、OpenAI の基盤モデルを Azure 上で提供し、責任ある AI ガバナンスと企業向けセキュリティを付与。API キー管理や内容フィルタリングで安全な生成 AI 活用を支援します。",
+          "features": [
+            "GPT-4 / GPT-35-Turbo / Embeddings など多彩なモデル",
+            "Azure AD とロールベースアクセス制御による認証",
+            "コンテンツフィルタリングと利用制限ポリシー",
+            "Azure Machine Learning や Cognitive Search との連携"
+          ],
+          "link": "https://azure.microsoft.com/products/cognitive-services/openai-service/"
+        }
+      ]
+    },
+    {
+      "id": "management",
+      "name": "運用・セキュリティ管理",
+      "description": "監視やセキュリティ、ガバナンスを統合的に強化するサービス。",
+      "services": [
+        {
+          "name": "Azure Monitor",
+          "summary": "Azure 全体のテレメトリを集約し、可観測性を高める監視基盤。",
+          "details": "Azure Monitor は、メトリクスやログ、分散トレースを集約してシステムの稼働状況を可視化。アラートやダッシュボード、Log Analytics での高度な分析を通じて運用改善を支援します。",
+          "features": [
+            "Log Analytics ワークスペースでの KQL クエリ分析",
+            "Application Insights によるアプリの分散トレーシング",
+            "アラート ルールとアクション グループで迅速な通知",
+            "Azure Managed Grafana や Power BI とのビジュアライズ統合"
+          ],
+          "link": "https://azure.microsoft.com/products/monitor/"
+        },
+        {
+          "name": "Microsoft Defender for Cloud",
+          "summary": "マルチクラウドを対象にしたクラウド セキュリティ態勢管理 (CSPM) / ワークロード保護。",
+          "details": "Defender for Cloud は、Azure / AWS / GCP を横断してセキュリティ評価と脅威検出を行うサービス。セキュア スコアや推奨事項でセキュリティギャップを明確化し、ワークロード保護プランで侵入を検知します。",
+          "features": [
+            "セキュア スコアに基づく改善タスクの提示",
+            "リアルタイムの脅威検出とアラート通知",
+            "ハイブリッド / マルチクラウド資産の自動発見",
+            "Logic Apps や Microsoft Sentinel と連携した自動化"
+          ],
+          "link": "https://azure.microsoft.com/products/defender-for-cloud/"
+        },
+        {
+          "name": "Azure Policy",
+          "summary": "リソースへのガバナンスとコンプライアンスを強制するポリシー管理サービス。",
+          "details": "Azure Policy は、リソース構成をコード化したポリシーで評価・準拠させる仕組み。違反検出だけでなく、修復タスクを自動実行し、組織全体のガバナンスを効率化します。",
+          "features": [
+            "組み込みポリシーとイニシアチブによる迅速な適用",
+            "ポリシー違反のリアルタイム可視化と監査ログ",
+            "Azure DevOps / GitHub との統合によるポリシー as Code",
+            "Remediation タスクによる自動修復アクション"
+          ],
+          "link": "https://azure.microsoft.com/products/azure-policy/"
+        }
+      ]
+    }
+  ]
+}
