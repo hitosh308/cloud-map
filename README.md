@@ -9,6 +9,7 @@ Google Cloud / Microsoft Azure / Amazon Web Services の主要サービスをカ
 - `index.html` : Google Cloud 版サービスマップ
 - `azure.html` : Microsoft Azure 版サービスマップ
 - `aws.html` : Amazon Web Services 版サービスマップ
+- `comparison.html` : 主要サービスの横断比較表
 
 ページ上部のメニューからクラウドを切り替えられます。いずれのページも同じ UI で動作し
 ており、カテゴリを選択するとサービスカードが表示され、カードをクリックまたは Enter /

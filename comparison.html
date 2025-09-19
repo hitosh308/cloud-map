@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>主要クラウドサービス比較表</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="theme-compare">
+    <header class="page-header">
+      <h1 class="headline">主要クラウドサービス比較表</h1>
+      <p class="tagline">
+        Google Cloud、Amazon Web Services、Microsoft Azure で提供されている代表的なサービス
+        の対応関係をカテゴリ別に整理しました。マルチクラウド戦略の検討や移行時の置き換え先の
+        目安としてご利用ください。
+      </p>
+      <nav class="page-nav" aria-label="クラウドプロバイダー">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">ホーム</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="google-cloud.html">Google Cloud</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="azure.html">Microsoft Azure</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aws.html">Amazon Web Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comparison.html" aria-current="page">サービス比較</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main comparison-main">
+      <section class="comparison-summary" aria-labelledby="comparison-summary-title">
+        <h2 class="section-title" id="comparison-summary-title">この比較表の見方</h2>
+        <p class="section-intro">
+          各クラウドでよく比較される領域を中心に、代表的なマネージドサービスを並べています。
+          個別サービスの細かな仕様は異なるため、用途や設計ポリシーに合わせて詳細を必ず確認し
+          てください。
+        </p>
+        <ul class="comparison-points">
+          <li>カテゴリはインフラ基盤、データ管理、統合/運用の 3 領域からピックアップしています。</li>
+          <li>名称は 2024 年時点で一般的に利用される正式名称を記載しています。</li>
+          <li>
+            「特徴・補足」列にはサービス選定時の観点や主要な違いをまとめています。より詳しい情
+            報は各クラウドの公式ドキュメントをご参照ください。
+          </li>
+        </ul>
+      </section>
+
+      <section class="comparison-table-section" aria-labelledby="comparison-table-title">
+        <h2 class="section-title" id="comparison-table-title">主要サービスの対応関係</h2>
+        <p class="section-intro">
+          同じカテゴリでも提供機能や料金モデル、SLA が異なる場合があります。移行やマルチクラウ
+          ド構成を検討する際は、監査要件やサポート体制なども合わせて比較することをおすすめしま
+          す。
+        </p>
+        <div class="table-wrapper" role="region" aria-labelledby="comparison-table-title" tabindex="0">
+          <table class="comparison-table">
+            <caption>
+              Google Cloud、Amazon Web Services、Microsoft Azure の代表的なサービス比較表
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">カテゴリ</th>
+                <th scope="col">Google Cloud</th>
+                <th scope="col">Amazon Web Services</th>
+                <th scope="col">Microsoft Azure</th>
+                <th scope="col">特徴・補足</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="category-cell">仮想マシン (IaaS)</th>
+                <td class="service-cell">Compute Engine</td>
+                <td class="service-cell">Amazon EC2</td>
+                <td class="service-cell">Azure Virtual Machines</td>
+                <td class="note-cell">
+                  汎用から GPU、SAP 認定インスタンスまで幅広いラインアップを提供。永続ディスクや
+                  スナップショット、オートスケーリングの仕組みで柔軟にリソースを増減できます。
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="category-cell">マネージド Kubernetes</th>
+                <td class="service-cell">Google Kubernetes Engine (GKE)</td>
+                <td class="service-cell">Amazon Elastic Kubernetes Service (EKS)</td>
+                <td class="service-cell">Azure Kubernetes Service (AKS)</td>
+                <td class="note-cell">
+                  コントロールプレーンの管理を各クラウドが担う Kubernetes サービス。オートスケール、
+                  マルチゾーン構成、マネージドアドオンなどを活用することで運用負荷を抑えられます。
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="category-cell">フルマネージド コンテナ実行</th>
+                <td class="service-cell">Cloud Run</td>
+                <td class="service-cell">AWS App Runner</td>
+                <td class="service-cell">Azure Container Apps</td>
+                <td class="note-cell">
+                  コンテナをソースコードや OCI イメージから即時にデプロイできる環境。トラフィック連
+                  動のオートスケールやゼロスケール対応で、マイクロサービスや API バックエンドに最適
+                  です。
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="category-cell">サーバーレス関数</th>
+                <td class="service-cell">Cloud Functions (2nd gen)</td>
+                <td class="service-cell">AWS Lambda</td>
+                <td class="service-cell">Azure Functions</td>
+                <td class="note-cell">
+                  イベント駆動の短時間処理に最適な関数サービス。トリガーの種類や最大実行時間、言語サ
+                  ポートなどを比較してワークロードに適した構成を選択します。
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="category-cell">オブジェクトストレージ</th>
+                <td class="service-cell">Cloud Storage</td>
+                <td class="service-cell">Amazon S3</td>
+                <td class="service-cell">Azure Blob Storage</td>
+                <td class="note-cell">
+                  静的コンテンツやバックアップ、データレイク基盤に利用される耐久性の高いストレージ。
+                  ストレージクラスやライフサイクルポリシーを活用してコストとパフォーマンスを最適化。
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="category-cell">リレーショナル DB (PaaS)</th>
+                <td class="service-cell">Cloud SQL</td>
+                <td class="service-cell">Amazon RDS</td>
+                <td class="service-cell">Azure SQL Database</td>
+                <td class="note-cell">
+                  MySQL や PostgreSQL、SQL Server などのエンジンをマネージドで提供。自動バックアップや
+                  フェイルオーバー、読み取りレプリカなどの機能で運用を簡素化します。
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="category-cell">ドキュメント / キーバリュー DB</th>
+                <td class="service-cell">Cloud Firestore</td>
+                <td class="service-cell">Amazon DynamoDB</td>
+                <td class="service-cell">Azure Cosmos DB</td>
+                <td class="note-cell">
+                  スキーマレスでスケーラブルなデータベース。グローバル分散やマルチマスター構成、柔軟
+                  なスループット課金などを備え、低レイテンシのアプリケーションに適しています。
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="category-cell">データウェアハウス</th>
+                <td class="service-cell">BigQuery</td>
+                <td class="service-cell">Amazon Redshift</td>
+                <td class="service-cell">Azure Synapse Analytics (Dedicated SQL Pool)</td>
+                <td class="note-cell">
+                  大規模データを分析するための高速クエリエンジン。サーバーレス実行やコンピュート/ス
+                  トレージ分離、各種 BI 連携でデータ利活用を加速します。
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="category-cell">メッセージング / イベント配信</th>
+                <td class="service-cell">Pub/Sub</td>
+                <td class="service-cell">Amazon SNS</td>
+                <td class="service-cell">Azure Event Grid</td>
+                <td class="note-cell">
+                  疎結合なイベント駆動アーキテクチャを構築するためのメッセージング基盤。Push/Pull 配
+                  信やフィルタリング、他サービスとの統合のしやすさを比較することが重要です。
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="category-cell">データ処理 / ETL</th>
+                <td class="service-cell">Dataflow</td>
+                <td class="service-cell">AWS Glue</td>
+                <td class="service-cell">Azure Data Factory</td>
+                <td class="note-cell">
+                  サーバーレスでバッチ・ストリーミング処理を実現するデータ統合サービス。コネクタの種
+                  類やスケーリング方式、コード/ノーコードの開発体験を比較します。
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="category-cell">監視 / 可観測性</th>
+                <td class="service-cell">Cloud Monitoring / Logging</td>
+                <td class="service-cell">Amazon CloudWatch</td>
+                <td class="service-cell">Azure Monitor</td>
+                <td class="note-cell">
+                  メトリクス、ログ、トレースを統合的に収集・可視化する監視基盤。自動アラートやダッシ
+                  ュボード、外部ツールとの連携状況も選定のポイントです。
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="comparison-next" aria-labelledby="comparison-next-title">
+        <h2 class="section-title" id="comparison-next-title">さらに詳しく調べる</h2>
+        <p class="section-intro">
+          各サービスの詳細な特徴やカテゴリ別の整理は、クラウドごとのサービスマップページでも紹
+          介しています。より深く検討したい場合は以下のリンクをご活用ください。
+        </p>
+        <div class="comparison-links">
+          <a class="comparison-link" href="google-cloud.html">Google Cloud サービスマップ</a>
+          <a class="comparison-link" href="azure.html">Microsoft Azure サービスマップ</a>
+          <a class="comparison-link" href="aws.html">Amazon Web Services サービスマップ</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>
+        掲載している内容は 2024 年時点の公開情報を参考にまとめたものです。料金や機能は変更され
+        る場合があるため、最新情報は各クラウドプロバイダーの公式ドキュメントをご確認ください。
+      </p>
+    </footer>
+  </body>
+</html>
