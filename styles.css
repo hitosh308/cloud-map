@@ -402,6 +402,44 @@ body {
   font-size: 1.05rem;
 }
 
+.hero-steps {
+  margin: clamp(36px, 7vw, 56px) auto 0;
+  padding: clamp(28px, 6vw, 40px);
+  max-width: min(920px, 100%);
+  border-radius: 28px;
+  background: linear-gradient(
+      135deg,
+      rgba(var(--accent-rgb), 0.16),
+      rgba(var(--accent-rgb), 0.08)
+    ),
+    rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(var(--accent-rgb), 0.22);
+  box-shadow: 0 26px 52px rgba(var(--accent-rgb), 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  text-align: left;
+  backdrop-filter: blur(6px);
+}
+
+.hero-steps__title {
+  margin: 0;
+  font-size: clamp(1.9rem, 4vw, 2.3rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.hero-steps__intro {
+  margin: 0;
+  max-width: 720px;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.hero-steps .steps-list {
+  gap: clamp(20px, 5vw, 28px);
+}
+
 .hero-actions {
   margin: 36px auto 0;
   display: flex;
@@ -666,6 +704,16 @@ body {
 @media (max-width: 720px) {
   .hero-metrics {
     margin-top: 36px;
+  }
+
+  .hero-steps {
+    padding: 28px 24px;
+    border-radius: 24px;
+    gap: 24px;
+  }
+
+  .hero-steps .steps-list {
+    grid-template-columns: 1fr;
   }
 
   .hero-button {
