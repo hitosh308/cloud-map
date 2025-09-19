@@ -1,8 +1,9 @@
 const tileContainer = document.getElementById('tileContainer');
-const backButton = document.getElementById('backButton');
 const viewTitle = document.getElementById('viewTitle');
+const toolbar = document.querySelector('.toolbar');
 
 let categories = [];
+let backButton = null;
 
 async function loadCategories() {
   const response = await fetch('data/google-cloud-services.json');
@@ -31,9 +32,30 @@ function createInfoMessage(text) {
   return message;
 }
 
+function ensureBackButton() {
+  if (!backButton) {
+    backButton = document.createElement('button');
+    backButton.id = 'backButton';
+    backButton.className = 'back-button';
+    backButton.type = 'button';
+    backButton.textContent = '← カテゴリ一覧へ戻る';
+    backButton.addEventListener('click', renderCategories);
+  }
+
+  if (!toolbar.contains(backButton)) {
+    toolbar.insertBefore(backButton, viewTitle);
+  }
+}
+
+function hideBackButton() {
+  if (backButton && toolbar.contains(backButton)) {
+    toolbar.removeChild(backButton);
+  }
+}
+
 function showLoadError() {
   viewTitle.textContent = '読み込みエラー';
-  backButton.hidden = true;
+  hideBackButton();
   tileContainer.innerHTML = '';
   tileContainer.appendChild(
     createInfoMessage('サービス情報を読み込めませんでした。ページを再読み込みしてもう一度お試しください。')
@@ -42,7 +64,7 @@ function showLoadError() {
 
 function renderCategories() {
   viewTitle.textContent = 'カテゴリ一覧';
-  backButton.hidden = true;
+  hideBackButton();
   tileContainer.innerHTML = '';
 
   if (categories.length === 0) {
@@ -77,7 +99,7 @@ function renderCategories() {
 
 function showServices(category) {
   viewTitle.textContent = `${category.name} のサービス`;
-  backButton.hidden = false;
+  ensureBackButton();
   tileContainer.innerHTML = '';
 
   const services = Array.isArray(category.services) ? category.services : [];
@@ -170,8 +192,6 @@ function toggleServiceTile(tile) {
   tile.classList.toggle('flipped', willFlip);
   tile.setAttribute('aria-pressed', willFlip ? 'true' : 'false');
 }
-
-backButton.addEventListener('click', renderCategories);
 
 async function initialize() {
   try {
