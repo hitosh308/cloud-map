@@ -1,14 +1,15 @@
 # cloud-map
 
-Google Cloud / Microsoft Azure / Amazon Web Services の主要サービスをカテゴリ別に整理した
+Amazon Web Services / Microsoft Azure / Google Cloud の主要サービスをカテゴリ別に整理した
 サービスマップです。各クラウドごとに専用ページを用意し、カテゴリからサービスの概要
 や代表的な特徴、公式ドキュメントへのリンクを確認できます。
 
 ## ページ構成
 
-- `index.html` : Google Cloud 版サービスマップ
-- `azure.html` : Microsoft Azure 版サービスマップ
+- `index.html` : ホーム / クラウド横断ハイライト
 - `aws.html` : Amazon Web Services 版サービスマップ
+- `azure.html` : Microsoft Azure 版サービスマップ
+- `google-cloud.html` : Google Cloud 版サービスマップ
 - `comparison.html` : 主要サービスの横断比較表
 
 ページ上部のメニューからクラウドを切り替えられます。いずれのページも同じ UI で動作し
