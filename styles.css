@@ -93,6 +93,17 @@ body {
   gap: 24px;
 }
 
+.info-message {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 32px;
+  border-radius: var(--border-radius);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-sm);
+  color: var(--text-muted);
+  text-align: center;
+}
+
 .tile {
   position: relative;
   padding: 24px;

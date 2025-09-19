@@ -1,0 +1,412 @@
+{
+  "categories": [
+    {
+      "id": "compute",
+      "name": "コンピューティング",
+      "description": "仮想マシン、コンテナ、サーバーレスなどアプリ実行のための基盤サービス。",
+      "services": [
+        {
+          "name": "Compute Engine",
+          "summary": "自由度の高い仮想マシンを提供する IaaS。",
+          "details": "Compute Engine は Google のインフラ上でスケーラブルな仮想マシンを提供し、柔軟な構成と高可用性を実現します。",
+          "features": [
+            "カスタムマシンタイプや GPU を組み合わせて最適な構成を選択可能",
+            "ライブマイグレーションでメンテナンス時の停止を最小限に抑制",
+            "マネージド インスタンス グループによる自動スケーリングに対応"
+          ],
+          "link": "https://cloud.google.com/compute"
+        },
+        {
+          "name": "Google Kubernetes Engine",
+          "summary": "フルマネージドな Kubernetes クラスタでコンテナを運用。",
+          "details": "Google Kubernetes Engine (GKE) は Kubernetes クラスタのプロビジョニングと運用を自動化し、コンテナ化されたワークロードを安全かつ効率的に実行できます。",
+          "features": [
+            "オートスケールや自動アップグレードにより運用負荷を軽減",
+            "マルチクラスタやハイブリッド環境を統合管理する Autopilot モード",
+            "セキュリティ ポリシーやネットワーク制御を細かく設定可能"
+          ],
+          "link": "https://cloud.google.com/kubernetes-engine"
+        },
+        {
+          "name": "Cloud Functions",
+          "summary": "イベント駆動でコードを実行するサーバーレス環境。",
+          "details": "Cloud Functions はイベントに応じてコードを実行できる軽量なサーバーレス プラットフォームで、インフラ管理なしでマイクロサービスを構築できます。",
+          "features": [
+            "HTTP や Pub/Sub、Cloud Storage など多様なイベントをトリガーに対応",
+            "リクエスト数に応じて自動スケーリングしアイドル時は課金なし",
+            "Secret Manager や VPC コネクタと連携して安全な実装が可能"
+          ],
+          "link": "https://cloud.google.com/functions"
+        },
+        {
+          "name": "App Engine",
+          "summary": "アプリケーションを自動スケーリングで運用する PaaS。",
+          "details": "App Engine はアプリケーションのデプロイとスケーリングを自動化するフルマネージド PaaS で、インフラ構成やサーバー管理が不要です。",
+          "features": [
+            "スタンダード／フレキシブル環境で複数言語やランタイムをサポート",
+            "リクエスト負荷に応じた自動スケーリングとトラフィック分割",
+            "Cloud Monitoring や Cloud Logging と標準連携"
+          ],
+          "link": "https://cloud.google.com/appengine"
+        }
+      ]
+    },
+    {
+      "id": "storage",
+      "name": "ストレージ",
+      "description": "データの保存・共有・保護を行うストレージ ソリューション。",
+      "services": [
+        {
+          "name": "Cloud Storage",
+          "summary": "高耐久でスケーラブルなオブジェクトストレージ。",
+          "details": "Cloud Storage はマルチリージョン対応のオブジェクトストレージで、頻繁アクセスからアーカイブ用途までユースケースに合わせてクラスを選べます。",
+          "features": [
+            "11 ナインの耐久性を備えた信頼性の高いデータ保護",
+            "Uniform / Fine-grained 権限モデルで柔軟なアクセス制御",
+            "オブジェクト ライフサイクル管理やバージョニングに対応"
+          ],
+          "link": "https://cloud.google.com/storage"
+        },
+        {
+          "name": "Filestore",
+          "summary": "低レイテンシな共有ファイルストレージ。",
+          "details": "Filestore はエンタープライズ向けのマネージド NFS ストレージで、GKE や Compute Engine と連携して高性能なファイル共有を提供します。",
+          "features": [
+            "高性能 (Enterprise)、バランス、Zonal などニーズに応じたクラス",
+            "バックアップとリストア機能でデータ保護を簡素化",
+            "Google Cloud VPC 内からの安全な接続とアクセス制御"
+          ],
+          "link": "https://cloud.google.com/filestore"
+        },
+        {
+          "name": "Persistent Disk",
+          "summary": "VM 向けのブロックストレージを提供。",
+          "details": "Persistent Disk は Compute Engine 用の永続ディスクで、標準・バランス・SSD・Extreme など用途に最適化した複数のタイプを提供します。",
+          "features": [
+            "自動暗号化とスナップショットによるバックアップ機能",
+            "同一ゾーン内の複数インスタンスで読み取り共有が可能",
+            "サイズ変更やディスクタイプ変更をダウンタイム最小で実施"
+          ],
+          "link": "https://cloud.google.com/compute/docs/disks"
+        },
+        {
+          "name": "Storage Transfer Service",
+          "summary": "オンプレや他クラウドからのデータ移行を自動化。",
+          "details": "Storage Transfer Service はオンプレミス、他クラウド、バケット間の大容量データ移行をスケジュール管理とともに効率化します。",
+          "features": [
+            "GUI と API の両方で転送ジョブを一括管理",
+            "チェックサム検証によるデータ整合性の確保",
+            "オンプレミス向けのエージェントでファイルシステムをサポート"
+          ],
+          "link": "https://cloud.google.com/storage-transfer-service"
+        }
+      ]
+    },
+    {
+      "id": "databases",
+      "name": "データベース",
+      "description": "リレーショナルから NoSQL までマネージドなデータベース。",
+      "services": [
+        {
+          "name": "Cloud SQL",
+          "summary": "MySQL・PostgreSQL・SQL Server をマネージド提供。",
+          "details": "Cloud SQL は人気のオープンソースおよび商用 RDBMS をマネージド サービスとして提供し、バックアップや複製、パッチ適用を自動化します。",
+          "features": [
+            "自動バックアップ、フェイルオーバー、ポイントインタイムリカバリ",
+            "マネージド インスタンスで高可用構成を簡単に構築",
+            "Secret Manager や IAM との統合によるセキュアな運用"
+          ],
+          "link": "https://cloud.google.com/sql"
+        },
+        {
+          "name": "Cloud Spanner",
+          "summary": "グローバル分散型のリレーショナル データベース。",
+          "details": "Cloud Spanner は水平スケーラビリティと強整合性を両立したフルマネージド RDBMS で、金融レベルのトランザクションを世界規模で処理できます。",
+          "features": [
+            "マルチリージョン配置で高い可用性と低レイテンシを実現",
+            "標準 SQL とトランザクションをサポート",
+            "自動シャーディングで大規模データを柔軟にスケール"
+          ],
+          "link": "https://cloud.google.com/spanner"
+        },
+        {
+          "name": "Cloud Firestore",
+          "summary": "モバイル・Web アプリ向けのドキュメント指向 DB。",
+          "details": "Cloud Firestore はスキーマレスなドキュメント DB で、リアルタイム同期とオフラインアクセスを備えたアプリケーション開発を支援します。",
+          "features": [
+            "強整合性のあるクエリとリアルタイムリスナー",
+            "Firebase Authentication と統合したセキュリティルール",
+            "自動スケーリングでトラフィック変動に柔軟対応"
+          ],
+          "link": "https://cloud.google.com/firestore"
+        },
+        {
+          "name": "Cloud Bigtable",
+          "summary": "大規模ワークロード向けの NoSQL ワイドカラム DB。",
+          "details": "Cloud Bigtable は超大規模の時系列データや IoT データを低レイテンシで処理できるスケーラブルな NoSQL データベースです。",
+          "features": [
+            "ペタバイト級データに対応する水平スケーリング",
+            "HBase API 互換で既存ツールとの連携が容易",
+            "SSD / HDD ともに高スループットを実現する設計"
+          ],
+          "link": "https://cloud.google.com/bigtable"
+        }
+      ]
+    },
+    {
+      "id": "networking",
+      "name": "ネットワーキング",
+      "description": "グローバル規模で安全・高速なネットワーク接続を提供。",
+      "services": [
+        {
+          "name": "Cloud Load Balancing",
+          "summary": "グローバル負荷分散を提供するフルマネージド LB。",
+          "details": "Cloud Load Balancing は Google のエッジネットワークを活用したフルマネージドなロードバランサで、HTTP/HTTPS から TCP/UDP まで複数プロトコルをサポートします。",
+          "features": [
+            "単一の任意キャスト IP でグローバル配信を実現",
+            "Cloud Armor や Cloud CDN とシームレスに連携",
+            "トラフィックに応じた自動スケーリングとヘルスチェック"
+          ],
+          "link": "https://cloud.google.com/load-balancing"
+        },
+        {
+          "name": "Cloud CDN",
+          "summary": "コンテンツ配信を高速化するグローバル CDN。",
+          "details": "Cloud CDN は Google のエッジキャッシュを活用してウェブとメディアコンテンツを低レイテンシで配信し、負荷分散と統合された運用を提供します。",
+          "features": [
+            "世界中のエッジロケーションから高速配信",
+            "キャッシュキーや TTL を柔軟に制御",
+            "Cloud Monitoring で詳細なキャッシュ指標を可視化"
+          ],
+          "link": "https://cloud.google.com/cdn"
+        },
+        {
+          "name": "Virtual Private Cloud (VPC)",
+          "summary": "クラウド上にプライベート ネットワークを構築。",
+          "details": "Google Cloud VPC は仮想ネットワークを柔軟に構成でき、サブネットの自動拡張やファイアウォール ルール、ハイブリッド接続を統合管理します。",
+          "features": [
+            "複数リージョンに跨るグローバル VPC を構築可能",
+            "IAM と連携したきめ細やかなアクセス管理",
+            "ハイブリッド接続のための Cloud VPN / Interconnect と連携"
+          ],
+          "link": "https://cloud.google.com/vpc"
+        },
+        {
+          "name": "Cloud Interconnect",
+          "summary": "オンプレ環境と Google Cloud を専用線接続。",
+          "details": "Cloud Interconnect はオンプレミス ネットワークと Google Cloud を低レイテンシかつ高帯域で接続するサービスで、Dedicated と Partner の 2 種類を提供します。",
+          "features": [
+            "Dedicated / Partner の選択で柔軟な導入が可能",
+            "SLA による高信頼な接続と帯域オプション",
+            "ネットワークを越えたハイブリッドアーキテクチャを実現"
+          ],
+          "link": "https://cloud.google.com/interconnect"
+        }
+      ]
+    },
+    {
+      "id": "data-analytics",
+      "name": "データ分析",
+      "description": "データ収集から可視化までを支援する分析プラットフォーム。",
+      "services": [
+        {
+          "name": "BigQuery",
+          "summary": "サーバーレスでペタバイト規模を分析する DWH。",
+          "details": "BigQuery はサーバーレスかつフルマネージドなデータウェアハウスで、SQL クエリで大規模データを高速に分析できます。",
+          "features": [
+            "ストレージとコンピュートを分離しコスト最適化",
+            "BigQuery ML による SQL ベースの機械学習",
+            "Federated Query で Cloud Storage や Drive のデータも分析"
+          ],
+          "link": "https://cloud.google.com/bigquery"
+        },
+        {
+          "name": "Dataflow",
+          "summary": "バッチとストリーミング処理を統合するデータパイプライン。",
+          "details": "Dataflow は Apache Beam ベースのフルマネージド サービスで、ストリーミングとバッチ処理を同じプログラミングモデルで実行できます。",
+          "features": [
+            "オートスケーリングとワークローダイナミクスに対応",
+            "Dataflow Prime でインフラ管理をさらに自動化",
+            "運用指標やエラーレポートをリアルタイム監視"
+          ],
+          "link": "https://cloud.google.com/dataflow"
+        },
+        {
+          "name": "Pub/Sub",
+          "summary": "グローバルなメッセージング基盤で非同期連携。",
+          "details": "Pub/Sub は大規模イベントを扱えるメッセージング サービスで、マイクロサービス間の非同期連携やリアルタイム分析基盤を実現します。",
+          "features": [
+            "1 秒あたり数百万件のメッセージに対応するスケーラビリティ",
+            "Push / Pull の両モデルと順序保証のオプション",
+            "メッセージの暗号化やデッドレタリングなどの運用機能"
+          ],
+          "link": "https://cloud.google.com/pubsub"
+        },
+        {
+          "name": "Looker",
+          "summary": "データ探索とダッシュボード作成を行う BI プラットフォーム。",
+          "details": "Looker はモダンな BI プラットフォームで、LookML によるモデリングとダッシュボードで組織全体のデータ活用を促進します。",
+          "features": [
+            "LookML による再利用性の高いデータモデル定義",
+            "探索・レポート・アラートをコードレスに構築",
+            "埋め込み分析や API でアプリケーション連携"
+          ],
+          "link": "https://cloud.google.com/looker"
+        }
+      ]
+    },
+    {
+      "id": "ai-ml",
+      "name": "AI / 機械学習",
+      "description": "AI モデルの構築・提供を支援するサービス群。",
+      "services": [
+        {
+          "name": "Vertex AI",
+          "summary": "機械学習ライフサイクルを統合するプラットフォーム。",
+          "details": "Vertex AI はデータ準備から学習、デプロイ、MLOps までを統合し、AutoML とカスタム モデルの両方を運用できます。",
+          "features": [
+            "AutoML とカスタムトレーニングを単一 UI で提供",
+            "Feature Store や Pipelines で MLOps を強化",
+            "Vertex AI Workbench でデータサイエンス環境を提供"
+          ],
+          "link": "https://cloud.google.com/vertex-ai"
+        },
+        {
+          "name": "Dialogflow CX",
+          "summary": "大規模な会話型エージェント構築を支援。",
+          "details": "Dialogflow CX はビジュアル フロー ビルダーを備えた会話型エージェント プラットフォームで、複雑な対話管理とマルチチャネル展開に対応します。",
+          "features": [
+            "ステートベースのフローで会話の分岐を直感的に管理",
+            "音声・テキスト・チャットボットなど多様なチャネルをサポート",
+            "テストスイートや分析ダッシュボードで品質を継続改善"
+          ],
+          "link": "https://cloud.google.com/dialogflow/cx"
+        },
+        {
+          "name": "Speech-to-Text",
+          "summary": "高精度な音声認識 API。",
+          "details": "Speech-to-Text は 100 を超える言語で音声認識を提供し、リアルタイムおよびバッチ処理で音声をテキスト化できます。",
+          "features": [
+            "自動句読点や話者分離など高度な音声認識機能",
+            "ストリーミング API でリアルタイム文字起こしに対応",
+            "ユーザー独自の語彙をカスタム辞書として追加可能"
+          ],
+          "link": "https://cloud.google.com/speech-to-text"
+        },
+        {
+          "name": "Vision AI",
+          "summary": "画像・動画の分析を自動化する AI サービス。",
+          "details": "Vision AI は画像・動画のラベリング、顔検出、モデレートなどを提供し、AutoML Vision で独自モデルの学習も可能です。",
+          "features": [
+            "事前学習モデルで一般的なラベル付けをすぐに利用",
+            "AutoML Vision で独自データに合わせたモデルを構築",
+            "Video Intelligence API で動画コンテンツも分析可能"
+          ],
+          "link": "https://cloud.google.com/vision"
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "セキュリティ / ID",
+      "description": "アクセス管理や脅威対策を支援するセキュリティ サービス。",
+      "services": [
+        {
+          "name": "Cloud IAM",
+          "summary": "Google Cloud のアクセス権限を一元管理。",
+          "details": "Cloud Identity and Access Management (IAM) はリソースへのアクセス権限をロールベースで管理し、最小権限の原則を実現します。",
+          "features": [
+            "きめ細かなロールと条件付きアクセスで柔軟に制御",
+            "監査ログで権限の変更や利用状況を追跡",
+            "サービスアカウントや短期認証情報による安全な運用"
+          ],
+          "link": "https://cloud.google.com/iam"
+        },
+        {
+          "name": "Cloud Identity",
+          "summary": "ユーザーとデバイス管理を行う IDaaS。",
+          "details": "Cloud Identity はシングルサインオン、多要素認証、端末管理を統合した IDaaS で、Google Workspace と同じ基盤を利用します。",
+          "features": [
+            "SAML / OIDC を利用した数千の SaaS への SSO",
+            "高度な MFA、条件付きアクセスポリシーを提供",
+            "デバイス管理とセキュリティレポートでゼロトラストを実現"
+          ],
+          "link": "https://cloud.google.com/identity"
+        },
+        {
+          "name": "Cloud Key Management",
+          "summary": "暗号鍵を安全に保管・運用する KMS。",
+          "details": "Cloud Key Management Service (KMS) はクラウドリソースの暗号鍵をセキュアに生成・保管し、ポリシーに基づくアクセス制御を提供します。",
+          "features": [
+            "ソフトウェア / HSM / 外部鍵 (Cloud EKM) を選択可能",
+            "Cloud Audit Logs と統合し鍵の利用状況を可視化",
+            "IAM と CMEK 連携で暗号化ポリシーを一元管理"
+          ],
+          "link": "https://cloud.google.com/security-key-management"
+        },
+        {
+          "name": "Security Command Center",
+          "summary": "Google Cloud 全体の脅威とリスクを可視化。",
+          "details": "Security Command Center は Google Cloud 環境の脆弱性や脅威、設定リスクを可視化し、統合的なセキュリティ運用を支援します。",
+          "features": [
+            "アセット、脆弱性、脅威検出を一元表示",
+            "Cloud Armor、Security Health Analytics などと連携",
+            "セキュリティ運用ワークフローと統合する API を提供"
+          ],
+          "link": "https://cloud.google.com/security-command-center"
+        }
+      ]
+    },
+    {
+      "id": "operations",
+      "name": "運用管理",
+      "description": "監視・ログ収集・デリバリーを支援する運用ツール。",
+      "services": [
+        {
+          "name": "Cloud Monitoring",
+          "summary": "Google Cloud とハイブリッド環境の指標を可視化。",
+          "details": "Cloud Monitoring は Google Cloud、オンプレミス、マルチクラウドの指標を統合し、アラートやダッシュボードでシステム状態を把握できます。",
+          "features": [
+            "300 以上の組み込みダッシュボードとカスタムメトリクス",
+            "SLO 管理とアラートポリシーで信頼性を可視化",
+            "Opsgenie や PagerDuty など外部ツールとも連携"
+          ],
+          "link": "https://cloud.google.com/stackdriver/"
+        },
+        {
+          "name": "Cloud Logging",
+          "summary": "大規模ログをリアルタイムで収集・分析。",
+          "details": "Cloud Logging は Google Cloud とアプリケーションのログをリアルタイムに取り込み、強力なクエリと保持ポリシーで運用分析を支援します。",
+          "features": [
+            "ログルーターで BigQuery や Pub/Sub へ柔軟にエクスポート",
+            "ログベースの指標やアラートを簡単に作成",
+            "保管期間やアクセス制御を IAM で細かく指定"
+          ],
+          "link": "https://cloud.google.com/logging"
+        },
+        {
+          "name": "Cloud Trace",
+          "summary": "分散トレースでアプリの遅延を可視化。",
+          "details": "Cloud Trace はアプリケーションのレイテンシを詳細に可視化する分散トレーシングサービスで、性能ボトルネックを特定できます。",
+          "features": [
+            "自動インストルメンテーションでトレースを収集",
+            "Stackdriver Profiler や Logging と連携",
+            "サンプリング制御でコストと精度を最適化"
+          ],
+          "link": "https://cloud.google.com/trace"
+        },
+        {
+          "name": "Cloud Deploy",
+          "summary": "GitOps を支援する継続的デリバリー サービス。",
+          "details": "Cloud Deploy は GKE や Cloud Run への継続的デリバリーをマネージドで提供し、パイプラインの可視化とロールバックを簡単にします。",
+          "features": [
+            "宣言的なパイプライン定義で環境ごとのフローを管理",
+            "リリースの承認ワークフローと監査ログを提供",
+            "Cloud Build や Artifact Registry とシームレスに統合"
+          ],
+          "link": "https://cloud.google.com/deploy"
+        }
+      ]
+    }
+  ]
+}
