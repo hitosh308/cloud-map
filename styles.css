@@ -12,7 +12,7 @@
 }
 
 body.theme-gcp {
-  --bg-color: #f4f6fb;
+  --bg-color: #f1f3f4;
   --accent: #4285f4;
   --accent-dark: #1a73e8;
   --accent-rgb: 66, 133, 244;
@@ -20,7 +20,7 @@ body.theme-gcp {
 }
 
 body.theme-home {
-  --bg-color: #f7f9ff;
+  --bg-color: #ffffff;
   --accent: #6366f1;
   --accent-dark: #4f46e5;
   --accent-rgb: 99, 102, 241;
@@ -44,7 +44,7 @@ body.theme-aws {
 }
 
 body.theme-compare {
-  --bg-color: #f3f6ff;
+  --bg-color: #ffffff;
   --accent: #0ea5e9;
   --accent-dark: #0284c7;
   --accent-rgb: 14, 165, 233;
