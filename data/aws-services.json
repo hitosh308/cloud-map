@@ -1,0 +1,305 @@
+{
+  "categories": [
+    {
+      "id": "compute",
+      "name": "コンピューティング",
+      "description": "仮想サーバーやバッチ処理など計算リソースを柔軟に提供するサービス。",
+      "services": [
+        {
+          "name": "Amazon EC2",
+          "summary": "用途に応じたインスタンスタイプを選べる仮想サーバーサービス。",
+          "details": "Amazon Elastic Compute Cloud (EC2) は、ニーズに合わせた CPU・メモリ・GPU 構成の仮想サーバーを即座に起動できる IaaS。オートスケールや多彩なストレージオプションと組み合わせて高可用なアプリ基盤を構築できます。",
+          "features": [
+            "数百種類のインスタンスファミリーと最新世代プロセッサに対応",
+            "オンデマンド / リザーブド / スポットの柔軟な料金モデル",
+            "セキュリティグループや IAM と連携したアクセス制御",
+            "CloudWatch / CloudTrail による運用監視と操作履歴管理"
+          ],
+          "link": "https://aws.amazon.com/ec2/"
+        },
+        {
+          "name": "AWS Auto Scaling",
+          "summary": "需要に応じてリソースを自動的に追加・削除するスケーリングサービス。",
+          "details": "AWS Auto Scaling は、アプリの利用状況に合わせて EC2 インスタンスや ECS タスク、DynamoDB キャパシティーなどを自動調整。目標追跡やスケジュールベースのポリシーでコストと可用性を最適化します。",
+          "features": [
+            "複数リソースをまとめて管理できるスケーリングプラン",
+            "CPU 使用率やリクエスト数に基づいた動的スケーリング",
+            "予測スケーリングによる需要予測と先読み調整",
+            "CloudWatch アラームと統合したイベント駆動の調整"
+          ],
+          "link": "https://aws.amazon.com/autoscaling/"
+        },
+        {
+          "name": "AWS Batch",
+          "summary": "HPC やデータ処理をマネージドに実行できるバッチ基盤。",
+          "details": "AWS Batch は、バッチジョブをキューに投入するだけで最適な量のコンピュートを自動プロビジョニング。EC2 や Spot インスタンス、Fargate を利用でき、ジョブ依存関係や優先順位制御もサポートします。",
+          "features": [
+            "ジョブ定義とキューによる柔軟なスケジューリング",
+            "マルチノード並列ジョブや GPU ワークロードを実行",
+            "CloudWatch Events と連携した自動化",
+            "AWS IAM と VPC 設定でセキュアに運用"
+          ],
+          "link": "https://aws.amazon.com/batch/"
+        }
+      ]
+    },
+    {
+      "id": "containers-serverless",
+      "name": "コンテナ / サーバレス",
+      "description": "コンテナ化アプリやイベント駆動アプリをマネージドで実行するサービス。",
+      "services": [
+        {
+          "name": "Amazon ECS",
+          "summary": "AWS 上でコンテナワークロードを運用するマネージドコンテナサービス。",
+          "details": "Amazon Elastic Container Service (ECS) は、タスク定義に基づいてコンテナをデプロイし、Fargate や EC2 起動タイプで柔軟に実行。IAM、ELB、CloudWatch とネイティブに統合され、運用をシンプルに保てます。",
+          "features": [
+            "Fargate によるサーバーレス実行と EC2 ベースの柔軟な構成",
+            "サービスディスカバリーとロードバランサー連携",
+            "CloudWatch Container Insights による可観測性",
+            "CodePipeline / CodeDeploy と連携した継続的デリバリー"
+          ],
+          "link": "https://aws.amazon.com/ecs/"
+        },
+        {
+          "name": "Amazon EKS",
+          "summary": "フルマネージドな Kubernetes コントロールプレーンを提供。",
+          "details": "Amazon Elastic Kubernetes Service (EKS) は、可用性の高い Kubernetes コントロールプレーンを AWS が管理。EC2 や Fargate、オンプレミス (EKS Anywhere) など多様な実行環境で一貫した運用が可能です。",
+          "features": [
+            "マルチ AZ 配置の冗長化されたコントロールプレーン",
+            "IAM / OIDC によるセキュアなアクセス制御",
+            "Managed Node Groups や Karpenter でノード管理を自動化",
+            "AWS App Mesh やサービスメッシュと連携"
+          ],
+          "link": "https://aws.amazon.com/eks/"
+        },
+        {
+          "name": "AWS Lambda",
+          "summary": "イベントに応じてコードを実行するサーバレス コンピューティング。",
+          "details": "AWS Lambda は、サーバー管理不要でコードを実行できる FaaS。イベントソースを設定するだけで自動的にスケールし、実行時間とリクエスト数に応じて課金されます。関数のバージョン管理やエイリアスで安全なリリースを実現。",
+          "features": [
+            "S3 / DynamoDB / API Gateway など多数のイベントソース",
+            "Node.js・Python・Java・Go 等のランタイムを提供",
+            "Provisioned Concurrency によるレイテンシ制御",
+            "X-Ray / CloudWatch Logs と統合したトレーシング"
+          ],
+          "link": "https://aws.amazon.com/lambda/"
+        }
+      ]
+    },
+    {
+      "id": "storage",
+      "name": "ストレージ",
+      "description": "オブジェクト・ファイル・バックアップなど多用途に対応するストレージサービス。",
+      "services": [
+        {
+          "name": "Amazon S3",
+          "summary": "耐久性 99.999999999% を誇るオブジェクトストレージサービス。",
+          "details": "Amazon Simple Storage Service (S3) は、あらゆる種類のデータを保存できるスケーラブルなオブジェクトストレージ。ストレージクラスを使い分けてコストを最適化し、バージョニングや MFA Delete でデータを保護します。",
+          "features": [
+            "Standard / Intelligent-Tiering / Glacier など多彩なストレージクラス",
+            "S3 Lifecycle による自動データ移行と削除",
+            "S3 Object Lambda や S3 Select でデータ加工を効率化",
+            "Bucket Policy / ACL / IAM による詳細なアクセス制御"
+          ],
+          "link": "https://aws.amazon.com/s3/"
+        },
+        {
+          "name": "Amazon EFS",
+          "summary": "Linux ワークロード向けのマネージド NFS ファイルシステム。",
+          "details": "Amazon Elastic File System (EFS) は、NFSv4 を介して複数の EC2 インスタンスから共有できるフルマネージド ファイルストレージ。需要に応じて自動スケールし、マルチ AZ 配置で高可用性を確保します。",
+          "features": [
+            "スループットモードとパフォーマンスモードを用途に合わせて選択",
+            "マウントターゲットを複数 AZ に展開して冗長化",
+            "AWS Backup によるバックアップと復元",
+            "VPC セキュリティグループでアクセス制御"
+          ],
+          "link": "https://aws.amazon.com/efs/"
+        },
+        {
+          "name": "Amazon FSx for Lustre",
+          "summary": "HPC や機械学習向けの高性能分散ファイルシステム。",
+          "details": "Amazon FSx for Lustre は、高スループットと低レイテンシを実現するファイルシステムをマネージドで提供。S3 と双方向に同期でき、大規模なトレーニングデータやメディア処理ワークロードに適しています。",
+          "features": [
+            "数百 GB/s 規模のスループットとミリ秒未満のレイテンシ",
+            "S3 バケットとの同期と結果の自動エクスポート",
+            "データ圧縮と連続スナップショット",
+            "AWS Direct Connect / VPC Peering で広域接続"
+          ],
+          "link": "https://aws.amazon.com/fsx/lustre/"
+        }
+      ]
+    },
+    {
+      "id": "networking",
+      "name": "ネットワーキング / 配信",
+      "description": "ネットワーク分離やトラフィック分散、グローバル配信を担うサービス。",
+      "services": [
+        {
+          "name": "Amazon VPC",
+          "summary": "AWS 上にプライベートな仮想ネットワークを構築する基盤サービス。",
+          "details": "Amazon Virtual Private Cloud (VPC) は、IP レンジやサブネット、ルーティングを細かく制御できる仮想ネットワーク。セキュリティグループやネットワーク ACL、VPC エンドポイントで安全な通信経路を確保します。",
+          "features": [
+            "サブネット単位でのパブリック / プライベート分離",
+            "VPN / Direct Connect を利用したハイブリッド接続",
+            "Gateway / Interface VPC エンドポイントによる閉域アクセス",
+            "Flow Logs でネットワークトラフィックを可視化"
+          ],
+          "link": "https://aws.amazon.com/vpc/"
+        },
+        {
+          "name": "Elastic Load Balancing",
+          "summary": "アプリケーションへのトラフィックを自動で複数ターゲットへ分散。",
+          "details": "Elastic Load Balancing (ELB) は、ALB / NLB / GLB といったタイプを提供し、HTTP/HTTPS や TCP/UDP トラフィックを適切に分散。ヘルスチェックやスティッキネス、WAF 連携でアプリの可用性とセキュリティを高めます。",
+          "features": [
+            "HTTP レイヤのルーティングや WebSocket 対応",
+            "ターゲットグループごとのヘルスチェック",
+            "AWS Certificate Manager と統合した TLS 終端",
+            "Auto Scaling と連携した動的なターゲット登録"
+          ],
+          "link": "https://aws.amazon.com/elasticloadbalancing/"
+        },
+        {
+          "name": "Amazon CloudFront",
+          "summary": "グローバルエッジネットワークから高速配信する CDN サービス。",
+          "details": "Amazon CloudFront は、世界中のエッジロケーションからコンテンツをキャッシュ・配信し、レイテンシを低減。Lambda@Edge や CloudFront Functions でリクエスト処理をカスタマイズしつつ、WAF と統合した保護を実現します。",
+          "features": [
+            "エッジでのキャッシュ制御と HTTP/3 対応",
+            "Lambda@Edge / Functions によるリクエスト加工",
+            "Origin Shield や複数オリジンに対応したフェイルオーバー",
+            "AWS Shield / AWS WAF と連携した DDoS・アプリ防御"
+          ],
+          "link": "https://aws.amazon.com/cloudfront/"
+        }
+      ]
+    },
+    {
+      "id": "database",
+      "name": "データベース",
+      "description": "リレーショナル / NoSQL / フルマネージドデータベースを提供するサービス。",
+      "services": [
+        {
+          "name": "Amazon RDS",
+          "summary": "主要なリレーショナルデータベースをフルマネージドで提供。",
+          "details": "Amazon Relational Database Service (RDS) は、MySQL・PostgreSQL・SQL Server などのデータベースを簡単にセットアップ・運用できる PaaS。自動バックアップやマルチ AZ 配置で高可用性を実現します。",
+          "features": [
+            "マルチ AZ / リードレプリカで可用性とスケーラビリティを確保",
+            "オートスケーリングストレージで容量を自動拡張",
+            "AWS Backup / Snapshots によるデータ保護",
+            "IAM 認証や暗号化でセキュアに運用"
+          ],
+          "link": "https://aws.amazon.com/rds/"
+        },
+        {
+          "name": "Amazon DynamoDB",
+          "summary": "低レイテンシでスケールするフルマネージド NoSQL データベース。",
+          "details": "Amazon DynamoDB は、キー・バリュー / ドキュメントデータモデルを提供し、単位ミリ秒のレイテンシでスケール。オンデマンドキャパシティーモードやグローバルテーブルで大規模アプリを支えます。",
+          "features": [
+            "サーバレスなオンデマンドキャパシティー",
+            "DynamoDB Streams と Lambda でイベント駆動連携",
+            "グローバルテーブルによるマルチリージョン展開",
+            "Point-in-Time Recovery で過去の状態に復元"
+          ],
+          "link": "https://aws.amazon.com/dynamodb/"
+        },
+        {
+          "name": "Amazon Aurora",
+          "summary": "MySQL / PostgreSQL 互換で高性能なクラウドネイティブ RDB。",
+          "details": "Amazon Aurora は、標準的な RDS データベースと比べて最大 5 倍の性能を発揮するクラウドネイティブ RDB。6 重のデータ複製と自動フェイルオーバーにより耐障害性が高く、サーバレスモードも選択できます。",
+          "features": [
+            "Aurora Serverless v2 による秒単位スケーリング",
+            "Global Database で最大 5 リージョンにレプリケーション",
+            "並列クエリエンジンによる分析性能の向上",
+            "バックトラック機能でテーブルを瞬時に巻き戻し"
+          ],
+          "link": "https://aws.amazon.com/rds/aurora/"
+        }
+      ]
+    },
+    {
+      "id": "analytics-ai",
+      "name": "データ分析 / AI",
+      "description": "データウェアハウスや ETL、機械学習モデル開発を支援するサービス。",
+      "services": [
+        {
+          "name": "Amazon Redshift",
+          "summary": "大規模データ分析に特化したクラウドデータウェアハウス。",
+          "details": "Amazon Redshift は、ペタバイト規模のデータを高速に分析できる DWH サービス。RA3 ノードと Redshift Spectrum により、S3 上のデータレイクを横断した分析も可能です。",
+          "features": [
+            "MPP アーキテクチャとカラムナ圧縮で高速クエリ",
+            "AQUA キャッシュによるクエリ高速化",
+            "Redshift Spectrum で S3 データレイクを直接分析",
+            "Materialized View や Concurrency Scaling に対応"
+          ],
+          "link": "https://aws.amazon.com/redshift/"
+        },
+        {
+          "name": "AWS Glue",
+          "summary": "サーバレスなデータ統合・ETL サービス。",
+          "details": "AWS Glue は、データカタログ、ETL ジョブ、ワークフローを統合的に提供するデータ統合基盤。ノーコードの Glue Studio や Glue DataBrew を活用し、データレイクや DWH への取り込みを加速します。",
+          "features": [
+            "サーバレス Spark 環境による ETL ジョブ実行",
+            "Glue Data Catalog でメタデータを集中管理",
+            "トリガーとワークフローでパイプラインを自動化",
+            "DataBrew によるノーコードデータクレンジング"
+          ],
+          "link": "https://aws.amazon.com/glue/"
+        },
+        {
+          "name": "Amazon SageMaker",
+          "summary": "機械学習モデルの開発から運用までを支援する包括的なプラットフォーム。",
+          "details": "Amazon SageMaker は、データ準備・学習・デプロイ・監視を一貫して提供する ML プラットフォーム。SageMaker Studio でノートブックや MLOps 機能を統合し、迅速なモデルライフサイクルを実現します。",
+          "features": [
+            "SageMaker Autopilot による自動機械学習",
+            "Feature Store や Pipelines で MLOps を体系化",
+            "Managed Spot Training で学習コストを最適化",
+            "Clarify / Model Monitor でバイアスや精度を継続的に監視"
+          ],
+          "link": "https://aws.amazon.com/sagemaker/"
+        }
+      ]
+    },
+    {
+      "id": "management",
+      "name": "運用・セキュリティ",
+      "description": "監視、自動化、セキュリティ評価を統合的に行うサービス。",
+      "services": [
+        {
+          "name": "Amazon CloudWatch",
+          "summary": "メトリクス・ログ・イベントを収集してシステムの可観測性を向上。",
+          "details": "Amazon CloudWatch は、AWS リソースやアプリのメトリクス・ログ・イベントを集中管理する監視基盤。アラームやダッシュボード、Synthetics などを活用して運用の自動化と品質向上を図れます。",
+          "features": [
+            "メトリクスとログを統合的に可視化するダッシュボード",
+            "アラームとイベントルールで自動アクションをトリガー",
+            "Synthetics や RUM でユーザー体験を継続監視",
+            "ServiceLens / X-Ray と連携した分散トレーシング"
+          ],
+          "link": "https://aws.amazon.com/cloudwatch/"
+        },
+        {
+          "name": "AWS Systems Manager",
+          "summary": "ハイブリッド環境を一元管理し、運用タスクを自動化するサービス。",
+          "details": "AWS Systems Manager は、EC2・オンプレミス・他クラウドのサーバーを統合管理。パッチ適用や設定管理、Run Command によるオーケストレーションを自動化し、運用ガバナンスを高めます。",
+          "features": [
+            "Parameter Store / Secrets Manager と連携した構成管理",
+            "Patch Manager や State Manager で標準構成を維持",
+            "Session Manager によるブラウザベースの安全なログイン",
+            "Automation ドキュメントで手順をコード化"
+          ],
+          "link": "https://aws.amazon.com/systems-manager/"
+        },
+        {
+          "name": "AWS Security Hub",
+          "summary": "AWS アカウント全体のセキュリティ態勢を評価し、改善を促進。",
+          "details": "AWS Security Hub は、各種セキュリティサービスやパートナー製品からの検出結果を集約してセキュリティスコアを算出。CIS や PCI DSS などのベンチマーク準拠状況を可視化し、是正アクションを推進します。",
+          "features": [
+            "GuardDuty・Inspector・Macie などの検出結果を集約",
+            "AWS Organizations と統合したマルチアカウント管理",
+            "セキュリティ基準に基づく自動評価とスコアリング",
+            "EventBridge 連携でチケット起票や自動修復を実行"
+          ],
+          "link": "https://aws.amazon.com/security-hub/"
+        }
+      ]
+    }
+  ]
+}

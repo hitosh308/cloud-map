@@ -2,11 +2,14 @@ const tileContainer = document.getElementById('tileContainer');
 const viewTitle = document.getElementById('viewTitle');
 const toolbar = document.querySelector('.toolbar');
 
+const { dataFile = 'data/google-cloud-services.json', providerName = 'クラウド' } =
+  document.body.dataset;
+
 let categories = [];
 let backButton = null;
 
-async function loadCategories() {
-  const response = await fetch('data/google-cloud-services.json');
+async function loadCategories(filePath) {
+  const response = await fetch(filePath);
 
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
@@ -58,7 +61,9 @@ function showLoadError() {
   hideBackButton();
   tileContainer.innerHTML = '';
   tileContainer.appendChild(
-    createInfoMessage('サービス情報を読み込めませんでした。ページを再読み込みしてもう一度お試しください。')
+    createInfoMessage(
+      `${providerName} のサービス情報を読み込めませんでした。ページを再読み込みしてもう一度お試しください。`
+    )
   );
 }
 
@@ -195,10 +200,10 @@ function toggleServiceTile(tile) {
 
 async function initialize() {
   try {
-    categories = await loadCategories();
+    categories = await loadCategories(dataFile);
     renderCategories();
   } catch (error) {
-    console.error('Failed to load Google Cloud services data.', error);
+    console.error(`Failed to load ${providerName} services data.`, error);
     showLoadError();
   }
 }
