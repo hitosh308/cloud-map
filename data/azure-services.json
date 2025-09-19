@@ -1,303 +1,1578 @@
 {
   "categories": [
     {
-      "id": "compute",
-      "name": "コンピューティング",
-      "description": "汎用 VM から HPC ワークロードまで幅広い計算需要を支えるサービス群。",
+      "id": "ai-ml",
+      "name": "AI / 機械学習",
+      "description": "Azure の AI/ML プラットフォームと AI サービス。生成 AI は専用カテゴリも併設。",
       "services": [
         {
-          "name": "Azure Virtual Machines",
-          "summary": "Windows / Linux 仮想マシンを柔軟に構成できる IaaS サービス。",
-          "details": "Azure Virtual Machines は、必要なサイズや OS を選択して高速に VM を展開できる IaaS。可用性セットや可用性ゾーンを利用して高可用構成を実現し、運用の自動化とセキュリティ統制を Azure 標準で組み込めます。",
+          "name": "Azure Machine Learning",
+          "summary": "ML の学習/推論/MLOps を統合するフルマネージド基盤。",
+          "details": "Azure Machine Learning は、ML の学習/推論/MLOps を統合するフルマネージド基盤。 データ保護と責任ある AI の枠組みに沿って、学習/推論/評価/監視を一体化できます。",
           "features": [
-            "数百種類の VM サイズと最新世代 CPU / GPU に対応",
-            "秒単位課金と予約インスタンスによるコスト最適化",
-            "拡張機能による自動構成・パッチ適用",
-            "Azure Storage や Virtual Network とシームレスに連携"
+            "学習/推論/評価/監視の統合（MLOps）",
+            "責任ある AI・安全制御との連携",
+            "ノーコード/コード双方の開発体験",
+            "マネージドでスケール/可用性を確保",
+            "データ統合/接続性（Storage/DB/Analytics）"
           ],
-          "link": "https://azure.microsoft.com/products/virtual-machines/"
+          "link": "https://azure.microsoft.com/services/machine-learning/"
         },
         {
-          "name": "Azure Virtual Machine Scale Sets",
-          "summary": "同一構成の VM を自動スケールさせるためのマネージドサービス。",
-          "details": "Scale Sets は、均一な VM グループを一元管理し、負荷やスケジュールに応じて自動的にスケールイン / アウトするための仕組み。ローリング アップグレードやヘルス プローブを備え、可用性の高いアプリケーションをシンプルに運用できます。",
+          "name": "Azure AI Services（旧 Cognitive Services）",
+          "summary": "言語/音声/視覚/意思決定系の API 群。",
+          "details": "Azure AI Services（旧 Cognitive Services） は、言語/音声/視覚/意思決定系の API 群。 データ保護と責任ある AI の枠組みに沿って、学習/推論/評価/監視を一体化できます。",
           "features": [
-            "CPU / メモリ利用率やキュー長などに基づく自動スケーリング",
-            "ゾーン冗長構成とロード バランサー連携を標準サポート",
-            "カスタム イメージや Azure Image Builder と統合",
-            "デプロイ スロットリングやローリング更新による安定したリリース"
+            "学習/推論/評価/監視の統合（MLOps）",
+            "責任ある AI・安全制御との連携",
+            "ノーコード/コード双方の開発体験",
+            "マネージドでスケール/可用性を確保",
+            "データ統合/接続性（Storage/DB/Analytics）"
           ],
-          "link": "https://azure.microsoft.com/products/virtual-machine-scale-sets/"
+          "link": "https://azure.microsoft.com/products/ai-services/"
         },
         {
-          "name": "Azure Batch",
-          "summary": "大規模なバッチ計算をマネージドで実行できるクラウドレンダリング基盤。",
-          "details": "Azure Batch は、HPC やレンダリング、ETL などの大量ジョブを大規模に実行するためのサービス。ジョブ スケジューラとプール管理を備え、ジョブ投入から結果取得までを自動化しつつ、コスト効率の良いスポット VM も組み合わせられます。",
+          "name": "Azure AI Search（旧 Cognitive Search）",
+          "summary": "セマンティック検索やRAG向けの検索プラットフォーム。",
+          "details": "Azure AI Search（旧 Cognitive Search） は、セマンティック検索やRAG向けの検索プラットフォーム。 データ保護と責任ある AI の枠組みに沿って、学習/推論/評価/監視を一体化できます。",
           "features": [
-            "ジョブ / タスク単位の管理と再試行制御",
-            "Auto-scale 式による柔軟なコンピューティングプール制御",
-            "Azure Storage との高速なデータ連携",
-            "コンテナ化ワークロードや Linux / Windows の混在にも対応"
+            "学習/推論/評価/監視の統合（MLOps）",
+            "責任ある AI・安全制御との連携",
+            "ノーコード/コード双方の開発体験",
+            "マネージドでスケール/可用性を確保",
+            "データ統合/接続性（Storage/DB/Analytics）"
           ],
-          "link": "https://azure.microsoft.com/services/batch/"
+          "link": "https://azure.microsoft.com/services/search/"
+        },
+        {
+          "name": "Azure AI Content Safety",
+          "summary": "不適切/リスクの高い出力を抑制するセーフティ制御。",
+          "details": "Azure AI Content Safety は、不適切/リスクの高い出力を抑制するセーフティ制御。 データ保護と責任ある AI の枠組みに沿って、学習/推論/評価/監視を一体化できます。",
+          "features": [
+            "学習/推論/評価/監視の統合（MLOps）",
+            "責任ある AI・安全制御との連携",
+            "ノーコード/コード双方の開発体験",
+            "マネージドでスケール/可用性を確保",
+            "データ統合/接続性（Storage/DB/Analytics）"
+          ],
+          "link": "https://azure.microsoft.com/products/ai-services/"
+        },
+        {
+          "name": "Azure Bot Service",
+          "summary": "会話ボットの開発/接続/運用。",
+          "details": "Azure Bot Service は、会話ボットの開発/接続/運用。 データ保護と責任ある AI の枠組みに沿って、学習/推論/評価/監視を一体化できます。",
+          "features": [
+            "学習/推論/評価/監視の統合（MLOps）",
+            "責任ある AI・安全制御との連携",
+            "ノーコード/コード双方の開発体験",
+            "マネージドでスケール/可用性を確保",
+            "データ統合/接続性（Storage/DB/Analytics）"
+          ],
+          "link": "https://azure.microsoft.com/services/bot-services/"
         }
       ]
     },
     {
-      "id": "app-platform",
-      "name": "アプリケーション実行基盤",
-      "description": "Web / API / コンテナ アプリをマネージドで提供し、開発に集中できるプラットフォーム。",
+      "id": "genai",
+      "name": "生成 AI",
+      "description": "基盤モデル/プロンプト/評価/ガードレール/エージェントの統合運用。",
       "services": [
         {
-          "name": "Azure App Service",
-          "summary": "Web アプリや API を自動スケールで提供する PaaS。",
-          "details": "Azure App Service は、インフラ管理を意識せずに Web アプリやモバイルバックエンド、API をホストできる実行環境。継続的デプロイや自動スケール、バックアップを備え、セキュアなアプリ提供を迅速に行えます。",
+          "name": "Azure OpenAI Service",
+          "summary": "OpenAI のモデル群へ企業向けに安全にアクセス。",
+          "details": "Azure OpenAI Service は、OpenAI のモデル群へ企業向けに安全にアクセス。 基盤モデルの選定、プロンプト管理、評価、ガードレール、RAG/ツール実行/エージェント連携までを統合できます。",
           "features": [
-            "GitHub Actions や Azure DevOps と連携した継続的デプロイ",
-            "インスタンス数とプラン別の自動スケール",
-            "VNet 統合とプライベートエンドポイントによる閉域接続",
-            "App Service Environment による高度な分離とスケール"
+            "多様な基盤/推論モデルを選択",
+            "プロンプト/評価/ガードレール一体化",
+            "RAG/ツール実行/エージェント連携",
+            "監査/データ境界/コンプライアンス対応",
+            "低レイテンシ/高スループット推論"
           ],
-          "link": "https://azure.microsoft.com/products/app-service/"
+          "link": "https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/"
         },
         {
-          "name": "Azure Functions",
-          "summary": "イベント駆動でコードを実行できるサーバレス基盤。",
-          "details": "Azure Functions は、トリガーに反応してコードを実行するサーバレス実行環境。消費プランではリクエストに応じて自動スケールし、料金は実行時間に応じた従量課金。Durable Functions によるワークフロー連携も可能です。",
+          "name": "Azure AI Foundry（旧 Azure AI Studio）",
+          "summary": "生成 AI アプリの設計/開発/運用を統合するスタジオ。",
+          "details": "Azure AI Foundry（旧 Azure AI Studio） は、生成 AI アプリの設計/開発/運用を統合するスタジオ。 基盤モデルの選定、プロンプト管理、評価、ガードレール、RAG/ツール実行/エージェント連携までを統合できます。",
           "features": [
-            "HTTP / Queue / Event Grid など多彩なトリガー",
-            "C#・JavaScript・Python など複数言語をサポート",
-            "Azure Monitor と統合したログ・メトリクス収集",
-            "VNet 統合とマネージド ID による安全なリソースアクセス"
+            "多様な基盤/推論モデルを選択",
+            "プロンプト/評価/ガードレール一体化",
+            "RAG/ツール実行/エージェント連携",
+            "監査/データ境界/コンプライアンス対応",
+            "低レイテンシ/高スループット推論"
           ],
-          "link": "https://azure.microsoft.com/products/functions/"
+          "link": "https://azure.microsoft.com/products/ai-foundry/"
+        },
+        {
+          "name": "Azure AI Foundry Models（OpenAI ほか）",
+          "summary": "Foundry に搭載された多様な基盤/推論モデル群。",
+          "details": "Azure AI Foundry Models（OpenAI ほか） は、Foundry に搭載された多様な基盤/推論モデル群。 基盤モデルの選定、プロンプト管理、評価、ガードレール、RAG/ツール実行/エージェント連携までを統合できます。",
+          "features": [
+            "多様な基盤/推論モデルを選択",
+            "プロンプト/評価/ガードレール一体化",
+            "RAG/ツール実行/エージェント連携",
+            "監査/データ境界/コンプライアンス対応",
+            "低レイテンシ/高スループット推論"
+          ],
+          "link": "https://azure.microsoft.com/products/ai-foundry/models/"
+        }
+      ]
+    },
+    {
+      "id": "analytics",
+      "name": "データ分析 / アナリティクス",
+      "description": "DWH/ETL/ストリーミング/探索/ノートブック/ガバナンス連携。",
+      "services": [
+        {
+          "name": "Microsoft Fabric",
+          "summary": "エンドツーエンドの分析 SaaS（Data Factory, Warehouse, Real-Time などを統合）。",
+          "details": "Microsoft Fabric は、エンドツーエンドの分析 SaaS（Data Factory, Warehouse, Real-Time などを統合）。 収集/統合/変換/クエリ/可視化/リアルタイムまで、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレス/マネージドで大規模処理",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/品質/ガバナンス統合",
+            "BI/ノートブック/ML と連携",
+            "柔軟な課金とスケーリング"
+          ],
+          "link": "https://learn.microsoft.com/fabric/fundamentals/microsoft-fabric-overview"
+        },
+        {
+          "name": "Azure Synapse Analytics",
+          "summary": "DWH とビッグデータ分析を統合した分析プラットフォーム。",
+          "details": "Azure Synapse Analytics は、DWH とビッグデータ分析を統合した分析プラットフォーム。 収集/統合/変換/クエリ/可視化/リアルタイムまで、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレス/マネージドで大規模処理",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/品質/ガバナンス統合",
+            "BI/ノートブック/ML と連携",
+            "柔軟な課金とスケーリング"
+          ],
+          "link": "https://azure.microsoft.com/services/synapse-analytics/"
+        },
+        {
+          "name": "Azure Databricks",
+          "summary": "Apache Spark ベースの統合分析/ML ワークスペース。",
+          "details": "Azure Databricks は、Apache Spark ベースの統合分析/ML ワークスペース。 収集/統合/変換/クエリ/可視化/リアルタイムまで、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレス/マネージドで大規模処理",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/品質/ガバナンス統合",
+            "BI/ノートブック/ML と連携",
+            "柔軟な課金とスケーリング"
+          ],
+          "link": "https://azure.microsoft.com/services/databricks/"
+        },
+        {
+          "name": "Azure Data Factory",
+          "summary": "ETL/ELT のデータ統合サービス。",
+          "details": "Azure Data Factory は、ETL/ELT のデータ統合サービス。 収集/統合/変換/クエリ/可視化/リアルタイムまで、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレス/マネージドで大規模処理",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/品質/ガバナンス統合",
+            "BI/ノートブック/ML と連携",
+            "柔軟な課金とスケーリング"
+          ],
+          "link": "https://azure.microsoft.com/services/data-factory/"
+        },
+        {
+          "name": "Azure Stream Analytics",
+          "summary": "ストリーミングデータのリアルタイム分析。",
+          "details": "Azure Stream Analytics は、ストリーミングデータのリアルタイム分析。 収集/統合/変換/クエリ/可視化/リアルタイムまで、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレス/マネージドで大規模処理",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/品質/ガバナンス統合",
+            "BI/ノートブック/ML と連携",
+            "柔軟な課金とスケーリング"
+          ],
+          "link": "https://azure.microsoft.com/services/stream-analytics/"
+        },
+        {
+          "name": "Azure Event Hubs",
+          "summary": "大規模イベント/テレメトリの取り込み。",
+          "details": "Azure Event Hubs は、大規模イベント/テレメトリの取り込み。 収集/統合/変換/クエリ/可視化/リアルタイムまで、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレス/マネージドで大規模処理",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/品質/ガバナンス統合",
+            "BI/ノートブック/ML と連携",
+            "柔軟な課金とスケーリング"
+          ],
+          "link": "https://azure.microsoft.com/services/event-hubs/"
+        },
+        {
+          "name": "Azure Data Explorer (Kusto)",
+          "summary": "ログ/時系列などのインタラクティブ探索。",
+          "details": "Azure Data Explorer (Kusto) は、ログ/時系列などのインタラクティブ探索。 収集/統合/変換/クエリ/可視化/リアルタイムまで、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレス/マネージドで大規模処理",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/品質/ガバナンス統合",
+            "BI/ノートブック/ML と連携",
+            "柔軟な課金とスケーリング"
+          ],
+          "link": "https://azure.microsoft.com/services/data-explorer/"
+        }
+      ]
+    },
+    {
+      "id": "compute",
+      "name": "コンピューティング",
+      "description": "仮想マシン、スケールセット、HPC、VMware 互換などの実行基盤。",
+      "services": [
+        {
+          "name": "Azure Virtual Machines",
+          "summary": "オンデマンド/予約/スポット等で利用できる IaaS 仮想マシン。",
+          "details": "Azure Virtual Machines は、オンデマンド/予約/スポット等で利用できる IaaS 仮想マシン。 可用性とスケールをクラウド標準で確保し、セキュリティと運用自動化のバランスを取りやすい実行基盤です。",
+          "features": [
+            "柔軟なスケーリングと高可用性",
+            "IAM/ネットワークでの安全な分離",
+            "Monitoring/Logging/Tracing の可観測性",
+            "IaC（Bicep/ARM/Terraform）で自動化",
+            "Private Link/VNet によるプライベート接続"
+          ],
+          "link": "https://azure.microsoft.com/services/virtual-machines/"
+        },
+        {
+          "name": "Virtual Machine Scale Sets",
+          "summary": "VM を自動的にスケールするスケールセット。",
+          "details": "Virtual Machine Scale Sets は、VM を自動的にスケールするスケールセット。 可用性とスケールをクラウド標準で確保し、セキュリティと運用自動化のバランスを取りやすい実行基盤です。",
+          "features": [
+            "柔軟なスケーリングと高可用性",
+            "IAM/ネットワークでの安全な分離",
+            "Monitoring/Logging/Tracing の可観測性",
+            "IaC（Bicep/ARM/Terraform）で自動化",
+            "Private Link/VNet によるプライベート接続"
+          ],
+          "link": "https://azure.microsoft.com/services/virtual-machine-scale-sets/"
+        },
+        {
+          "name": "Azure Batch",
+          "summary": "大規模バッチ/HPC ジョブをマネージドで実行。",
+          "details": "Azure Batch は、大規模バッチ/HPC ジョブをマネージドで実行。 可用性とスケールをクラウド標準で確保し、セキュリティと運用自動化のバランスを取りやすい実行基盤です。",
+          "features": [
+            "柔軟なスケーリングと高可用性",
+            "IAM/ネットワークでの安全な分離",
+            "Monitoring/Logging/Tracing の可観測性",
+            "IaC（Bicep/ARM/Terraform）で自動化",
+            "Private Link/VNet によるプライベート接続"
+          ],
+          "link": "https://azure.microsoft.com/services/batch/"
+        },
+        {
+          "name": "Azure Dedicated Host",
+          "summary": "物理ホストを専有して VM を実行。",
+          "details": "Azure Dedicated Host は、物理ホストを専有して VM を実行。 可用性とスケールをクラウド標準で確保し、セキュリティと運用自動化のバランスを取りやすい実行基盤です。",
+          "features": [
+            "柔軟なスケーリングと高可用性",
+            "IAM/ネットワークでの安全な分離",
+            "Monitoring/Logging/Tracing の可観測性",
+            "IaC（Bicep/ARM/Terraform）で自動化",
+            "Private Link/VNet によるプライベート接続"
+          ],
+          "link": "https://azure.microsoft.com/services/virtual-machines/dedicated-host/"
+        },
+        {
+          "name": "Azure VMware Solution (AVS)",
+          "summary": "VMware 環境を Azure 上でネイティブ実行。",
+          "details": "Azure VMware Solution (AVS) は、VMware 環境を Azure 上でネイティブ実行。 可用性とスケールをクラウド標準で確保し、セキュリティと運用自動化のバランスを取りやすい実行基盤です。",
+          "features": [
+            "柔軟なスケーリングと高可用性",
+            "IAM/ネットワークでの安全な分離",
+            "Monitoring/Logging/Tracing の可観測性",
+            "IaC（Bicep/ARM/Terraform）で自動化",
+            "Private Link/VNet によるプライベート接続"
+          ],
+          "link": "https://azure.microsoft.com/services/azure-vmware/"
+        },
+        {
+          "name": "Azure Spring Apps",
+          "summary": "Spring ベースのアプリ実行をマネージド提供。",
+          "details": "Azure Spring Apps は、Spring ベースのアプリ実行をマネージド提供。 可用性とスケールをクラウド標準で確保し、セキュリティと運用自動化のバランスを取りやすい実行基盤です。",
+          "features": [
+            "柔軟なスケーリングと高可用性",
+            "IAM/ネットワークでの安全な分離",
+            "Monitoring/Logging/Tracing の可観測性",
+            "IaC（Bicep/ARM/Terraform）で自動化",
+            "Private Link/VNet によるプライベート接続"
+          ],
+          "link": "https://azure.microsoft.com/services/spring-apps/"
+        },
+        {
+          "name": "Service Fabric",
+          "summary": "マイクロサービス/ステートフルサービスの分散基盤。",
+          "details": "Service Fabric は、マイクロサービス/ステートフルサービスの分散基盤。 可用性とスケールをクラウド標準で確保し、セキュリティと運用自動化のバランスを取りやすい実行基盤です。",
+          "features": [
+            "柔軟なスケーリングと高可用性",
+            "IAM/ネットワークでの安全な分離",
+            "Monitoring/Logging/Tracing の可観測性",
+            "IaC（Bicep/ARM/Terraform）で自動化",
+            "Private Link/VNet によるプライベート接続"
+          ],
+          "link": "https://azure.microsoft.com/services/service-fabric/"
+        }
+      ]
+    },
+    {
+      "id": "containers",
+      "name": "コンテナ / オーケストレーション",
+      "description": "Kubernetes、サーバーレスコンテナ、コンテナレジストリなど。",
+      "services": [
+        {
+          "name": "Azure Kubernetes Service (AKS)",
+          "summary": "マネージド Kubernetes。",
+          "details": "Azure Kubernetes Service (AKS) は、マネージド Kubernetes。 Kubernetes とサーバーレスコンテナの両輪で、迅速なリリースと一貫したセキュリティ/可観測性を実現します。",
+          "features": [
+            "オートスケール/ローリング/ブルーグリーン",
+            "コンテナイメージの署名/スキャン",
+            "サービスメッシュ/観測性の統合",
+            "Workload Identity/IAM による権限分離",
+            "マルチクラスター/ハイブリッド対応"
+          ],
+          "link": "https://azure.microsoft.com/services/kubernetes-service/"
         },
         {
           "name": "Azure Container Apps",
-          "summary": "マイクロサービスをマネージドコンテナで実行するサーバレス コンテナサービス。",
-          "details": "Azure Container Apps は、Kubernetes の知識がなくてもマイクロサービスやイベント駆動アプリを実行できるフルマネージド環境。KEDA によるイベントベースのスケーリングや Dapr のビルディングブロックを活用できます。",
+          "summary": "サーバーレスなコンテナアプリ実行。",
+          "details": "Azure Container Apps は、サーバーレスなコンテナアプリ実行。 Kubernetes とサーバーレスコンテナの両輪で、迅速なリリースと一貫したセキュリティ/可観測性を実現します。",
           "features": [
-            "ゼロまでスケールダウンする消費ベース課金",
-            "HTTP / キュー / カスタムメトリクスによる柔軟なスケーリング",
-            "リビジョン管理とトラフィックスプリットで段階的リリース",
-            "マネージド ID とシークレット管理で安全なサービス連携"
+            "オートスケール/ローリング/ブルーグリーン",
+            "コンテナイメージの署名/スキャン",
+            "サービスメッシュ/観測性の統合",
+            "Workload Identity/IAM による権限分離",
+            "マルチクラスター/ハイブリッド対応"
           ],
-          "link": "https://azure.microsoft.com/products/container-apps/"
+          "link": "https://azure.microsoft.com/services/container-apps/"
+        },
+        {
+          "name": "Azure Container Instances (ACI)",
+          "summary": "最小構成でコンテナを即時実行。",
+          "details": "Azure Container Instances (ACI) は、最小構成でコンテナを即時実行。 Kubernetes とサーバーレスコンテナの両輪で、迅速なリリースと一貫したセキュリティ/可観測性を実現します。",
+          "features": [
+            "オートスケール/ローリング/ブルーグリーン",
+            "コンテナイメージの署名/スキャン",
+            "サービスメッシュ/観測性の統合",
+            "Workload Identity/IAM による権限分離",
+            "マルチクラスター/ハイブリッド対応"
+          ],
+          "link": "https://azure.microsoft.com/services/container-instances/"
+        },
+        {
+          "name": "Azure Container Registry (ACR)",
+          "summary": "セキュアなプライベートコンテナレジストリ。",
+          "details": "Azure Container Registry (ACR) は、セキュアなプライベートコンテナレジストリ。 Kubernetes とサーバーレスコンテナの両輪で、迅速なリリースと一貫したセキュリティ/可観測性を実現します。",
+          "features": [
+            "オートスケール/ローリング/ブルーグリーン",
+            "コンテナイメージの署名/スキャン",
+            "サービスメッシュ/観測性の統合",
+            "Workload Identity/IAM による権限分離",
+            "マルチクラスター/ハイブリッド対応"
+          ],
+          "link": "https://azure.microsoft.com/services/container-registry/"
+        },
+        {
+          "name": "Azure Red Hat OpenShift (ARO)",
+          "summary": "Red Hat と共同提供のマネージド OpenShift。",
+          "details": "Azure Red Hat OpenShift (ARO) は、Red Hat と共同提供のマネージド OpenShift。 Kubernetes とサーバーレスコンテナの両輪で、迅速なリリースと一貫したセキュリティ/可観測性を実現します。",
+          "features": [
+            "オートスケール/ローリング/ブルーグリーン",
+            "コンテナイメージの署名/スキャン",
+            "サービスメッシュ/観測性の統合",
+            "Workload Identity/IAM による権限分離",
+            "マルチクラスター/ハイブリッド対応"
+          ],
+          "link": "https://azure.microsoft.com/services/openshift/"
+        }
+      ]
+    },
+    {
+      "id": "databases",
+      "name": "データベース",
+      "description": "RDBMS/NoSQL/インメモリ/分散台帳。",
+      "services": [
+        {
+          "name": "Azure SQL Database",
+          "summary": "フルマネージドの PaaS SQL。",
+          "details": "Azure SQL Database は、フルマネージドの PaaS SQL。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "自動バックアップ/高可用性/監視",
+            "スケールアップ/アウトの選択肢",
+            "VNet/Private Link のプライベート接続",
+            "移行ツール（DMS 等）との連携",
+            "SLA/サポートプランの適用対象"
+          ],
+          "link": "https://azure.microsoft.com/services/sql-database/"
+        },
+        {
+          "name": "Azure SQL Managed Instance",
+          "summary": "SQL Server 互換のマネージド実行環境。",
+          "details": "Azure SQL Managed Instance は、SQL Server 互換のマネージド実行環境。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "自動バックアップ/高可用性/監視",
+            "スケールアップ/アウトの選択肢",
+            "VNet/Private Link のプライベート接続",
+            "移行ツール（DMS 等）との連携",
+            "SLA/サポートプランの適用対象"
+          ],
+          "link": "https://azure.microsoft.com/services/sql-managed-instance/"
+        },
+        {
+          "name": "SQL Server on Azure Virtual Machines",
+          "summary": "IaaS 上で SQL Server を実行。",
+          "details": "SQL Server on Azure Virtual Machines は、IaaS 上で SQL Server を実行。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "自動バックアップ/高可用性/監視",
+            "スケールアップ/アウトの選択肢",
+            "VNet/Private Link のプライベート接続",
+            "移行ツール（DMS 等）との連携",
+            "SLA/サポートプランの適用対象"
+          ],
+          "link": "https://azure.microsoft.com/services/virtual-machines/sql-server/"
+        },
+        {
+          "name": "Azure Cosmos DB",
+          "summary": "グローバル分散の NoSQL（複数 API）。",
+          "details": "Azure Cosmos DB は、グローバル分散の NoSQL（複数 API）。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "自動バックアップ/高可用性/監視",
+            "スケールアップ/アウトの選択肢",
+            "VNet/Private Link のプライベート接続",
+            "移行ツール（DMS 等）との連携",
+            "SLA/サポートプランの適用対象"
+          ],
+          "link": "https://azure.microsoft.com/services/cosmos-db/"
+        },
+        {
+          "name": "Azure Database for PostgreSQL (Flexible Server)",
+          "summary": "マネージド PostgreSQL（Flexible）。",
+          "details": "Azure Database for PostgreSQL (Flexible Server) は、マネージド PostgreSQL（Flexible）。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "自動バックアップ/高可用性/監視",
+            "スケールアップ/アウトの選択肢",
+            "VNet/Private Link のプライベート接続",
+            "移行ツール（DMS 等）との連携",
+            "SLA/サポートプランの適用対象"
+          ],
+          "link": "https://azure.microsoft.com/services/postgresql/"
+        },
+        {
+          "name": "Azure Database for MySQL (Flexible Server)",
+          "summary": "マネージド MySQL（Flexible）。",
+          "details": "Azure Database for MySQL (Flexible Server) は、マネージド MySQL（Flexible）。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "自動バックアップ/高可用性/監視",
+            "スケールアップ/アウトの選択肢",
+            "VNet/Private Link のプライベート接続",
+            "移行ツール（DMS 等）との連携",
+            "SLA/サポートプランの適用対象"
+          ],
+          "link": "https://azure.microsoft.com/services/mysql/"
+        },
+        {
+          "name": "Azure Cache for Redis",
+          "summary": "マネージド Redis キャッシュ。",
+          "details": "Azure Cache for Redis は、マネージド Redis キャッシュ。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "自動バックアップ/高可用性/監視",
+            "スケールアップ/アウトの選択肢",
+            "VNet/Private Link のプライベート接続",
+            "移行ツール（DMS 等）との連携",
+            "SLA/サポートプランの適用対象"
+          ],
+          "link": "https://azure.microsoft.com/services/cache/"
+        },
+        {
+          "name": "Azure Database for PostgreSQL - Hyperscale (Citus)",
+          "summary": "分散 Postgres（Citus）で水平スケール。",
+          "details": "Azure Database for PostgreSQL - Hyperscale (Citus) は、分散 Postgres（Citus）で水平スケール。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "自動バックアップ/高可用性/監視",
+            "スケールアップ/アウトの選択肢",
+            "VNet/Private Link のプライベート接続",
+            "移行ツール（DMS 等）との連携",
+            "SLA/サポートプランの適用対象"
+          ],
+          "link": "https://azure.microsoft.com/services/postgresql/"
         }
       ]
     },
     {
       "id": "storage",
-      "name": "ストレージ",
-      "description": "オブジェクト、ファイル、ビッグデータ解析向けストレージサービス。",
+      "name": "ストレージ / BCDR",
+      "description": "オブジェクト/ファイル/ブロック、SAN、バックアップ/DR。",
       "services": [
         {
-          "name": "Azure Blob Storage",
-          "summary": "非構造化データを安全に保存できるオブジェクトストレージ。",
-          "details": "Azure Blob Storage は、画像やログ、バックアップなど大容量の非構造化データを耐久性高く保存。アクセス頻度に応じた階層化ストレージときめ細かなアクセス制御でコストとセキュリティを両立します。",
+          "name": "Azure Blob Storage（Data Lake Storage Gen2 含む）",
+          "summary": "オブジェクトストレージと HDFS 互換のデータレイク機能。",
+          "details": "Azure Blob Storage（Data Lake Storage Gen2 含む） は、オブジェクトストレージと HDFS 互換のデータレイク機能。 耐久性/可用性/暗号化/ライフサイクル/バックアップ/DR を要件に合わせて選択・自動化できます。",
           "features": [
-            "ホット / クール / アーカイブのアクセス階層を柔軟に選択",
-            "SAS とロールベースアクセス制御によるセキュアな共有",
-            "ライフサイクル管理で自動的に階層移行や削除を実行",
-            "静的ウェブサイト ホスティングやイベントトリガーに対応"
+            "高耐久/高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "大容量移行（Data Box/Import-Export）",
+            "バックアップ/DR の統合",
+            "Private Link/Firewall による境界制御"
           ],
-          "link": "https://azure.microsoft.com/products/storage/blobs/"
+          "link": "https://azure.microsoft.com/services/storage/blobs/"
         },
         {
           "name": "Azure Files",
-          "summary": "SMB / NFS で提供されるフルマネージド ファイル共有サービス。",
-          "details": "Azure Files は、Windows や Linux から SMB / NFS でマウントできるクラウドファイル共有を提供。オンプレミスとの同期や AD ベースの認証に対応し、アプリの Lift & Shift を容易にします。",
+          "summary": "SMB/NFS 対応のフルマネージドファイル共有。",
+          "details": "Azure Files は、SMB/NFS 対応のフルマネージドファイル共有。 耐久性/可用性/暗号化/ライフサイクル/バックアップ/DR を要件に合わせて選択・自動化できます。",
           "features": [
-            "Standard / Premium のパフォーマンス層を選択可能",
-            "Azure File Sync によるオンプレとの双方向同期",
-            "AD DS / AAD DS と連携したアイデンティティ管理",
-            "スナップショットとバックアップによるデータ保護"
+            "高耐久/高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "大容量移行（Data Box/Import-Export）",
+            "バックアップ/DR の統合",
+            "Private Link/Firewall による境界制御"
           ],
-          "link": "https://azure.microsoft.com/products/storage/files/"
+          "link": "https://azure.microsoft.com/services/storage/files/"
         },
         {
-          "name": "Azure Data Lake Storage Gen2",
-          "summary": "ビッグデータ分析向けの階層型ネームスペースを備えたストレージ基盤。",
-          "details": "Data Lake Storage Gen2 は、Azure Blob Storage をベースにビッグデータ分析に最適化されたストレージ。階層型ネームスペースと POSIX 互換 ACL を備え、Spark や Synapse Analytics から高速にアクセスできます。",
+          "name": "Azure Managed Disks",
+          "summary": "VM 向けのマネージドブロックストレージ。",
+          "details": "Azure Managed Disks は、VM 向けのマネージドブロックストレージ。 耐久性/可用性/暗号化/ライフサイクル/バックアップ/DR を要件に合わせて選択・自動化できます。",
           "features": [
-            "大規模データセットに最適な階層型ネームスペース",
-            "Azure AD ベースの細やかなアクセス制御",
-            "Synapse / Databricks / HDInsight とのネイティブ統合",
-            "高いスループットを実現するマルチプロトコルアクセス"
+            "高耐久/高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "大容量移行（Data Box/Import-Export）",
+            "バックアップ/DR の統合",
+            "Private Link/Firewall による境界制御"
           ],
-          "link": "https://azure.microsoft.com/products/storage/data-lake-storage/"
+          "link": "https://azure.microsoft.com/services/managed-disks/"
+        },
+        {
+          "name": "Azure Archive Storage",
+          "summary": "長期保管向けのアーカイブ層。",
+          "details": "Azure Archive Storage は、長期保管向けのアーカイブ層。 耐久性/可用性/暗号化/ライフサイクル/バックアップ/DR を要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久/高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "大容量移行（Data Box/Import-Export）",
+            "バックアップ/DR の統合",
+            "Private Link/Firewall による境界制御"
+          ],
+          "link": "https://azure.microsoft.com/services/storage/archive/"
+        },
+        {
+          "name": "Azure NetApp Files",
+          "summary": "エンタープライズ向け高性能ファイル。",
+          "details": "Azure NetApp Files は、エンタープライズ向け高性能ファイル。 耐久性/可用性/暗号化/ライフサイクル/バックアップ/DR を要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久/高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "大容量移行（Data Box/Import-Export）",
+            "バックアップ/DR の統合",
+            "Private Link/Firewall による境界制御"
+          ],
+          "link": "https://azure.microsoft.com/services/netapp/"
+        },
+        {
+          "name": "Azure Elastic SAN",
+          "summary": "スケーラブルなブロックストレージ（SAN as a Service）。",
+          "details": "Azure Elastic SAN は、スケーラブルなブロックストレージ（SAN as a Service）。 耐久性/可用性/暗号化/ライフサイクル/バックアップ/DR を要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久/高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "大容量移行（Data Box/Import-Export）",
+            "バックアップ/DR の統合",
+            "Private Link/Firewall による境界制御"
+          ],
+          "link": "https://azure.microsoft.com/services/elastic-san/"
+        },
+        {
+          "name": "Azure Backup",
+          "summary": "Azure/オンプレ資産のバックアップ/リストア。",
+          "details": "Azure Backup は、Azure/オンプレ資産のバックアップ/リストア。 耐久性/可用性/暗号化/ライフサイクル/バックアップ/DR を要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久/高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "大容量移行（Data Box/Import-Export）",
+            "バックアップ/DR の統合",
+            "Private Link/Firewall による境界制御"
+          ],
+          "link": "https://azure.microsoft.com/services/backup/"
+        },
+        {
+          "name": "Azure Site Recovery",
+          "summary": "障害対策/フェールオーバーを自動化。",
+          "details": "Azure Site Recovery は、障害対策/フェールオーバーを自動化。 耐久性/可用性/暗号化/ライフサイクル/バックアップ/DR を要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久/高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "大容量移行（Data Box/Import-Export）",
+            "バックアップ/DR の統合",
+            "Private Link/Firewall による境界制御"
+          ],
+          "link": "https://azure.microsoft.com/services/site-recovery/"
         }
       ]
     },
     {
       "id": "networking",
-      "name": "ネットワーク / 配信",
-      "description": "仮想ネットワーク、負荷分散、グローバル配信を実現するサービス群。",
+      "name": "ネットワーキング",
+      "description": "VNet/ゲートウェイ/負荷分散/ゼロトラスト/アプリ配信。",
       "services": [
         {
           "name": "Azure Virtual Network",
-          "summary": "クラウド上に論理的なネットワークを構成する基盤サービス。",
-          "details": "Virtual Network (VNet) は、クラウド内にプライベートなネットワーク空間を構成し、サブネットやセキュリティグループでトラフィックを制御。オンプレミスとの VPN / ExpressRoute 接続も柔軟に構成できます。",
+          "summary": "プライベートな仮想ネットワーク。",
+          "details": "Azure Virtual Network は、プライベートな仮想ネットワーク。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
           "features": [
-            "サブネット分割とネットワーク セキュリティ グループによるアクセス制御",
-            "VPN Gateway や ExpressRoute でのハイブリッド接続",
-            "サービス エンドポイント / プライベートリンクによる安全な PaaS 接続",
-            "DNS サービスや Bastion などネットワーク機能との統合"
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
           ],
-          "link": "https://azure.microsoft.com/products/virtual-network/"
+          "link": "https://azure.microsoft.com/services/virtual-network/"
+        },
+        {
+          "name": "VPN Gateway",
+          "summary": "サイト間/ポイント対サイトの VPN。",
+          "details": "VPN Gateway は、サイト間/ポイント対サイトの VPN。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
+          ],
+          "link": "https://azure.microsoft.com/services/vpn-gateway/"
+        },
+        {
+          "name": "ExpressRoute",
+          "summary": "専用線でのプライベート接続。",
+          "details": "ExpressRoute は、専用線でのプライベート接続。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
+          ],
+          "link": "https://azure.microsoft.com/services/expressroute/"
         },
         {
           "name": "Azure Load Balancer",
-          "summary": "L4 レベルの負荷分散と高可用性を提供するネットワークサービス。",
-          "details": "Azure Load Balancer は、仮想マシンや仮想マシンスケールセットにトラフィックを分散し、高可用性を実現。内部 / パブリックどちらのシナリオにも対応し、ヘルスプローブによる監視を備えています。",
+          "summary": "L4 ロードバランサ。",
+          "details": "Azure Load Balancer は、L4 ロードバランサ。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
           "features": [
-            "マルチゾーン配置による冗長性確保",
-            "アウトバウンド接続の SNAT を自動的に提供",
-            "TCP / UDP のロードバランシングをサポート",
-            "Azure Monitor と統合したメトリクス・診断ログ"
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
           ],
-          "link": "https://azure.microsoft.com/products/load-balancer/"
+          "link": "https://azure.microsoft.com/services/load-balancer/"
+        },
+        {
+          "name": "Application Gateway（WAF）",
+          "summary": "L7 ロードバランシングと WAF。",
+          "details": "Application Gateway（WAF） は、L7 ロードバランシングと WAF。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
+          ],
+          "link": "https://azure.microsoft.com/services/application-gateway/"
         },
         {
           "name": "Azure Front Door",
-          "summary": "グローバルなアプリ配信と WAF を備えたエッジ ネットワークサービス。",
-          "details": "Azure Front Door は、Microsoft のグローバル エッジ ネットワークからアプリを高速配信し、WAF や BOT 防御でセキュアに保護。ルール エンジンで柔軟なルーティングと A/B テストを実現できます。",
+          "summary": "グローバルアプリ配信/エッジ WAF/CDN。",
+          "details": "Azure Front Door は、グローバルアプリ配信/エッジ WAF/CDN。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
           "features": [
-            "動的サイトアクセラレーションとグローバル負荷分散",
-            "WAF ポリシーによるアプリケーション防御",
-            "URL ベース / モバイル アプリ向けのルーティング制御",
-            "Custom Domains と Azure AD 認証をサポート"
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
           ],
-          "link": "https://azure.microsoft.com/products/frontdoor/"
+          "link": "https://azure.microsoft.com/services/frontdoor/"
+        },
+        {
+          "name": "Azure DNS",
+          "summary": "高可用な DNS ホスティング。",
+          "details": "Azure DNS は、高可用な DNS ホスティング。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
+          ],
+          "link": "https://azure.microsoft.com/services/dns/"
+        },
+        {
+          "name": "Traffic Manager",
+          "summary": "DNS ベースのトラフィック分散。",
+          "details": "Traffic Manager は、DNS ベースのトラフィック分散。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
+          ],
+          "link": "https://azure.microsoft.com/services/traffic-manager/"
+        },
+        {
+          "name": "NAT Gateway",
+          "summary": "アウトバウンドのスケーラブル NAT。",
+          "details": "NAT Gateway は、アウトバウンドのスケーラブル NAT。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
+          ],
+          "link": "https://azure.microsoft.com/services/nat-gateway/"
+        },
+        {
+          "name": "Azure Bastion",
+          "summary": "ブラウザから安全に VM へ接続。",
+          "details": "Azure Bastion は、ブラウザから安全に VM へ接続。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
+          ],
+          "link": "https://azure.microsoft.com/services/azure-bastion/"
+        },
+        {
+          "name": "Private Link / Private Endpoint",
+          "summary": "PaaS へのプライベート接続。",
+          "details": "Private Link / Private Endpoint は、PaaS へのプライベート接続。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
+          ],
+          "link": "https://azure.microsoft.com/services/private-link/"
+        },
+        {
+          "name": "Azure Virtual WAN",
+          "summary": "広域ネットワークを一元運用。",
+          "details": "Azure Virtual WAN は、広域ネットワークを一元運用。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
+          ],
+          "link": "https://azure.microsoft.com/services/virtual-wan/"
+        },
+        {
+          "name": "Route Server",
+          "summary": "NVA と BGP を簡素化。",
+          "details": "Route Server は、NVA と BGP を簡素化。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
+          ],
+          "link": "https://azure.microsoft.com/services/route-server/"
+        },
+        {
+          "name": "Azure Firewall",
+          "summary": "マネージド L3–L7 ファイアウォール。",
+          "details": "Azure Firewall は、マネージド L3–L7 ファイアウォール。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
+          ],
+          "link": "https://azure.microsoft.com/services/azure-firewall/"
+        },
+        {
+          "name": "Azure DDoS Protection",
+          "summary": "DDoS 防御（標準/基本）。",
+          "details": "Azure DDoS Protection は、DDoS 防御（標準/基本）。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
+          ],
+          "link": "https://azure.microsoft.com/services/ddos-protection/"
+        },
+        {
+          "name": "Network Watcher",
+          "summary": "トラフィック解析/トラブルシュート。",
+          "details": "Network Watcher は、トラフィック解析/トラブルシュート。 低遅延/高スループットな接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバル配信/エッジ最適化（Front Door）",
+            "多段 LB とアプリ保護（WAF/DDoS）",
+            "ハイブリッド接続（ExpressRoute/VPN）",
+            "VNet/NSG/ASG によるセグメント化",
+            "詳細なトラブルシュート/可視化"
+          ],
+          "link": "https://azure.microsoft.com/services/network-watcher/"
         }
       ]
     },
     {
-      "id": "database",
-      "name": "データベース",
-      "description": "リレーショナルからグローバル分散 NoSQL まで対応するデータベース サービス。",
+      "id": "identity",
+      "name": "アイデンティティ（Microsoft Entra）",
+      "description": "従業員/顧客/アプリの ID とアクセス管理。",
       "services": [
         {
-          "name": "Azure SQL Database",
-          "summary": "フルマネージドな SQL Server 互換データベース。",
-          "details": "Azure SQL Database は、SQL Server ベースの PaaS データベースで、自動バックアップやポイントインタイムリストア、高可用性を標準で提供。サーバレスやハイパースケールなど柔軟な展開モデルを選択できます。",
+          "name": "Microsoft Entra ID（旧 Azure AD）",
+          "summary": "ID/認証/ポリシー/保護の中核。",
+          "details": "Microsoft Entra ID（旧 Azure AD） は、ID/認証/ポリシー/保護の中核。 Zero Trust を前提に、認証/認可/制御/監査を統合しガバナンスを強化します。",
           "features": [
-            "自動チューニングと脆弱性評価による性能・セキュリティ最適化",
-            "自動スケール対応のサーバレスコンピュート層",
-            "Always Encrypted や AAD 認証によるセキュリティ強化",
-            "Azure Synapse / Power BI との統合で分析基盤を構築"
+            "SSO/MFA/条件付きアクセス",
+            "ID ライフサイクル/プロビジョニング",
+            "B2B/B2C/外部 ID 対応",
+            "監査/レポート/ログ統合",
+            "Zero Trust のガードレール"
           ],
-          "link": "https://azure.microsoft.com/products/azure-sql/database/"
+          "link": "https://learn.microsoft.com/entra/identity/"
         },
         {
-          "name": "Azure Cosmos DB",
-          "summary": "マルチモデル・グローバル分散型の NoSQL データベース。",
-          "details": "Azure Cosmos DB は、ドキュメント、キー・値、グラフなど複数モデルをサポートするフルマネージド NoSQL。任意のリージョンにスケールアウトし、ミリ秒のレイテンシと 99 パーセンタイル SLA を提供します。",
+          "name": "Microsoft Entra External ID",
+          "summary": "B2C/B2B など外部 ID 管理。",
+          "details": "Microsoft Entra External ID は、B2C/B2B など外部 ID 管理。 Zero Trust を前提に、認証/認可/制御/監査を統合しガバナンスを強化します。",
           "features": [
-            "グローバル分散と自動マルチマスター レプリケーション",
-            "5 種類の整合性レベルを選択可能",
-            "自動インデックス作成とサーバレス コンピュート",
-            "SDK とネイティブ API (Core / MongoDB / Cassandra 等) を提供"
+            "SSO/MFA/条件付きアクセス",
+            "ID ライフサイクル/プロビジョニング",
+            "B2B/B2C/外部 ID 対応",
+            "監査/レポート/ログ統合",
+            "Zero Trust のガードレール"
           ],
-          "link": "https://azure.microsoft.com/products/cosmos-db/"
+          "link": "https://learn.microsoft.com/entra/external-id/"
         },
         {
-          "name": "Azure Database for PostgreSQL",
-          "summary": "PostgreSQL を完全マネージドで提供する PaaS。",
-          "details": "Azure Database for PostgreSQL は、PostgreSQL を高可用かつセキュアに運用できるマネージドサービス。フレキシブル サーバー モデルではゾーン冗長や停止時のコスト最適化が可能です。",
+          "name": "Microsoft Entra Verified ID",
+          "summary": "分散型 ID（DID）による検証可能な資格情報。",
+          "details": "Microsoft Entra Verified ID は、分散型 ID（DID）による検証可能な資格情報。 Zero Trust を前提に、認証/認可/制御/監査を統合しガバナンスを強化します。",
           "features": [
-            "フレキシブル サーバーでのきめ細かなスケールとメンテナンス制御",
-            "ポイントインタイム リストアと自動バックアップ",
-            "仮想ネットワーク統合とファイアウォールによる保護",
-            "Azure Monitor と統合したメトリクス / ログ収集"
+            "SSO/MFA/条件付きアクセス",
+            "ID ライフサイクル/プロビジョニング",
+            "B2B/B2C/外部 ID 対応",
+            "監査/レポート/ログ統合",
+            "Zero Trust のガードレール"
           ],
-          "link": "https://azure.microsoft.com/products/postgresql/"
+          "link": "https://learn.microsoft.com/entra/verified-id/"
+        },
+        {
+          "name": "Microsoft Entra Domain Services",
+          "summary": "ドメインサービス（Kerberos/LDAP）をマネージド提供。",
+          "details": "Microsoft Entra Domain Services は、ドメインサービス（Kerberos/LDAP）をマネージド提供。 Zero Trust を前提に、認証/認可/制御/監査を統合しガバナンスを強化します。",
+          "features": [
+            "SSO/MFA/条件付きアクセス",
+            "ID ライフサイクル/プロビジョニング",
+            "B2B/B2C/外部 ID 対応",
+            "監査/レポート/ログ統合",
+            "Zero Trust のガードレール"
+          ],
+          "link": "https://learn.microsoft.com/entra/identity/domain-services/"
         }
       ]
     },
     {
-      "id": "ai-ml",
-      "name": "AI / 機械学習",
-      "description": "機械学習モデルの構築から推論、AI API までをカバーするサービス。",
+      "id": "security",
+      "name": "セキュリティ",
+      "description": "クラウドセキュリティ管理、SIEM/SOAR、鍵/証明書、機密計算。",
       "services": [
         {
-          "name": "Azure Machine Learning",
-          "summary": "ML モデルの開発・学習・推論をエンドツーエンドで支援するプラットフォーム。",
-          "details": "Azure Machine Learning は、データ準備からモデルトレーニング、MLOps までを支える包括的なサービス。コンピュート クラスタや自動 ML、Responsible AI ツールを提供します。",
+          "name": "Microsoft Defender for Cloud",
+          "summary": "クラウド資産の姿勢管理/CNAPP/脅威防御。",
+          "details": "Microsoft Defender for Cloud は、クラウド資産の姿勢管理/CNAPP/脅威防御。 クラウド姿勢管理、脅威検出、鍵/証明書/機密計算を横断的にカバーします。",
           "features": [
-            "AutoML とドラッグ & ドロップ Designer による素早い検証",
-            "Kubernetes / AML エンドポイントへの一貫したデプロイ",
-            "MLflow / Git 連携によるモデルバージョン管理",
-            "Responsible AI ダッシュボードでのバイアス / 解釈性チェック"
+            "クラウド姿勢管理と脅威検出",
+            "鍵/証明書/シークレット管理",
+            "機密計算/隔離実行",
+            "SIEM/SOAR による運用",
+            "ポリシー/ガードレール適用"
           ],
-          "link": "https://azure.microsoft.com/products/machine-learning/"
+          "link": "https://azure.microsoft.com/services/defender-for-cloud/"
         },
         {
-          "name": "Azure Cognitive Services",
-          "summary": "視覚・音声・言語などの AI 機能を API として提供。",
-          "details": "Cognitive Services は、画像認識、音声合成、翻訳などの AI 機能を REST API として提供。アプリに簡単に組み込み、エンタープライズ水準のセキュリティと可用性を確保できます。",
+          "name": "Microsoft Sentinel",
+          "summary": "SIEM/SOAR によるセキュリティ運用。",
+          "details": "Microsoft Sentinel は、SIEM/SOAR によるセキュリティ運用。 クラウド姿勢管理、脅威検出、鍵/証明書/機密計算を横断的にカバーします。",
           "features": [
-            "Vision / Speech / Language / Decision の幅広い API 群",
-            "Custom Vision や Language Studio でモデルをカスタマイズ",
-            "Azure AD とロールベースアクセス制御で安全に利用",
-            "コンテナ化してオンプレミスやエッジでも実行可能"
+            "クラウド姿勢管理と脅威検出",
+            "鍵/証明書/シークレット管理",
+            "機密計算/隔離実行",
+            "SIEM/SOAR による運用",
+            "ポリシー/ガードレール適用"
           ],
-          "link": "https://azure.microsoft.com/products/cognitive-services/"
+          "link": "https://azure.microsoft.com/services/microsoft-sentinel/"
         },
         {
-          "name": "Azure OpenAI Service",
-          "summary": "GPT や DALL·E などの大規模言語モデルを企業向けに提供。",
-          "details": "Azure OpenAI Service は、OpenAI の基盤モデルを Azure 上で提供し、責任ある AI ガバナンスと企業向けセキュリティを付与。API キー管理や内容フィルタリングで安全な生成 AI 活用を支援します。",
+          "name": "Azure Key Vault",
+          "summary": "鍵/シークレット/証明書の安全な保管。",
+          "details": "Azure Key Vault は、鍵/シークレット/証明書の安全な保管。 クラウド姿勢管理、脅威検出、鍵/証明書/機密計算を横断的にカバーします。",
           "features": [
-            "GPT-4 / GPT-35-Turbo / Embeddings など多彩なモデル",
-            "Azure AD とロールベースアクセス制御による認証",
-            "コンテンツフィルタリングと利用制限ポリシー",
-            "Azure Machine Learning や Cognitive Search との連携"
+            "クラウド姿勢管理と脅威検出",
+            "鍵/証明書/シークレット管理",
+            "機密計算/隔離実行",
+            "SIEM/SOAR による運用",
+            "ポリシー/ガードレール適用"
           ],
-          "link": "https://azure.microsoft.com/products/cognitive-services/openai-service/"
+          "link": "https://azure.microsoft.com/services/key-vault/"
+        },
+        {
+          "name": "Azure Key Vault Managed HSM",
+          "summary": "FIPS 対応のマネージド HSM。",
+          "details": "Azure Key Vault Managed HSM は、FIPS 対応のマネージド HSM。 クラウド姿勢管理、脅威検出、鍵/証明書/機密計算を横断的にカバーします。",
+          "features": [
+            "クラウド姿勢管理と脅威検出",
+            "鍵/証明書/シークレット管理",
+            "機密計算/隔離実行",
+            "SIEM/SOAR による運用",
+            "ポリシー/ガードレール適用"
+          ],
+          "link": "https://azure.microsoft.com/services/key-vault/managed-hsm/"
+        },
+        {
+          "name": "Azure Confidential Computing",
+          "summary": "機密計算（TEE/Confidential VM）を提供。",
+          "details": "Azure Confidential Computing は、機密計算（TEE/Confidential VM）を提供。 クラウド姿勢管理、脅威検出、鍵/証明書/機密計算を横断的にカバーします。",
+          "features": [
+            "クラウド姿勢管理と脅威検出",
+            "鍵/証明書/シークレット管理",
+            "機密計算/隔離実行",
+            "SIEM/SOAR による運用",
+            "ポリシー/ガードレール適用"
+          ],
+          "link": "https://azure.microsoft.com/solutions/confidential-compute/"
         }
       ]
     },
     {
       "id": "management",
-      "name": "運用・セキュリティ管理",
-      "description": "監視やセキュリティ、ガバナンスを統合的に強化するサービス。",
+      "name": "運用管理 / ガバナンス",
+      "description": "監視/ログ/アドバイザ/構成/自動化/コスト/可視化。",
       "services": [
         {
           "name": "Azure Monitor",
-          "summary": "Azure 全体のテレメトリを集約し、可観測性を高める監視基盤。",
-          "details": "Azure Monitor は、メトリクスやログ、分散トレースを集約してシステムの稼働状況を可視化。アラートやダッシュボード、Log Analytics での高度な分析を通じて運用改善を支援します。",
+          "summary": "メトリクス/ログ/アラート/ダッシュボード。",
+          "details": "Azure Monitor は、メトリクス/ログ/アラート/ダッシュボード。 メトリクス/ログ/トレース/アドバイス/ポリシー/コストを統合し、SRE 実践を後押しします。",
           "features": [
-            "Log Analytics ワークスペースでの KQL クエリ分析",
-            "Application Insights によるアプリの分散トレーシング",
-            "アラート ルールとアクション グループで迅速な通知",
-            "Azure Managed Grafana や Power BI とのビジュアライズ統合"
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "ガバナンス/ポリシー/配賦",
+            "大規模資産の横断クエリ",
+            "ベストプラクティス推奨"
           ],
-          "link": "https://azure.microsoft.com/products/monitor/"
+          "link": "https://azure.microsoft.com/services/monitor/"
         },
         {
-          "name": "Microsoft Defender for Cloud",
-          "summary": "マルチクラウドを対象にしたクラウド セキュリティ態勢管理 (CSPM) / ワークロード保護。",
-          "details": "Defender for Cloud は、Azure / AWS / GCP を横断してセキュリティ評価と脅威検出を行うサービス。セキュア スコアや推奨事項でセキュリティギャップを明確化し、ワークロード保護プランで侵入を検知します。",
+          "name": "Log Analytics / Azure Monitor Logs",
+          "summary": "ログ収集/クエリ/分析（KQL）。",
+          "details": "Log Analytics / Azure Monitor Logs は、ログ収集/クエリ/分析（KQL）。 メトリクス/ログ/トレース/アドバイス/ポリシー/コストを統合し、SRE 実践を後押しします。",
           "features": [
-            "セキュア スコアに基づく改善タスクの提示",
-            "リアルタイムの脅威検出とアラート通知",
-            "ハイブリッド / マルチクラウド資産の自動発見",
-            "Logic Apps や Microsoft Sentinel と連携した自動化"
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "ガバナンス/ポリシー/配賦",
+            "大規模資産の横断クエリ",
+            "ベストプラクティス推奨"
           ],
-          "link": "https://azure.microsoft.com/products/defender-for-cloud/"
+          "link": "https://azure.microsoft.com/services/monitor/"
+        },
+        {
+          "name": "Application Insights",
+          "summary": "アプリの可観測性/分散トレース。",
+          "details": "Application Insights は、アプリの可観測性/分散トレース。 メトリクス/ログ/トレース/アドバイス/ポリシー/コストを統合し、SRE 実践を後押しします。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "ガバナンス/ポリシー/配賦",
+            "大規模資産の横断クエリ",
+            "ベストプラクティス推奨"
+          ],
+          "link": "https://azure.microsoft.com/services/monitor/"
+        },
+        {
+          "name": "Azure Advisor",
+          "summary": "コスト/セキュリティ/信頼性の推奨。",
+          "details": "Azure Advisor は、コスト/セキュリティ/信頼性の推奨。 メトリクス/ログ/トレース/アドバイス/ポリシー/コストを統合し、SRE 実践を後押しします。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "ガバナンス/ポリシー/配賦",
+            "大規模資産の横断クエリ",
+            "ベストプラクティス推奨"
+          ],
+          "link": "https://azure.microsoft.com/services/advisor/"
         },
         {
           "name": "Azure Policy",
-          "summary": "リソースへのガバナンスとコンプライアンスを強制するポリシー管理サービス。",
-          "details": "Azure Policy は、リソース構成をコード化したポリシーで評価・準拠させる仕組み。違反検出だけでなく、修復タスクを自動実行し、組織全体のガバナンスを効率化します。",
+          "summary": "構成のガバナンス/コンプライアンスを評価/強制。",
+          "details": "Azure Policy は、構成のガバナンス/コンプライアンスを評価/強制。 メトリクス/ログ/トレース/アドバイス/ポリシー/コストを統合し、SRE 実践を後押しします。",
           "features": [
-            "組み込みポリシーとイニシアチブによる迅速な適用",
-            "ポリシー違反のリアルタイム可視化と監査ログ",
-            "Azure DevOps / GitHub との統合によるポリシー as Code",
-            "Remediation タスクによる自動修復アクション"
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "ガバナンス/ポリシー/配賦",
+            "大規模資産の横断クエリ",
+            "ベストプラクティス推奨"
           ],
-          "link": "https://azure.microsoft.com/products/azure-policy/"
+          "link": "https://azure.microsoft.com/services/azure-policy/"
+        },
+        {
+          "name": "Azure Resource Manager (ARM)",
+          "summary": "リソースの宣言的管理/API。",
+          "details": "Azure Resource Manager (ARM) は、リソースの宣言的管理/API。 メトリクス/ログ/トレース/アドバイス/ポリシー/コストを統合し、SRE 実践を後押しします。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "ガバナンス/ポリシー/配賦",
+            "大規模資産の横断クエリ",
+            "ベストプラクティス推奨"
+          ],
+          "link": "https://learn.microsoft.com/azure/azure-resource-manager/"
+        },
+        {
+          "name": "Azure Resource Graph",
+          "summary": "大規模環境の資産クエリ。",
+          "details": "Azure Resource Graph は、大規模環境の資産クエリ。 メトリクス/ログ/トレース/アドバイス/ポリシー/コストを統合し、SRE 実践を後押しします。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "ガバナンス/ポリシー/配賦",
+            "大規模資産の横断クエリ",
+            "ベストプラクティス推奨"
+          ],
+          "link": "https://learn.microsoft.com/azure/governance/resource-graph/"
+        },
+        {
+          "name": "Azure Automation",
+          "summary": "Runbook/更新管理/Hybrid Worker。",
+          "details": "Azure Automation は、Runbook/更新管理/Hybrid Worker。 メトリクス/ログ/トレース/アドバイス/ポリシー/コストを統合し、SRE 実践を後押しします。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "ガバナンス/ポリシー/配賦",
+            "大規模資産の横断クエリ",
+            "ベストプラクティス推奨"
+          ],
+          "link": "https://azure.microsoft.com/services/automation/"
+        },
+        {
+          "name": "Azure Update Manager",
+          "summary": "OS パッチ/更新のスケジュール管理。",
+          "details": "Azure Update Manager は、OS パッチ/更新のスケジュール管理。 メトリクス/ログ/トレース/アドバイス/ポリシー/コストを統合し、SRE 実践を後押しします。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "ガバナンス/ポリシー/配賦",
+            "大規模資産の横断クエリ",
+            "ベストプラクティス推奨"
+          ],
+          "link": "https://learn.microsoft.com/azure/update-manager/overview"
+        },
+        {
+          "name": "Azure Service Health",
+          "summary": "Azure イベント/メンテ情報の可視化。",
+          "details": "Azure Service Health は、Azure イベント/メンテ情報の可視化。 メトリクス/ログ/トレース/アドバイス/ポリシー/コストを統合し、SRE 実践を後押しします。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "ガバナンス/ポリシー/配賦",
+            "大規模資産の横断クエリ",
+            "ベストプラクティス推奨"
+          ],
+          "link": "https://azure.microsoft.com/features/service-health/"
+        },
+        {
+          "name": "Azure Cost Management + Billing",
+          "summary": "コスト可視化/予算/配賦。",
+          "details": "Azure Cost Management + Billing は、コスト可視化/予算/配賦。 メトリクス/ログ/トレース/アドバイス/ポリシー/コストを統合し、SRE 実践を後押しします。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "ガバナンス/ポリシー/配賦",
+            "大規模資産の横断クエリ",
+            "ベストプラクティス推奨"
+          ],
+          "link": "https://azure.microsoft.com/services/cost-management/"
+        },
+        {
+          "name": "Azure Lighthouse",
+          "summary": "マルチテナント/マルチサブスクリプション運用。",
+          "details": "Azure Lighthouse は、マルチテナント/マルチサブスクリプション運用。 メトリクス/ログ/トレース/アドバイス/ポリシー/コストを統合し、SRE 実践を後押しします。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "ガバナンス/ポリシー/配賦",
+            "大規模資産の横断クエリ",
+            "ベストプラクティス推奨"
+          ],
+          "link": "https://azure.microsoft.com/services/lighthouse/"
+        }
+      ]
+    },
+    {
+      "id": "integration",
+      "name": "統合 / メッセージング / API",
+      "description": "API 管理、イベント/メッセージ、ワークフロー連携。",
+      "services": [
+        {
+          "name": "Azure API Management",
+          "summary": "API の公開/保護/分析/開発者ポータル。",
+          "details": "Azure API Management は、API の公開/保護/分析/開発者ポータル。 API/イベント/メッセージ/ワークフローを標準化し、疎結合な統合を迅速に実装できます。",
+          "features": [
+            "API 設計/公開/保護/分析",
+            "イベント駆動/メッセージングの統合",
+            "ハイブリッド/マルチクラウドに適合",
+            "開発者ポータル/契約/レート制御",
+            "監視/トレース/診断"
+          ],
+          "link": "https://azure.microsoft.com/services/api-management/"
+        },
+        {
+          "name": "Azure Logic Apps",
+          "summary": "ノーコード/ローコードの統合/自動化。",
+          "details": "Azure Logic Apps は、ノーコード/ローコードの統合/自動化。 API/イベント/メッセージ/ワークフローを標準化し、疎結合な統合を迅速に実装できます。",
+          "features": [
+            "API 設計/公開/保護/分析",
+            "イベント駆動/メッセージングの統合",
+            "ハイブリッド/マルチクラウドに適合",
+            "開発者ポータル/契約/レート制御",
+            "監視/トレース/診断"
+          ],
+          "link": "https://azure.microsoft.com/services/logic-apps/"
+        },
+        {
+          "name": "Azure Event Grid",
+          "summary": "イベント駆動アーキテクチャのハブ。",
+          "details": "Azure Event Grid は、イベント駆動アーキテクチャのハブ。 API/イベント/メッセージ/ワークフローを標準化し、疎結合な統合を迅速に実装できます。",
+          "features": [
+            "API 設計/公開/保護/分析",
+            "イベント駆動/メッセージングの統合",
+            "ハイブリッド/マルチクラウドに適合",
+            "開発者ポータル/契約/レート制御",
+            "監視/トレース/診断"
+          ],
+          "link": "https://azure.microsoft.com/services/event-grid/"
+        },
+        {
+          "name": "Azure Service Bus",
+          "summary": "高信頼メッセージング。",
+          "details": "Azure Service Bus は、高信頼メッセージング。 API/イベント/メッセージ/ワークフローを標準化し、疎結合な統合を迅速に実装できます。",
+          "features": [
+            "API 設計/公開/保護/分析",
+            "イベント駆動/メッセージングの統合",
+            "ハイブリッド/マルチクラウドに適合",
+            "開発者ポータル/契約/レート制御",
+            "監視/トレース/診断"
+          ],
+          "link": "https://azure.microsoft.com/services/service-bus/"
+        }
+      ]
+    },
+    {
+      "id": "iot",
+      "name": "IoT / デジタルツイン",
+      "description": "デバイス接続/管理、デジタルツイン、エッジ推論、セキュア MCU。",
+      "services": [
+        {
+          "name": "Azure IoT Hub",
+          "summary": "デバイスのセキュアな接続/管理。",
+          "details": "Azure IoT Hub は、デバイスのセキュアな接続/管理。 デバイス接続/管理/分析/デジタルツイン/エッジ処理を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/管理",
+            "ゼロタッチ導入/OTA 更新",
+            "時系列/イベントの収集/分析",
+            "デジタルツインのモデリング/グラフ",
+            "エッジでのローカル処理/ML 推論"
+          ],
+          "link": "https://azure.microsoft.com/services/iot-hub/"
+        },
+        {
+          "name": "Azure IoT Central",
+          "summary": "マルチテナント IoT SaaS。",
+          "details": "Azure IoT Central は、マルチテナント IoT SaaS。 デバイス接続/管理/分析/デジタルツイン/エッジ処理を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/管理",
+            "ゼロタッチ導入/OTA 更新",
+            "時系列/イベントの収集/分析",
+            "デジタルツインのモデリング/グラフ",
+            "エッジでのローカル処理/ML 推論"
+          ],
+          "link": "https://azure.microsoft.com/services/iot-central/"
+        },
+        {
+          "name": "Device Provisioning Service (DPS)",
+          "summary": "大量デバイスのゼロタッチプロビジョニング。",
+          "details": "Device Provisioning Service (DPS) は、大量デバイスのゼロタッチプロビジョニング。 デバイス接続/管理/分析/デジタルツイン/エッジ処理を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/管理",
+            "ゼロタッチ導入/OTA 更新",
+            "時系列/イベントの収集/分析",
+            "デジタルツインのモデリング/グラフ",
+            "エッジでのローカル処理/ML 推論"
+          ],
+          "link": "https://azure.microsoft.com/services/iot-hub/dps/"
+        },
+        {
+          "name": "Azure Digital Twins",
+          "summary": "現実世界のモデル化/関係性グラフ。",
+          "details": "Azure Digital Twins は、現実世界のモデル化/関係性グラフ。 デバイス接続/管理/分析/デジタルツイン/エッジ処理を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/管理",
+            "ゼロタッチ導入/OTA 更新",
+            "時系列/イベントの収集/分析",
+            "デジタルツインのモデリング/グラフ",
+            "エッジでのローカル処理/ML 推論"
+          ],
+          "link": "https://azure.microsoft.com/services/digital-twins/"
+        },
+        {
+          "name": "Azure IoT Edge",
+          "summary": "エッジでのローカル処理/ML 実行。",
+          "details": "Azure IoT Edge は、エッジでのローカル処理/ML 実行。 デバイス接続/管理/分析/デジタルツイン/エッジ処理を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/管理",
+            "ゼロタッチ導入/OTA 更新",
+            "時系列/イベントの収集/分析",
+            "デジタルツインのモデリング/グラフ",
+            "エッジでのローカル処理/ML 推論"
+          ],
+          "link": "https://azure.microsoft.com/services/iot-edge/"
+        },
+        {
+          "name": "Azure Sphere",
+          "summary": "MCU デバイスのセキュアOS/サービス。",
+          "details": "Azure Sphere は、MCU デバイスのセキュアOS/サービス。 デバイス接続/管理/分析/デジタルツイン/エッジ処理を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/管理",
+            "ゼロタッチ導入/OTA 更新",
+            "時系列/イベントの収集/分析",
+            "デジタルツインのモデリング/グラフ",
+            "エッジでのローカル処理/ML 推論"
+          ],
+          "link": "https://azure.microsoft.com/services/azure-sphere/"
+        }
+      ]
+    },
+    {
+      "id": "hybrid",
+      "name": "ハイブリッド / マルチクラウド / エッジ",
+      "description": "オンプレ/他クラウド/エッジの一元運用と配置。",
+      "services": [
+        {
+          "name": "Azure Arc",
+          "summary": "Azure の管理/ID/ポリシーをハイブリッドに拡張。",
+          "details": "Azure Arc は、Azure の管理/ID/ポリシーをハイブリッドに拡張。 オンプレ/他クラウド/エッジと組み合わせ、一元的なポリシーと運用を実現します。",
+          "features": [
+            "オンプレ/他クラウド/エッジの一元運用",
+            "一貫した ID/ポリシー/監視",
+            "オフライン/低遅延要件に適合",
+            "専用ハード/接続で安定性能",
+            "規制/主権要件への配慮"
+          ],
+          "link": "https://azure.microsoft.com/services/azure-arc/"
+        },
+        {
+          "name": "Azure Stack HCI",
+          "summary": "ハイパーコンバージド基盤の Azure 連携。",
+          "details": "Azure Stack HCI は、ハイパーコンバージド基盤の Azure 連携。 オンプレ/他クラウド/エッジと組み合わせ、一元的なポリシーと運用を実現します。",
+          "features": [
+            "オンプレ/他クラウド/エッジの一元運用",
+            "一貫した ID/ポリシー/監視",
+            "オフライン/低遅延要件に適合",
+            "専用ハード/接続で安定性能",
+            "規制/主権要件への配慮"
+          ],
+          "link": "https://azure.microsoft.com/products/azure-stack/hci/"
+        },
+        {
+          "name": "Azure Stack Hub",
+          "summary": "自己運用型の Azure 環境。",
+          "details": "Azure Stack Hub は、自己運用型の Azure 環境。 オンプレ/他クラウド/エッジと組み合わせ、一元的なポリシーと運用を実現します。",
+          "features": [
+            "オンプレ/他クラウド/エッジの一元運用",
+            "一貫した ID/ポリシー/監視",
+            "オフライン/低遅延要件に適合",
+            "専用ハード/接続で安定性能",
+            "規制/主権要件への配慮"
+          ],
+          "link": "https://azure.microsoft.com/products/azure-stack/hub/"
+        },
+        {
+          "name": "Azure Stack Edge",
+          "summary": "エッジでの推論/キャッシュ/転送デバイス。",
+          "details": "Azure Stack Edge は、エッジでの推論/キャッシュ/転送デバイス。 オンプレ/他クラウド/エッジと組み合わせ、一元的なポリシーと運用を実現します。",
+          "features": [
+            "オンプレ/他クラウド/エッジの一元運用",
+            "一貫した ID/ポリシー/監視",
+            "オフライン/低遅延要件に適合",
+            "専用ハード/接続で安定性能",
+            "規制/主権要件への配慮"
+          ],
+          "link": "https://azure.microsoft.com/products/azure-stack/edge/"
+        }
+      ]
+    },
+    {
+      "id": "migration",
+      "name": "マイグレーション",
+      "description": "アセスメント、サーバ/DB 移行、データ搬送、リージョン移動。",
+      "services": [
+        {
+          "name": "Azure Migrate",
+          "summary": "移行アセスメント/モビリティの統合ポータル。",
+          "details": "Azure Migrate は、移行アセスメント/モビリティの統合ポータル。 現状可視化から移行/データ搬送/切替までの最短経路を提供します。",
+          "features": [
+            "アセスメント/依存解析/計画",
+            "最小停止でのサーバ/DB 移行",
+            "オンライン/オフラインのデータ搬送",
+            "リージョン間移動の簡素化",
+            "検証/ロールバックを設計"
+          ],
+          "link": "https://azure.microsoft.com/services/azure-migrate/"
+        },
+        {
+          "name": "Azure Database Migration Service",
+          "summary": "同種/異種 DB の移行/レプリケーション。",
+          "details": "Azure Database Migration Service は、同種/異種 DB の移行/レプリケーション。 現状可視化から移行/データ搬送/切替までの最短経路を提供します。",
+          "features": [
+            "アセスメント/依存解析/計画",
+            "最小停止でのサーバ/DB 移行",
+            "オンライン/オフラインのデータ搬送",
+            "リージョン間移動の簡素化",
+            "検証/ロールバックを設計"
+          ],
+          "link": "https://azure.microsoft.com/services/database-migration/"
+        },
+        {
+          "name": "Azure Data Box",
+          "summary": "物理デバイスで大容量データ搬送。",
+          "details": "Azure Data Box は、物理デバイスで大容量データ搬送。 現状可視化から移行/データ搬送/切替までの最短経路を提供します。",
+          "features": [
+            "アセスメント/依存解析/計画",
+            "最小停止でのサーバ/DB 移行",
+            "オンライン/オフラインのデータ搬送",
+            "リージョン間移動の簡素化",
+            "検証/ロールバックを設計"
+          ],
+          "link": "https://azure.microsoft.com/services/databox/"
+        },
+        {
+          "name": "Azure Import/Export",
+          "summary": "ストレージへのオフライン導入/搬出。",
+          "details": "Azure Import/Export は、ストレージへのオフライン導入/搬出。 現状可視化から移行/データ搬送/切替までの最短経路を提供します。",
+          "features": [
+            "アセスメント/依存解析/計画",
+            "最小停止でのサーバ/DB 移行",
+            "オンライン/オフラインのデータ搬送",
+            "リージョン間移動の簡素化",
+            "検証/ロールバックを設計"
+          ],
+          "link": "https://azure.microsoft.com/services/storage/import-export/"
+        },
+        {
+          "name": "Azure Resource Mover",
+          "summary": "複数リソースのリージョン間移動を簡素化。",
+          "details": "Azure Resource Mover は、複数リソースのリージョン間移動を簡素化。 現状可視化から移行/データ搬送/切替までの最短経路を提供します。",
+          "features": [
+            "アセスメント/依存解析/計画",
+            "最小停止でのサーバ/DB 移行",
+            "オンライン/オフラインのデータ搬送",
+            "リージョン間移動の簡素化",
+            "検証/ロールバックを設計"
+          ],
+          "link": "https://azure.microsoft.com/services/resource-mover/"
+        }
+      ]
+    },
+    {
+      "id": "devtools",
+      "name": "開発者ツール / DevOps",
+      "description": "ソース/ビルド/デプロイ/テスト、IaC、実験環境、開発者体験。",
+      "services": [
+        {
+          "name": "Azure DevOps Services",
+          "summary": "Repos/Pipelines/Boards/Artifacts/Test Plans の統合。",
+          "details": "Azure DevOps Services は、Repos/Pipelines/Boards/Artifacts/Test Plans の統合。 IaC/CI/CD/テスト/環境自動化を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/テスト/アーティファクト統合",
+            "IaC（Bicep/ARM/Terraform）で再現性を担保",
+            "セルフサービス環境の標準化",
+            "可観測性/負荷試験の統合",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://azure.microsoft.com/services/devops/"
+        },
+        {
+          "name": "Azure Deployment Environments",
+          "summary": "開発環境をテンプレ化/セルフサービス提供。",
+          "details": "Azure Deployment Environments は、開発環境をテンプレ化/セルフサービス提供。 IaC/CI/CD/テスト/環境自動化を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/テスト/アーティファクト統合",
+            "IaC（Bicep/ARM/Terraform）で再現性を担保",
+            "セルフサービス環境の標準化",
+            "可観測性/負荷試験の統合",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://azure.microsoft.com/products/deployment-environments/"
+        },
+        {
+          "name": "Azure Lab Services",
+          "summary": "教室/検証用のラボ環境提供。",
+          "details": "Azure Lab Services は、教室/検証用のラボ環境提供。 IaC/CI/CD/テスト/環境自動化を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/テスト/アーティファクト統合",
+            "IaC（Bicep/ARM/Terraform）で再現性を担保",
+            "セルフサービス環境の標準化",
+            "可観測性/負荷試験の統合",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://azure.microsoft.com/services/lab-services/"
+        },
+        {
+          "name": "Azure DevTest Labs",
+          "summary": "開発/テスト用の軽量ラボ。",
+          "details": "Azure DevTest Labs は、開発/テスト用の軽量ラボ。 IaC/CI/CD/テスト/環境自動化を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/テスト/アーティファクト統合",
+            "IaC（Bicep/ARM/Terraform）で再現性を担保",
+            "セルフサービス環境の標準化",
+            "可観測性/負荷試験の統合",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://azure.microsoft.com/services/devtest-labs/"
+        },
+        {
+          "name": "Azure Load Testing",
+          "summary": "アプリの負荷テストをマネージドで実行。",
+          "details": "Azure Load Testing は、アプリの負荷テストをマネージドで実行。 IaC/CI/CD/テスト/環境自動化を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/テスト/アーティファクト統合",
+            "IaC（Bicep/ARM/Terraform）で再現性を担保",
+            "セルフサービス環境の標準化",
+            "可観測性/負荷試験の統合",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://azure.microsoft.com/products/load-testing/"
+        },
+        {
+          "name": "Azure Container Registry (ACR)",
+          "summary": "コンテナイメージの保管/署名/スキャン。",
+          "details": "Azure Container Registry (ACR) は、コンテナイメージの保管/署名/スキャン。 IaC/CI/CD/テスト/環境自動化を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/テスト/アーティファクト統合",
+            "IaC（Bicep/ARM/Terraform）で再現性を担保",
+            "セルフサービス環境の標準化",
+            "可観測性/負荷試験の統合",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://azure.microsoft.com/services/container-registry/"
+        },
+        {
+          "name": "Bicep / ARM Templates",
+          "summary": "宣言的 IaC（テンプレート）でデプロイを自動化。",
+          "details": "Bicep / ARM Templates は、宣言的 IaC（テンプレート）でデプロイを自動化。 IaC/CI/CD/テスト/環境自動化を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/テスト/アーティファクト統合",
+            "IaC（Bicep/ARM/Terraform）で再現性を担保",
+            "セルフサービス環境の標準化",
+            "可観測性/負荷試験の統合",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview"
+        }
+      ]
+    },
+    {
+      "id": "vdi",
+      "name": "仮想デスクトップ",
+      "description": "DaaS/アプリの仮想化。",
+      "services": [
+        {
+          "name": "Azure Virtual Desktop (AVD)",
+          "summary": "Windows デスクトップ/アプリの仮想化。",
+          "details": "Azure Virtual Desktop (AVD) は、Windows デスクトップ/アプリの仮想化。 アプリ/デスクトップを安全に配信し、データの端末持ち出しを抑制します。",
+          "features": [
+            "セキュアな DaaS/アプリ配信",
+            "スケールと従量課金",
+            "ID 連携/ポリシー制御",
+            "端末データ持ち出しの抑制",
+            "監視/自動化の統合"
+          ],
+          "link": "https://azure.microsoft.com/services/virtual-desktop/"
+        }
+      ]
+    },
+    {
+      "id": "web",
+      "name": "Web / アプリ実行",
+      "description": "Web アプリのホスティング/配信。",
+      "services": [
+        {
+          "name": "App Service（Web Apps）",
+          "summary": "マネージドな Web アプリ実行基盤。",
+          "details": "App Service（Web Apps） は、マネージドな Web アプリ実行基盤。 スケーラブルな Web ホスティングを提供し、CI/CD/観測性と容易に統合できます。",
+          "features": [
+            "スケーラブルなホスティング",
+            "CI/CD と統合",
+            "カスタムドメイン/証明書",
+            "監視/ログ/診断",
+            "VNet/Private Link での保護"
+          ],
+          "link": "https://azure.microsoft.com/services/app-service/"
+        },
+        {
+          "name": "Azure Static Web Apps",
+          "summary": "フロントエンド/静的サイトを簡単にデプロイ。",
+          "details": "Azure Static Web Apps は、フロントエンド/静的サイトを簡単にデプロイ。 スケーラブルな Web ホスティングを提供し、CI/CD/観測性と容易に統合できます。",
+          "features": [
+            "スケーラブルなホスティング",
+            "CI/CD と統合",
+            "カスタムドメイン/証明書",
+            "監視/ログ/診断",
+            "VNet/Private Link での保護"
+          ],
+          "link": "https://azure.microsoft.com/services/app-service/static/"
+        }
+      ]
+    },
+    {
+      "id": "mobile",
+      "name": "モバイル / 通信",
+      "description": "通知・通話・ビデオ・SMS などのコミュニケーション機能。",
+      "services": [
+        {
+          "name": "Azure Notification Hubs",
+          "summary": "大規模プッシュ通知。",
+          "details": "Azure Notification Hubs は、大規模プッシュ通知。 多様なチャネルを安全に提供し、ユーザー体験の向上と運用の可視化に貢献します。",
+          "features": [
+            "多チャネル配信（Push/SMS/音声/映像）",
+            "スケーラブルで信頼性の高い配信",
+            "ID/認証との統合",
+            "監視/レポーティング",
+            "グローバル到達性"
+          ],
+          "link": "https://azure.microsoft.com/services/notification-hubs/"
+        },
+        {
+          "name": "Azure Communication Services",
+          "summary": "音声/映像/チャット/SMS をアプリに組み込み。",
+          "details": "Azure Communication Services は、音声/映像/チャット/SMS をアプリに組み込み。 多様なチャネルを安全に提供し、ユーザー体験の向上と運用の可視化に貢献します。",
+          "features": [
+            "多チャネル配信（Push/SMS/音声/映像）",
+            "スケーラブルで信頼性の高い配信",
+            "ID/認証との統合",
+            "監視/レポーティング",
+            "グローバル到達性"
+          ],
+          "link": "https://azure.microsoft.com/services/communication-services/"
         }
       ]
     }
