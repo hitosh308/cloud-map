@@ -166,6 +166,18 @@ body {
   height: 260px;
   perspective: 1200px;
   overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition), height 0.45s ease;
+}
+
+.service-tile.flipped {
+  height: clamp(320px, 40vw, 420px);
+  z-index: 2;
+}
+
+@media (min-width: 900px) {
+  .service-tile.flipped {
+    grid-column: span 2;
+  }
 }
 
 .service-tile .tile-inner {

@@ -159,7 +159,15 @@ function showServices(category) {
 
 function toggleServiceTile(tile) {
   const willFlip = !tile.classList.contains('flipped');
-  tile.classList.toggle('flipped');
+
+  tileContainer.querySelectorAll('.service-tile.flipped').forEach((otherTile) => {
+    if (otherTile !== tile) {
+      otherTile.classList.remove('flipped');
+      otherTile.setAttribute('aria-pressed', 'false');
+    }
+  });
+
+  tile.classList.toggle('flipped', willFlip);
   tile.setAttribute('aria-pressed', willFlip ? 'true' : 'false');
 }
 
