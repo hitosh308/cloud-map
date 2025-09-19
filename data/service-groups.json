@@ -1,0 +1,1845 @@
+{
+  "google-cloud": {
+    "compute": [
+      {
+        "title": "仮想マシン / 専用インフラ",
+        "description": "IaaS から VMware、ベアメタルまで基盤を柔軟に提供します。",
+        "services": [
+          "Compute Engine",
+          "Google Cloud VMware Engine",
+          "Bare Metal Solution"
+        ]
+      },
+      {
+        "title": "アプリケーション実行",
+        "description": "マネージドなアプリ実行環境や大規模バッチ処理を支援します。",
+        "services": [
+          "App Engine",
+          "Batch"
+        ]
+      },
+      {
+        "title": "運用管理ツール",
+        "description": "仮想マシンの構成・検証を自動化し、ガバナンスを高めます。",
+        "services": [
+          "VM Manager",
+          "Workload Manager"
+        ]
+      },
+      {
+        "title": "特化ワークロード",
+        "description": "特定用途向けのブロックチェーンノードをフルマネージドで提供します。",
+        "services": [
+          "Blockchain Node Engine"
+        ]
+      }
+    ],
+    "serverless": [
+      {
+        "title": "コンテナ / 関数実行",
+        "description": "ソースコードやコンテナを即座にスケーラブルな形で実行できます。",
+        "services": [
+          "Cloud Run",
+          "Cloud Run functions（旧 Cloud Functions）"
+        ]
+      },
+      {
+        "title": "イベント統合 / ワークフロー",
+        "description": "イベント駆動の統合やワークフロー自動化を行う基盤です。",
+        "services": [
+          "Eventarc",
+          "Workflows"
+        ]
+      },
+      {
+        "title": "ジョブスケジューリング",
+        "description": "ジョブやタスクのスケジューリングと分散実行を担います。",
+        "services": [
+          "Cloud Scheduler",
+          "Cloud Tasks"
+        ]
+      }
+    ],
+    "containers": [
+      {
+        "title": "クラスタ運用",
+        "description": "GKE の実行モードを選択し、運用負荷を最適化します。",
+        "services": [
+          "Google Kubernetes Engine (GKE)",
+          "GKE Autopilot"
+        ]
+      },
+      {
+        "title": "サービスメッシュ",
+        "description": "サービス間通信を統合し、ゼロトラストを実現します。",
+        "services": [
+          "Cloud Service Mesh"
+        ]
+      },
+      {
+        "title": "構成・ポリシー管理",
+        "description": "宣言的な構成同期やポリシー適用でガバナンスを強化します。",
+        "services": [
+          "Config Sync",
+          "Policy Controller",
+          "Identity Service"
+        ]
+      },
+      {
+        "title": "ハイブリッド連携",
+        "description": "オンプレミスや他クラウドからの接続と統合管理を容易にします。",
+        "services": [
+          "Connect",
+          "GKE Hub"
+        ]
+      }
+    ],
+    "storage": [
+      {
+        "title": "オブジェクト / ブロックストレージ",
+        "description": "非構造データと高性能ブロックストレージをクラウドで提供します。",
+        "services": [
+          "Cloud Storage",
+          "Persistent Disk / Hyperdisk"
+        ]
+      },
+      {
+        "title": "ファイルストレージ",
+        "description": "共有ファイルシステムをマネージドで提供し、移行も容易です。",
+        "services": [
+          "Cloud Filestore",
+          "NetApp Volumes"
+        ]
+      },
+      {
+        "title": "バックアップ / DR",
+        "description": "Kubernetes やクラウド環境のバックアップとリカバリを支援します。",
+        "services": [
+          "Backup for GKE",
+          "Google Cloud Backup and DR"
+        ]
+      },
+      {
+        "title": "データ転送 / 移行",
+        "description": "大容量データのオンライン / オフライン移行を支援します。",
+        "services": [
+          "Storage Transfer Service",
+          "Transfer Appliance"
+        ]
+      }
+    ],
+    "databases": [
+      {
+        "title": "リレーショナル",
+        "description": "可用性・スケールに優れた分散リレーショナルサービスです。",
+        "services": [
+          "Cloud SQL",
+          "AlloyDB for PostgreSQL",
+          "Cloud Spanner"
+        ]
+      },
+      {
+        "title": "NoSQL / ビッグデータ",
+        "description": "スケーラブルなキーバリューやドキュメント型データベースです。",
+        "services": [
+          "Cloud Bigtable",
+          "Firestore",
+          "Datastore（レガシー）"
+        ]
+      },
+      {
+        "title": "インメモリキャッシュ",
+        "description": "Redis / Memcached 互換のマネージドインメモリサービスです。",
+        "services": [
+          "Memorystore (Redis/Memcached)"
+        ]
+      }
+    ],
+    "networking": [
+      {
+        "title": "ネットワーク基盤 / 接続",
+        "description": "VPC とオンプレミス接続を統合し、拡張性のあるネットワークを構築します。",
+        "services": [
+          "Virtual Private Cloud (VPC)",
+          "Cloud Router",
+          "Cloud NAT",
+          "Cloud VPN",
+          "Cloud Interconnect",
+          "Network Connectivity Center",
+          "Private Service Connect"
+        ]
+      },
+      {
+        "title": "トラフィック配信 / 最適化",
+        "description": "グローバル負荷分散や CDN によりユーザー体験を最適化します。",
+        "services": [
+          "Cloud Load Balancing",
+          "Cloud CDN",
+          "Media CDN",
+          "Network Service Tiers",
+          "Secure Web Proxy"
+        ]
+      },
+      {
+        "title": "DNS / サービス公開",
+        "description": "名前解決やサービスディスカバリを提供します。",
+        "services": [
+          "Cloud DNS",
+          "Service Directory"
+        ]
+      },
+      {
+        "title": "ネットワークセキュリティ",
+        "description": "脅威検知やファイアウォールで境界防御を強化します。",
+        "services": [
+          "Network Security Integration",
+          "Cloud IDS",
+          "Cloud NGFW / Enterprise",
+          "Google Cloud Armor",
+          "Google Cloud Armor Enterprise"
+        ]
+      },
+      {
+        "title": "可視化 / 運用分析",
+        "description": "ネットワークの健全性やパフォーマンスを可視化します。",
+        "services": [
+          "Network Intelligence Center"
+        ]
+      },
+      {
+        "title": "業界特化ネットワーク",
+        "description": "通信事業者向けの専用ネットワーク管理を支援します。",
+        "services": [
+          "Spectrum Access System",
+          "Telecom Network Automation"
+        ]
+      }
+    ],
+    "data-analytics": [
+      {
+        "title": "BigQuery エコシステム",
+        "description": "BigQuery と移行・連携ツールで DWH を高速化します。",
+        "services": [
+          "BigQuery",
+          "BigQuery Data Transfer Service",
+          "BigQuery Migration Service"
+        ]
+      },
+      {
+        "title": "データ統合 / パイプライン",
+        "description": "ETL / ELT・ストリーミング処理の基盤をマネージドで提供します。",
+        "services": [
+          "Cloud Composer",
+          "Cloud Data Fusion",
+          "Dataform",
+          "Dataflow",
+          "Datastream",
+          "Pub/Sub",
+          "Managed Service for Apache Kafka"
+        ]
+      },
+      {
+        "title": "データガバナンス / メタデータ",
+        "description": "メタデータ管理とポリシー制御でデータ利活用を安全に進めます。",
+        "services": [
+          "Dataplex",
+          "Data Catalog"
+        ]
+      },
+      {
+        "title": "Hadoop / Spark 基盤",
+        "description": "マネージド Hadoop / Spark クラスタを容易に運用できます。",
+        "services": [
+          "Dataproc",
+          "Dataproc Metastore"
+        ]
+      },
+      {
+        "title": "BI / 可視化",
+        "description": "Looker ファミリーで分析とダッシュボード化を行います。",
+        "services": [
+          "Looker (Google Cloud core)",
+          "Looker Studio",
+          "Looker Studio Pro"
+        ]
+      },
+      {
+        "title": "地理空間分析",
+        "description": "衛星データなど地理空間データの分析に特化したサービスです。",
+        "services": [
+          "Google Earth Engine"
+        ]
+      }
+    ],
+    "ai-ml": [
+      {
+        "title": "Vertex AI プラットフォーム",
+        "description": "フルマネージドな ML 開発基盤と AutoML 機能を備えます。",
+        "services": [
+          "Vertex AI Platform",
+          "AutoML",
+          "AI Platform Training and Prediction（レガシー）",
+          "AI Platform Data Labeling（レガシー）",
+          "Vertex AI NAS"
+        ]
+      },
+      {
+        "title": "ビジョン AI",
+        "description": "画像・動画解析を高精度に行うサービス群です。",
+        "services": [
+          "Vertex AI Vision",
+          "Visual Inspection AI",
+          "Cloud Vision API",
+          "Video Intelligence API"
+        ]
+      },
+      {
+        "title": "会話 / コンタクトセンター AI",
+        "description": "対話型体験とコンタクトセンターの高度化を支援します。",
+        "services": [
+          "Conversational AI（旧 CCAI）",
+          "Conversational Insights",
+          "Dialogflow ES",
+          "Dialogflow CX",
+          "Agent Assist",
+          "Google Cloud CCaaS（旧 CCAI Platform）"
+        ]
+      },
+      {
+        "title": "検索 / レコメンド",
+        "description": "検索・レコメンド体験を強化する AI サービス群です。",
+        "services": [
+          "Vertex AI Search for Industry / commerce",
+          "Recommendations AI",
+          "Recommendation Engine API（v1・レガシー）",
+          "Retail Search"
+        ]
+      },
+      {
+        "title": "言語 / 翻訳",
+        "description": "自然言語解析や翻訳・トランスクリプト生成を提供します。",
+        "services": [
+          "Cloud Natural Language API",
+          "Cloud Translation API",
+          "Translation Hub",
+          "Media Translation API"
+        ]
+      },
+      {
+        "title": "音声 / 会話体験",
+        "description": "音声認識や合成、端末組み込みまで幅広く対応します。",
+        "services": [
+          "Speech-to-Text",
+          "Text-to-Speech",
+          "Speech On Device",
+          "Speaker ID"
+        ]
+      },
+      {
+        "title": "ドキュメント処理",
+        "description": "帳票や PDF の自動処理を支援し、人手作業を削減します。",
+        "services": [
+          "Document AI",
+          "Document AI Warehouse",
+          "Document Workbench",
+          "Human-in-the-Loop AI"
+        ]
+      },
+      {
+        "title": "業界特化 AI",
+        "description": "金融・自動車・飲食など特定業界向けの AI サービスです。",
+        "services": [
+          "Anti Money Laundering AI (AML AI)",
+          "Automotive AI Agent",
+          "Automotive AI Agent API",
+          "Food Ordering AI Agent"
+        ]
+      },
+      {
+        "title": "時系列解析",
+        "description": "センサーデータなど時系列の洞察を得るためのサービスです。",
+        "services": [
+          "Timeseries Insights API"
+        ]
+      }
+    ],
+    "genai": [
+      {
+        "title": "Gemini ファミリー",
+        "description": "Gemini を活用した開発支援やデータ分析の機能です。",
+        "services": [
+          "Gemini for Google Cloud",
+          "Gemini Code Assist",
+          "Gemini in BigQuery"
+        ]
+      },
+      {
+        "title": "Vertex AI 生成基盤",
+        "description": "Vertex AI 上で生成 AI モデルの利用と運用を行います。",
+        "services": [
+          "Vertex AI API",
+          "Vertex AI Conversation",
+          "Vertex AI Live API",
+          "Vertex AI Model Garden",
+          "Vertex AI Search",
+          "Vertex AI Studio"
+        ]
+      },
+      {
+        "title": "エージェント / アシスタント",
+        "description": "業務支援エージェントや情報整理を支えるサービスです。",
+        "services": [
+          "Agentspace",
+          "NotebookLM for enterprise",
+          "Firebase AI Logic"
+        ]
+      }
+    ],
+    "api-integration": [
+      {
+        "title": "API 管理",
+        "description": "API のライフサイクルを管理し、セキュリティを担保します。",
+        "services": [
+          "Apigee (X / hybrid)",
+          "Apigee Edge",
+          "API Gateway",
+          "Cloud Endpoints"
+        ]
+      },
+      {
+        "title": "連携・コネクタ",
+        "description": "ノーコードで SaaS 連携や業務統合を実現します。",
+        "services": [
+          "Application Integration",
+          "Integration Connectors"
+        ]
+      }
+    ],
+    "security-id": [
+      {
+        "title": "アクセス制御 / ID",
+        "description": "ユーザーとリソースへのアクセスを厳密に管理します。",
+        "services": [
+          "Access Transparency",
+          "Access Approval",
+          "Access Context Manager",
+          "Identity-Aware Proxy (IAP)",
+          "Identity and Access Management (IAM)",
+          "Identity Platform",
+          "Managed Service for Microsoft AD",
+          "Cloud Identity Services"
+        ]
+      },
+      {
+        "title": "組織ガバナンス",
+        "description": "組織やプロジェクト単位でのポリシー・境界を制御します。",
+        "services": [
+          "Organization Policy",
+          "Resource Manager API",
+          "Assured Workloads",
+          "VPC Service Controls"
+        ]
+      },
+      {
+        "title": "鍵・証明書管理",
+        "description": "暗号鍵・証明書・シークレットを安全に保護します。",
+        "services": [
+          "Cloud KMS",
+          "Cloud HSM",
+          "Cloud EKM",
+          "Key Access Justifications (KAJ)",
+          "Certificate Authority Service",
+          "Certificate Manager",
+          "Secret Manager"
+        ]
+      },
+      {
+        "title": "セキュリティ運用 / 可視化",
+        "description": "脅威の検知とリスク評価を一元的に管理します。",
+        "services": [
+          "Security Command Center",
+          "Cloud Asset Inventory",
+          "Risk Manager",
+          "Audit Manager"
+        ]
+      },
+      {
+        "title": "データ / アプリ保護",
+        "description": "アプリや AI モデル、データの保護を強化します。",
+        "services": [
+          "Sensitive Data Protection（DLP）",
+          "Binary Authorization",
+          "Model Armor",
+          "Web Security Scanner",
+          "reCAPTCHA Enterprise",
+          "Web Risk API"
+        ]
+      }
+    ],
+    "operations": [
+      {
+        "title": "モニタリング / 可観測性",
+        "description": "ログ・メトリクス・トレースを統合し、運用を可視化します。",
+        "services": [
+          "Cloud Logging",
+          "Cloud Monitoring",
+          "Cloud Trace",
+          "Cloud Profiler",
+          "Error Reporting"
+        ]
+      },
+      {
+        "title": "運用自動化 / 最適化",
+        "description": "推奨事項やテンプレートで運用改善を促進します。",
+        "services": [
+          "Recommenders",
+          "Cloud Deployment Manager",
+          "Service Infrastructure"
+        ]
+      },
+      {
+        "title": "運用ツール",
+        "description": "CLI やモバイルアプリからクラウドを操作・監視できます。",
+        "services": [
+          "Cloud Shell",
+          "Google Cloud App (モバイル)"
+        ]
+      },
+      {
+        "title": "バックアップ / 復旧",
+        "description": "クラウドワークロードのバックアップと迅速な復旧を支援します。",
+        "services": [
+          "Google Cloud Backup and DR"
+        ]
+      }
+    ],
+    "devtools": [
+      {
+        "title": "ソース管理 / OSS セキュリティ",
+        "description": "リポジトリとソフトウェアサプライチェーンを安全に保ちます。",
+        "services": [
+          "Cloud Source Repositories",
+          "Secure Source Manager",
+          "Assured OSS"
+        ]
+      },
+      {
+        "title": "CI/CD パイプライン",
+        "description": "ビルドからデリバリーまでをマネージドで自動化します。",
+        "services": [
+          "Cloud Build",
+          "Cloud Deploy",
+          "Developer Connect"
+        ]
+      },
+      {
+        "title": "開発環境",
+        "description": "クラウドベースの IDE で統一された開発体験を提供します。",
+        "services": [
+          "Cloud Workstations"
+        ]
+      },
+      {
+        "title": "アーティファクト管理",
+        "description": "イメージやパッケージを集中管理し、セキュリティを確保します。",
+        "services": [
+          "Artifact Registry",
+          "Container Registry（レガシー）"
+        ]
+      },
+      {
+        "title": "テスト / デバイス",
+        "description": "実機デバイス検証と自動テストをクラウドから実施できます。",
+        "services": [
+          "Test Lab",
+          "Android Device Streaming",
+          "Google Device Cloud"
+        ]
+      }
+    ],
+    "migration": [
+      {
+        "title": "評価 / 計画",
+        "description": "既存環境の棚卸しと移行計画の策定を支援します。",
+        "services": [
+          "Migration Center"
+        ]
+      },
+      {
+        "title": "サーバー移行",
+        "description": "オンプレミスのワークロードを GCP へ移行します。",
+        "services": [
+          "Migrate to Virtual Machines"
+        ]
+      },
+      {
+        "title": "データベース移行",
+        "description": "データベースをクラウドに移行するためのサービスです。",
+        "services": [
+          "Database Migration Service"
+        ]
+      },
+      {
+        "title": "BigQuery への移行",
+        "description": "DWH の移行やデータ取り込みを効率化します。",
+        "services": [
+          "BigQuery Migration Service",
+          "BigQuery Data Transfer Service"
+        ]
+      },
+      {
+        "title": "データ転送 / ハイブリッド",
+        "description": "大量データの移送とハイブリッド連携をサポートします。",
+        "services": [
+          "Storage Transfer Service",
+          "Transfer Appliance"
+        ]
+      }
+    ],
+    "hybrid-multicloud": [
+      {
+        "title": "分散クラウド",
+        "description": "Google Distributed Cloud によりエッジでの処理を実現します。",
+        "services": [
+          "Google Distributed Cloud connected",
+          "Google Distributed Cloud connected Appliance Service"
+        ]
+      },
+      {
+        "title": "マルチクラウド分析",
+        "description": "他クラウド上のデータを BigQuery から分析できます。",
+        "services": [
+          "BigQuery Omni"
+        ]
+      },
+      {
+        "title": "データ境界 / コンプライアンス",
+        "description": "パートナーソリューションと連携し、地域データ統制に対応します。",
+        "services": [
+          "Data Boundary by Partners"
+        ]
+      }
+    ]
+  },
+  "azure": {
+    "ai-ml": [
+      {
+        "title": "ML プラットフォーム",
+        "description": "Azure Machine Learning でエンドツーエンドの ML 開発を実現します。",
+        "services": [
+          "Azure Machine Learning"
+        ]
+      },
+      {
+        "title": "AI サービス API",
+        "description": "認知サービスや検索 API を組み合わせて AI を組み込みます。",
+        "services": [
+          "Azure AI Services（旧 Cognitive Services）",
+          "Azure AI Search（旧 Cognitive Search）"
+        ]
+      },
+      {
+        "title": "責任ある AI",
+        "description": "生成コンテンツの安全性とコンプライアンスを担保します。",
+        "services": [
+          "Azure AI Content Safety"
+        ]
+      },
+      {
+        "title": "ボット / 会話体験",
+        "description": "Bot Framework を活用した対話体験を構築します。",
+        "services": [
+          "Azure Bot Service"
+        ]
+      }
+    ],
+    "genai": [
+      {
+        "title": "モデル提供 / API",
+        "description": "OpenAI モデルを中心に高品質な生成 AI を提供します。",
+        "services": [
+          "Azure OpenAI Service",
+          "Azure AI Foundry Models（OpenAI ほか）"
+        ]
+      },
+      {
+        "title": "開発スタジオ",
+        "description": "Azure AI Foundry でプロンプトやアプリ開発を加速します。",
+        "services": [
+          "Azure AI Foundry（旧 Azure AI Studio）"
+        ]
+      }
+    ],
+    "analytics": [
+      {
+        "title": "統合分析基盤",
+        "description": "Microsoft Fabric と Synapse でデータを横断活用します。",
+        "services": [
+          "Microsoft Fabric",
+          "Azure Synapse Analytics"
+        ]
+      },
+      {
+        "title": "データエンジニアリング",
+        "description": "大規模データ処理やパイプライン構築を支援します。",
+        "services": [
+          "Azure Databricks",
+          "Azure Data Factory"
+        ]
+      },
+      {
+        "title": "ストリーミング処理",
+        "description": "リアルタイム分析とイベント処理を実現します。",
+        "services": [
+          "Azure Stream Analytics",
+          "Azure Event Hubs"
+        ]
+      },
+      {
+        "title": "ログ / 時系列分析",
+        "description": "Kusto により大量ログやテレメトリを高速分析します。",
+        "services": [
+          "Azure Data Explorer (Kusto)"
+        ]
+      }
+    ],
+    "compute": [
+      {
+        "title": "仮想マシン / スケール",
+        "description": "VM とスケールセットで柔軟な IaaS 基盤を提供します。",
+        "services": [
+          "Azure Virtual Machines",
+          "Virtual Machine Scale Sets"
+        ]
+      },
+      {
+        "title": "バッチ / HPC",
+        "description": "クラウドでのバッチ処理や HPC ワークロードを実行します。",
+        "services": [
+          "Azure Batch"
+        ]
+      },
+      {
+        "title": "専用ホスト / VMware",
+        "description": "専有ホストや VMware 環境でコンプライアンス要件に対応します。",
+        "services": [
+          "Azure Dedicated Host",
+          "Azure VMware Solution (AVS)"
+        ]
+      },
+      {
+        "title": "アプリ実行基盤",
+        "description": "マイクロサービスや Java アプリの実行基盤を提供します。",
+        "services": [
+          "Azure Spring Apps",
+          "Service Fabric"
+        ]
+      }
+    ],
+    "containers": [
+      {
+        "title": "Kubernetes マネージド",
+        "description": "AKS や ARO でエンタープライズな K8s 運用を実現します。",
+        "services": [
+          "Azure Kubernetes Service (AKS)",
+          "Azure Red Hat OpenShift (ARO)"
+        ]
+      },
+      {
+        "title": "サーバーレスコンテナ",
+        "description": "アプリケーションをコンテナで簡易に実行します。",
+        "services": [
+          "Azure Container Apps",
+          "Azure Container Instances (ACI)"
+        ]
+      },
+      {
+        "title": "イメージ管理",
+        "description": "コンテナイメージを安全に保管・配布します。",
+        "services": [
+          "Azure Container Registry (ACR)"
+        ]
+      }
+    ],
+    "databases": [
+      {
+        "title": "SQL Server ファミリー",
+        "description": "SQL Server の運用形態に応じたマネージドサービスです。",
+        "services": [
+          "Azure SQL Database",
+          "Azure SQL Managed Instance",
+          "SQL Server on Azure Virtual Machines"
+        ]
+      },
+      {
+        "title": "OSS リレーショナル",
+        "description": "PostgreSQL や MySQL を Azure でフルマネージド提供します。",
+        "services": [
+          "Azure Database for PostgreSQL (Flexible Server)",
+          "Azure Database for MySQL (Flexible Server)",
+          "Azure Database for PostgreSQL - Hyperscale (Citus)"
+        ]
+      },
+      {
+        "title": "NoSQL / マルチモデル",
+        "description": "グローバル分散やマルチモデルに対応した NoSQL データベースです。",
+        "services": [
+          "Azure Cosmos DB"
+        ]
+      },
+      {
+        "title": "インメモリキャッシュ",
+        "description": "Redis 互換のインメモリストアをマネージドで提供します。",
+        "services": [
+          "Azure Cache for Redis"
+        ]
+      }
+    ],
+    "storage": [
+      {
+        "title": "オブジェクト / データレイク",
+        "description": "Blob Storage でスケーラブルなデータレイクを構築します。",
+        "services": [
+          "Azure Blob Storage（Data Lake Storage Gen2 含む）"
+        ]
+      },
+      {
+        "title": "ファイル / ブロック",
+        "description": "ファイル共有とディスクストレージをマネージドで提供します。",
+        "services": [
+          "Azure Files",
+          "Azure Managed Disks"
+        ]
+      },
+      {
+        "title": "アーカイブ / 長期保管",
+        "description": "低コストで長期保存するためのストレージ階層です。",
+        "services": [
+          "Azure Archive Storage"
+        ]
+      },
+      {
+        "title": "ハイパフォーマンスストレージ",
+        "description": "高スループットなエンタープライズ向けストレージです。",
+        "services": [
+          "Azure NetApp Files",
+          "Azure Elastic SAN"
+        ]
+      },
+      {
+        "title": "バックアップ / DR",
+        "description": "バックアップと災害復旧のためのマネージドサービスです。",
+        "services": [
+          "Azure Backup",
+          "Azure Site Recovery"
+        ]
+      }
+    ],
+    "networking": [
+      {
+        "title": "ネットワーク基盤 / 接続",
+        "description": "VNet と専用線・VPN を組み合わせてハイブリッド接続を実現します。",
+        "services": [
+          "Azure Virtual Network",
+          "VPN Gateway",
+          "ExpressRoute",
+          "NAT Gateway",
+          "Route Server",
+          "Azure Virtual WAN",
+          "Private Link / Private Endpoint"
+        ]
+      },
+      {
+        "title": "トラフィック制御 / 配信",
+        "description": "グローバルロードバランシングと WAF で可用性を高めます。",
+        "services": [
+          "Azure Load Balancer",
+          "Application Gateway（WAF）",
+          "Azure Front Door",
+          "Traffic Manager"
+        ]
+      },
+      {
+        "title": "リモートアクセス",
+        "description": "Bastion で安全なブラウザベースの管理接続を提供します。",
+        "services": [
+          "Azure Bastion"
+        ]
+      },
+      {
+        "title": "DNS / 名前解決",
+        "description": "信頼性の高い DNS 管理とトラフィック制御を行います。",
+        "services": [
+          "Azure DNS"
+        ]
+      },
+      {
+        "title": "ネットワークセキュリティ",
+        "description": "ファイアウォールと DDoS 防御で境界セキュリティを強化します。",
+        "services": [
+          "Azure Firewall",
+          "Azure DDoS Protection"
+        ]
+      },
+      {
+        "title": "監視 / 診断",
+        "description": "ネットワークの可視化とトラブルシューティングを支援します。",
+        "services": [
+          "Network Watcher"
+        ]
+      }
+    ],
+    "identity": [
+      {
+        "title": "従業員 ID 管理",
+        "description": "社内 ID とドメインサービスをクラウドで提供します。",
+        "services": [
+          "Microsoft Entra ID（旧 Azure AD）",
+          "Microsoft Entra Domain Services"
+        ]
+      },
+      {
+        "title": "外部 / 検証 ID",
+        "description": "顧客 ID や検証可能な資格情報を扱います。",
+        "services": [
+          "Microsoft Entra External ID",
+          "Microsoft Entra Verified ID"
+        ]
+      }
+    ],
+    "security": [
+      {
+        "title": "統合セキュリティ",
+        "description": "クラウド全体の脅威検知と SIEM を提供します。",
+        "services": [
+          "Microsoft Defender for Cloud",
+          "Microsoft Sentinel"
+        ]
+      },
+      {
+        "title": "鍵・シークレット管理",
+        "description": "暗号鍵と秘密情報を安全に保存・管理します。",
+        "services": [
+          "Azure Key Vault",
+          "Azure Key Vault Managed HSM"
+        ]
+      },
+      {
+        "title": "機密計算",
+        "description": "ハードウェアレベルの隔離で機密ワークロードを保護します。",
+        "services": [
+          "Azure Confidential Computing"
+        ]
+      }
+    ],
+    "management": [
+      {
+        "title": "監視 / 可観測性",
+        "description": "アプリとインフラのログ・メトリクスを統合監視します。",
+        "services": [
+          "Azure Monitor",
+          "Log Analytics / Azure Monitor Logs",
+          "Application Insights"
+        ]
+      },
+      {
+        "title": "ベストプラクティス / コスト",
+        "description": "推奨事項とコスト管理で最適な運用を実現します。",
+        "services": [
+          "Azure Advisor",
+          "Azure Cost Management + Billing"
+        ]
+      },
+      {
+        "title": "ポリシー / リソース管理",
+        "description": "リソース管理 API とポリシー適用でガバナンスを徹底します。",
+        "services": [
+          "Azure Policy",
+          "Azure Resource Manager (ARM)",
+          "Azure Resource Graph"
+        ]
+      },
+      {
+        "title": "自動化 / 更新",
+        "description": "自動化ランブックや更新管理で運用効率を向上します。",
+        "services": [
+          "Azure Automation",
+          "Azure Update Manager"
+        ]
+      },
+      {
+        "title": "運用サポート",
+        "description": "サービス状態と委託運用を一元的に把握します。",
+        "services": [
+          "Azure Service Health",
+          "Azure Lighthouse"
+        ]
+      }
+    ],
+    "integration": [
+      {
+        "title": "API 管理",
+        "description": "API の公開・分析・保護を一元管理します。",
+        "services": [
+          "Azure API Management"
+        ]
+      },
+      {
+        "title": "ワークフロー / 連携",
+        "description": "ロジックアプリで業務フローを自動化します。",
+        "services": [
+          "Azure Logic Apps"
+        ]
+      },
+      {
+        "title": "イベント / メッセージング",
+        "description": "イベント配信とメッセージングで疎結合な連携を構築します。",
+        "services": [
+          "Azure Event Grid",
+          "Azure Service Bus"
+        ]
+      }
+    ],
+    "iot": [
+      {
+        "title": "デバイス接続 / 管理",
+        "description": "デバイス登録から運用まで IoT 管理を一元化します。",
+        "services": [
+          "Azure IoT Hub",
+          "Device Provisioning Service (DPS)",
+          "Azure IoT Central"
+        ]
+      },
+      {
+        "title": "デジタルツイン",
+        "description": "実世界をモデリングし、双方向にデータ連携します。",
+        "services": [
+          "Azure Digital Twins"
+        ]
+      },
+      {
+        "title": "エッジランタイム",
+        "description": "エッジでの処理やセキュリティを担うプラットフォームです。",
+        "services": [
+          "Azure IoT Edge",
+          "Azure Sphere"
+        ]
+      }
+    ],
+    "hybrid": [
+      {
+        "title": "ハイブリッド管理",
+        "description": "Azure Arc でオンプレや他クラウドを統合管理します。",
+        "services": [
+          "Azure Arc"
+        ]
+      },
+      {
+        "title": "Azure Stack ポートフォリオ",
+        "description": "オンプレミスで Azure サービスを実行する製品群です。",
+        "services": [
+          "Azure Stack HCI",
+          "Azure Stack Hub",
+          "Azure Stack Edge"
+        ]
+      }
+    ],
+    "migration": [
+      {
+        "title": "移行計画 / 評価",
+        "description": "Azure Migrate でサーバー移行の計画を立てます。",
+        "services": [
+          "Azure Migrate"
+        ]
+      },
+      {
+        "title": "データベース移行",
+        "description": "データベースの移行を支援するマネージドサービスです。",
+        "services": [
+          "Azure Database Migration Service"
+        ]
+      },
+      {
+        "title": "データ転送",
+        "description": "大容量データを安全に Azure へ搬送します。",
+        "services": [
+          "Azure Data Box",
+          "Azure Import/Export"
+        ]
+      },
+      {
+        "title": "リソース移行",
+        "description": "サブスクリプション間のリソース移動を容易にします。",
+        "services": [
+          "Azure Resource Mover"
+        ]
+      }
+    ],
+    "devtools": [
+      {
+        "title": "CI/CD / プラットフォーム",
+        "description": "Azure DevOps と連携して開発プロセスを統合します。",
+        "services": [
+          "Azure DevOps Services",
+          "Azure Deployment Environments"
+        ]
+      },
+      {
+        "title": "テスト / サンドボックス",
+        "description": "検証環境や負荷テストを迅速に構築します。",
+        "services": [
+          "Azure Lab Services",
+          "Azure DevTest Labs",
+          "Azure Load Testing"
+        ]
+      },
+      {
+        "title": "コンテナレジストリ",
+        "description": "コンテナイメージを管理する中央リポジトリです。",
+        "services": [
+          "Azure Container Registry (ACR)"
+        ]
+      },
+      {
+        "title": "インフラ自動化",
+        "description": "Bicep や ARM テンプレートで IaC を実現します。",
+        "services": [
+          "Bicep / ARM Templates"
+        ]
+      }
+    ]
+  },
+  "aws": {
+    "compute": [
+      {
+        "title": "仮想サーバ / イメージ管理",
+        "description": "EC2 と Auto Scaling で柔軟な計算リソースを提供します。",
+        "services": [
+          "Amazon EC2",
+          "Amazon EC2 Auto Scaling",
+          "EC2 Image Builder"
+        ]
+      },
+      {
+        "title": "バッチ / HPC",
+        "description": "大規模バッチや HPC ワークロードを効率的に実行します。",
+        "services": [
+          "AWS Batch",
+          "AWS ParallelCluster"
+        ]
+      },
+      {
+        "title": "アプリケーション実行基盤",
+        "description": "マネージドなアプリケーション実行環境を提供します。",
+        "services": [
+          "AWS Elastic Beanstalk"
+        ]
+      },
+      {
+        "title": "機密計算",
+        "description": "Nitro Enclaves でデータを隔離し安全に処理します。",
+        "services": [
+          "AWS Nitro Enclaves"
+        ]
+      }
+    ],
+    "containers": [
+      {
+        "title": "オーケストレーション",
+        "description": "ECS / EKS でコンテナ運用をマネージドに実現します。",
+        "services": [
+          "Amazon ECS",
+          "Amazon EKS"
+        ]
+      },
+      {
+        "title": "サーバーレスコンテナ",
+        "description": "インフラ管理不要でコンテナを実行します。",
+        "services": [
+          "AWS Fargate",
+          "AWS App Runner"
+        ]
+      },
+      {
+        "title": "イメージレジストリ",
+        "description": "コンテナイメージの保管・配布を安全に行います。",
+        "services": [
+          "Amazon ECR"
+        ]
+      },
+      {
+        "title": "プラットフォームエンジニアリング",
+        "description": "環境テンプレートで標準化されたデプロイを支援します。",
+        "services": [
+          "AWS Proton"
+        ]
+      }
+    ],
+    "serverless-integration": [
+      {
+        "title": "サーバーレス関数 / ワークフロー",
+        "description": "関数実行とワークフロー定義でイベント駆動アーキテクチャを実現します。",
+        "services": [
+          "AWS Lambda",
+          "AWS Step Functions",
+          "AWS Application Composer"
+        ]
+      },
+      {
+        "title": "イベントルーティング / スケジュール",
+        "description": "イベント集約と大量スケジュール実行を提供します。",
+        "services": [
+          "Amazon EventBridge",
+          "EventBridge Scheduler"
+        ]
+      },
+      {
+        "title": "メッセージング",
+        "description": "メッセージキューと Pub/Sub で疎結合な連携を構築します。",
+        "services": [
+          "Amazon SQS",
+          "Amazon SNS",
+          "Amazon MQ"
+        ]
+      },
+      {
+        "title": "API / GraphQL",
+        "description": "API の公開・管理と GraphQL サービスを提供します。",
+        "services": [
+          "Amazon API Gateway",
+          "AWS AppSync"
+        ]
+      }
+    ],
+    "storage": [
+      {
+        "title": "オブジェクト / アーカイブ",
+        "description": "S3 と Glacier で耐久性の高いストレージを提供します。",
+        "services": [
+          "Amazon S3",
+          "Amazon S3 Glacier"
+        ]
+      },
+      {
+        "title": "ブロックストレージ",
+        "description": "EC2 向けの高性能ブロックストレージです。",
+        "services": [
+          "Amazon EBS"
+        ]
+      },
+      {
+        "title": "ファイルストレージ",
+        "description": "用途別に最適化された共有ファイルストレージです。",
+        "services": [
+          "Amazon EFS",
+          "Amazon FSx for Windows File Server",
+          "Amazon FSx for Lustre",
+          "Amazon FSx for NetApp ONTAP",
+          "Amazon FSx for OpenZFS"
+        ]
+      },
+      {
+        "title": "バックアップ / 保護",
+        "description": "バックアップポリシーと統合管理を提供します。",
+        "services": [
+          "AWS Backup"
+        ]
+      },
+      {
+        "title": "データ転送 / ハイブリッド",
+        "description": "オンプレミス連携や大容量データ移行を支援します。",
+        "services": [
+          "AWS Storage Gateway",
+          "AWS DataSync",
+          "AWS Snow Family",
+          "AWS Transfer Family"
+        ]
+      }
+    ],
+    "databases": [
+      {
+        "title": "リレーショナルデータベース",
+        "description": "RDS と Aurora で高可用な RDB を提供します。",
+        "services": [
+          "Amazon RDS",
+          "Amazon Aurora"
+        ]
+      },
+      {
+        "title": "キーバリュー / ドキュメント",
+        "description": "スケーラブルな NoSQL とドキュメント型 DB です。",
+        "services": [
+          "Amazon DynamoDB",
+          "Amazon DocumentDB (with MongoDB compatibility)"
+        ]
+      },
+      {
+        "title": "インメモリ",
+        "description": "高速キャッシュやセッション管理に適したサービスです。",
+        "services": [
+          "Amazon ElastiCache",
+          "Amazon MemoryDB for Redis"
+        ]
+      },
+      {
+        "title": "グラフ / 台帳",
+        "description": "グラフデータや改ざん耐性のある台帳を扱います。",
+        "services": [
+          "Amazon Neptune",
+          "Amazon QLDB"
+        ]
+      },
+      {
+        "title": "時系列 / 列指向",
+        "description": "時系列・ワイドカラムデータの分析基盤です。",
+        "services": [
+          "Amazon Timestream",
+          "Amazon Keyspaces (for Apache Cassandra)"
+        ]
+      }
+    ],
+    "networking": [
+      {
+        "title": "ネットワーク基盤 / 接続",
+        "description": "VPC と専用線・VPN を統合しグローバル接続を実現します。",
+        "services": [
+          "Amazon VPC",
+          "AWS Transit Gateway",
+          "AWS Direct Connect",
+          "AWS Site-to-Site VPN / Client VPN",
+          "AWS Cloud WAN"
+        ]
+      },
+      {
+        "title": "トラフィック分散 / 配信",
+        "description": "負荷分散と CDN でユーザー体験を向上します。",
+        "services": [
+          "Elastic Load Balancing (ALB/NLB/GWLB)",
+          "Amazon CloudFront",
+          "AWS Global Accelerator"
+        ]
+      },
+      {
+        "title": "DNS / サービス検出",
+        "description": "DNS 管理とサービスディスカバリを統合します。",
+        "services": [
+          "Amazon Route 53",
+          "Amazon Route 53 ARC",
+          "AWS Cloud Map"
+        ]
+      },
+      {
+        "title": "サービス間通信",
+        "description": "サービスメッシュやプライベート接続を提供します。",
+        "services": [
+          "AWS PrivateLink",
+          "Amazon VPC Lattice",
+          "AWS App Mesh",
+          "AWS Verified Access"
+        ]
+      }
+    ],
+    "analytics": [
+      {
+        "title": "データウェアハウス / クエリ",
+        "description": "Redshift や Athena で大規模クエリを高速に実行します。",
+        "services": [
+          "Amazon Redshift",
+          "Amazon Athena"
+        ]
+      },
+      {
+        "title": "データ統合 / ETL",
+        "description": "データ抽出・整形・ロードを自動化します。",
+        "services": [
+          "AWS Glue",
+          "AWS Glue DataBrew"
+        ]
+      },
+      {
+        "title": "データレイク管理",
+        "description": "メタデータ管理とデータガバナンスを提供します。",
+        "services": [
+          "AWS Lake Formation",
+          "AWS DataZone"
+        ]
+      },
+      {
+        "title": "ストリーミング分析",
+        "description": "リアルタイムデータ処理のためのストリーミング基盤です。",
+        "services": [
+          "Amazon Kinesis Data Streams",
+          "Amazon Kinesis Data Firehose",
+          "Amazon Kinesis Data Analytics",
+          "Amazon Managed Streaming for Apache Kafka (MSK)"
+        ]
+      },
+      {
+        "title": "検索 / ログ分析",
+        "description": "OpenSearch でログ・テキスト検索を実現します。",
+        "services": [
+          "Amazon OpenSearch Service"
+        ]
+      },
+      {
+        "title": "BI / ダッシュボード",
+        "description": "QuickSight で可視化とダッシュボードを提供します。",
+        "services": [
+          "Amazon QuickSight"
+        ]
+      },
+      {
+        "title": "データ共有 / コラボレーション",
+        "description": "データ取引やクリーンルーム分析を支援します。",
+        "services": [
+          "AWS Data Exchange",
+          "AWS Clean Rooms",
+          "AWS Entity Resolution",
+          "Amazon FinSpace"
+        ]
+      }
+    ],
+    "ai-ml": [
+      {
+        "title": "ML プラットフォーム",
+        "description": "SageMaker で ML の構築・学習・推論を統合します。",
+        "services": [
+          "Amazon SageMaker"
+        ]
+      },
+      {
+        "title": "言語理解 / 翻訳",
+        "description": "自然言語解析や翻訳機能をアプリに組み込みます。",
+        "services": [
+          "Amazon Comprehend",
+          "Amazon Translate"
+        ]
+      },
+      {
+        "title": "音声 / 会話",
+        "description": "音声認識と合成、会話型体験を提供します。",
+        "services": [
+          "Amazon Transcribe",
+          "Amazon Polly",
+          "Amazon Lex"
+        ]
+      },
+      {
+        "title": "画像 / ドキュメント",
+        "description": "画像・文書の分析と異常検知を行います。",
+        "services": [
+          "Amazon Rekognition",
+          "Amazon Textract",
+          "Amazon Lookout for Vision"
+        ]
+      },
+      {
+        "title": "予測 / レコメンド",
+        "description": "需要予測やパーソナライズを実現します。",
+        "services": [
+          "Amazon Forecast",
+          "Amazon Personalize"
+        ]
+      },
+      {
+        "title": "検索 / 知識探索",
+        "description": "社内外のドキュメント検索を強化します。",
+        "services": [
+          "Amazon Kendra"
+        ]
+      },
+      {
+        "title": "異常検知",
+        "description": "不正検知や設備異常の監視を自動化します。",
+        "services": [
+          "Amazon Fraud Detector",
+          "Amazon Lookout for Equipment",
+          "Amazon Lookout for Metrics"
+        ]
+      }
+    ],
+    "genai": [
+      {
+        "title": "生成 AI プラットフォーム",
+        "description": "Bedrock と Guardrails で安全な生成 AI 基盤を構築します。",
+        "services": [
+          "Amazon Bedrock",
+          "Guardrails for Amazon Bedrock"
+        ]
+      },
+      {
+        "title": "エージェント / ナレッジ",
+        "description": "エージェント実行とナレッジ統合で高度な対話を実現します。",
+        "services": [
+          "Agents for Amazon Bedrock",
+          "Knowledge Bases for Amazon Bedrock"
+        ]
+      },
+      {
+        "title": "Amazon Q アシスタント",
+        "description": "開発者・業務ユーザー向けの生成 AI アシスタントです。",
+        "services": [
+          "Amazon Q Developer",
+          "Amazon Q Business",
+          "Amazon Q Apps"
+        ]
+      }
+    ],
+    "security-id": [
+      {
+        "title": "アクセス管理",
+        "description": "ID、認証、権限共有を統合的に管理します。",
+        "services": [
+          "AWS Identity and Access Management (IAM)",
+          "IAM Identity Center",
+          "Amazon Cognito",
+          "AWS Verified Permissions",
+          "AWS Resource Access Manager (RAM)"
+        ]
+      },
+      {
+        "title": "鍵・証明書・シークレット",
+        "description": "暗号鍵や証明書、シークレットを安全に扱います。",
+        "services": [
+          "AWS KMS",
+          "AWS CloudHSM",
+          "AWS Secrets Manager",
+          "AWS Certificate Manager (ACM)"
+        ]
+      },
+      {
+        "title": "ネットワーク防御",
+        "description": "アプリケーションとネットワーク層の防御を提供します。",
+        "services": [
+          "AWS WAF",
+          "AWS Shield",
+          "AWS Network Firewall",
+          "AWS Firewall Manager",
+          "AWS Verified Access"
+        ]
+      },
+      {
+        "title": "脅威検知 / セキュリティ運用",
+        "description": "脅威検知とセキュリティ運用を自動化します。",
+        "services": [
+          "Amazon GuardDuty",
+          "Amazon Inspector",
+          "Amazon Macie",
+          "AWS Detective",
+          "AWS Security Hub"
+        ]
+      },
+      {
+        "title": "コンプライアンス / 監査",
+        "description": "レポーティングと監査対応を効率化します。",
+        "services": [
+          "AWS Artifact",
+          "AWS Audit Manager"
+        ]
+      }
+    ],
+    "management": [
+      {
+        "title": "モニタリング / 可観測性",
+        "description": "CloudWatch でメトリクスとログを統合監視します。",
+        "services": [
+          "Amazon CloudWatch"
+        ]
+      },
+      {
+        "title": "監査 / 設定管理",
+        "description": "操作履歴と構成変更を追跡しガバナンスを強化します。",
+        "services": [
+          "AWS CloudTrail",
+          "AWS Config"
+        ]
+      },
+      {
+        "title": "運用自動化 / カオス工学",
+        "description": "運用自動化と故障注入で信頼性を高めます。",
+        "services": [
+          "AWS Systems Manager",
+          "AWS Fault Injection Simulator"
+        ]
+      },
+      {
+        "title": "組織ガバナンス",
+        "description": "マルチアカウント管理と標準化を推進します。",
+        "services": [
+          "AWS Organizations",
+          "AWS Control Tower",
+          "AWS Service Catalog",
+          "AWS License Manager"
+        ]
+      },
+      {
+        "title": "ベストプラクティス / ガイド",
+        "description": "運用ベストプラクティスと推奨事項を確認できます。",
+        "services": [
+          "AWS Trusted Advisor",
+          "AWS Well-Architected Tool"
+        ]
+      },
+      {
+        "title": "クォータ / ステータス",
+        "description": "サービスリミットとヘルス情報を把握します。",
+        "services": [
+          "AWS Service Quotas",
+          "AWS Health Dashboard"
+        ]
+      }
+    ],
+    "devtools": [
+      {
+        "title": "ソース管理",
+        "description": "Git リポジトリをマネージドで提供します。",
+        "services": [
+          "AWS CodeCommit"
+        ]
+      },
+      {
+        "title": "CI/CD パイプライン",
+        "description": "継続的インテグレーションとデリバリーを自動化します。",
+        "services": [
+          "AWS CodeBuild",
+          "AWS CodeDeploy",
+          "AWS CodePipeline",
+          "Amazon CodeCatalyst"
+        ]
+      },
+      {
+        "title": "開発環境",
+        "description": "ブラウザベースの開発環境を提供します。",
+        "services": [
+          "AWS Cloud9",
+          "AWS CloudShell"
+        ]
+      },
+      {
+        "title": "インフラ自動化",
+        "description": "IaC ツールでインフラ構成をコード管理します。",
+        "services": [
+          "AWS CloudFormation",
+          "AWS CDK",
+          "AWS SAM"
+        ]
+      },
+      {
+        "title": "フロントエンド / モバイル",
+        "description": "フロントエンド開発とデバイステストを支援します。",
+        "services": [
+          "AWS Amplify",
+          "AWS Device Farm"
+        ]
+      },
+      {
+        "title": "アプリ設定 / フラグ",
+        "description": "アプリケーション設定の集中管理とロールアウトを提供します。",
+        "services": [
+          "AWS AppConfig"
+        ]
+      },
+      {
+        "title": "分散トレーシング",
+        "description": "アプリケーションの分散トレースを収集・分析します。",
+        "services": [
+          "AWS X-Ray"
+        ]
+      }
+    ],
+    "migration": [
+      {
+        "title": "移行計画 / 可視化",
+        "description": "アプリとサーバー資産を可視化し移行計画を立てます。",
+        "services": [
+          "AWS Migration Hub",
+          "AWS Application Discovery Service"
+        ]
+      },
+      {
+        "title": "サーバー移行",
+        "description": "リホストやメインフレームモダナイゼーションを支援します。",
+        "services": [
+          "AWS Application Migration Service (MGN)",
+          "AWS Elastic Disaster Recovery",
+          "AWS Mainframe Modernization"
+        ]
+      },
+      {
+        "title": "データベース移行",
+        "description": "DMS でデータベースの移行を自動化します。",
+        "services": [
+          "AWS Database Migration Service (DMS)"
+        ]
+      },
+      {
+        "title": "データ転送",
+        "description": "物理デバイスやオンライン転送でデータ移行を支援します。",
+        "services": [
+          "AWS Snow Family",
+          "AWS DataSync",
+          "AWS Transfer Family"
+        ]
+      }
+    ],
+    "business-apps": [
+      {
+        "title": "コンタクトセンター",
+        "description": "Amazon Connect でクラウド型コンタクトセンターを構築します。",
+        "services": [
+          "Amazon Connect"
+        ]
+      },
+      {
+        "title": "顧客コミュニケーション",
+        "description": "メールや通知、音声通話を統合的に提供します。",
+        "services": [
+          "Amazon Pinpoint",
+          "Amazon Simple Email Service (SES)",
+          "Amazon Chime SDK"
+        ]
+      },
+      {
+        "title": "業務メール / コラボレーション",
+        "description": "WorkMail でビジネスメールと予定表を提供します。",
+        "services": [
+          "Amazon WorkMail"
+        ]
+      },
+      {
+        "title": "ノーコードアプリ",
+        "description": "ノーコードで業務アプリケーションを構築できます。",
+        "services": [
+          "Amazon Honeycode"
+        ]
+      }
+    ],
+    "media": [
+      {
+        "title": "ライブ配信 / 送出",
+        "description": "ライブ動画の送出と配信を支援します。",
+        "services": [
+          "AWS Elemental MediaLive",
+          "AWS Elemental MediaConnect",
+          "Amazon IVS (Interactive Video Service)",
+          "Amazon Kinesis Video Streams"
+        ]
+      },
+      {
+        "title": "動画処理 / 配信",
+        "description": "動画の変換やパッケージング、広告挿入を行います。",
+        "services": [
+          "AWS Elemental MediaConvert",
+          "AWS Elemental MediaPackage",
+          "AWS Elemental MediaTailor"
+        ]
+      },
+      {
+        "title": "制作ワークステーション",
+        "description": "クラウドベースの制作スタジオ環境を提供します。",
+        "services": [
+          "Amazon Nimble Studio"
+        ]
+      }
+    ],
+    "iot-edge": [
+      {
+        "title": "デバイス接続 / 管理",
+        "description": "デバイス接続とライフサイクル管理を提供します。",
+        "services": [
+          "AWS IoT Core",
+          "AWS IoT Device Management"
+        ]
+      },
+      {
+        "title": "セキュリティ / モニタリング",
+        "description": "デバイスのセキュリティと異常検知を行います。",
+        "services": [
+          "AWS IoT Device Defender"
+        ]
+      },
+      {
+        "title": "イベント処理 / 分析",
+        "description": "イベント検知とデータ分析をサーバーレスで実行します。",
+        "services": [
+          "AWS IoT Analytics",
+          "AWS IoT Events"
+        ]
+      },
+      {
+        "title": "産業デジタルツイン",
+        "description": "産業設備の可視化とデジタルツインを提供します。",
+        "services": [
+          "AWS IoT SiteWise",
+          "AWS IoT TwinMaker"
+        ]
+      },
+      {
+        "title": "エッジランタイム / OS",
+        "description": "エッジデバイスでのアプリ実行と管理を支援します。",
+        "services": [
+          "AWS IoT Greengrass",
+          "FreeRTOS"
+        ]
+      }
+    ],
+    "industry": [
+      {
+        "title": "ヘルスケア / ライフサイエンス",
+        "description": "医療・ライフサイエンス向けのデータ管理を提供します。",
+        "services": [
+          "Amazon HealthLake",
+          "Amazon Omics"
+        ]
+      },
+      {
+        "title": "サプライチェーン / 製造",
+        "description": "製造・サプライチェーンのデータ可視化と最適化を行います。",
+        "services": [
+          "AWS Supply Chain",
+          "AWS IoT FleetWise",
+          "Amazon Monitron"
+        ]
+      },
+      {
+        "title": "エッジコンピュータービジョン",
+        "description": "現場向けのコンピュータービジョンを提供します。",
+        "services": [
+          "AWS Panorama"
+        ]
+      }
+    ],
+    "cfinops": [
+      {
+        "title": "コスト可視化 / レポート",
+        "description": "費用の可視化と詳細レポートを提供します。",
+        "services": [
+          "AWS Cost Explorer",
+          "AWS Cost and Usage Report (CUR)"
+        ]
+      },
+      {
+        "title": "予算管理 / 異常検知",
+        "description": "予算設定とコスト異常の検知を行います。",
+        "services": [
+          "AWS Budgets",
+          "AWS Cost Anomaly Detection"
+        ]
+      },
+      {
+        "title": "課金配賦 / 請求",
+        "description": "課金配賦や請求プロセスを最適化します。",
+        "services": [
+          "AWS Billing Conductor"
+        ]
+      },
+      {
+        "title": "リソース最適化",
+        "description": "Compute Optimizer でリソース利用を最適化します。",
+        "services": [
+          "AWS Compute Optimizer"
+        ]
+      }
+    ]
+  }
+}
