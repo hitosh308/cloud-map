@@ -135,59 +135,6 @@ body {
   box-shadow: 0 12px 30px rgba(var(--accent-rgb), 0.22);
 }
 
-.nav-link--subtle {
-  background: transparent;
-  color: var(--text-muted);
-  border: 1px solid rgba(var(--accent-rgb), 0.22);
-  border-radius: 12px;
-  padding: 8px 16px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  box-shadow: none;
-}
-
-.nav-link--subtle::after {
-  content: '';
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: translateY(-1px) rotate(-45deg);
-  transform-origin: center;
-  opacity: 0.6;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.nav-link--subtle:hover,
-.nav-link--subtle:focus {
-  background: rgba(var(--accent-rgb), 0.08);
-  color: var(--accent-dark);
-  border-color: rgba(var(--accent-rgb), 0.35);
-}
-
-.nav-link--subtle:hover::after,
-.nav-link--subtle:focus::after {
-  opacity: 1;
-  transform: translate(1px, -1px) rotate(-45deg);
-}
-
-.nav-link--subtle:focus-visible {
-  outline: 3px solid rgba(var(--accent-rgb), 0.35);
-  outline-offset: 3px;
-}
-
-.nav-link--subtle[aria-current='page'] {
-  background: rgba(var(--accent-rgb), 0.12);
-  color: var(--accent-dark);
-  border-color: rgba(var(--accent-rgb), 0.35);
-  box-shadow: none;
-}
-
-.nav-link--subtle[aria-current='page']::after {
-  opacity: 1;
-}
-
 .page-main {
   flex: 1;
   width: min(1100px, 92vw);
@@ -292,45 +239,43 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: linear-gradient(
-    135deg,
-    rgba(var(--accent-rgb), 0.12) 0%,
-    rgba(var(--accent-rgb), 0.22) 100%
-  );
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: rgba(var(--accent-rgb), 0.08);
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
   color: var(--accent-dark);
+  font-weight: 600;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  transition: background var(--transition), color var(--transition),
-    box-shadow var(--transition), transform 0.25s ease;
-  box-shadow: 0 8px 20px rgba(var(--accent-rgb), 0.16);
+  transition: background var(--transition), border-color var(--transition),
+    color var(--transition), transform 0.2s ease, box-shadow var(--transition);
+  box-shadow: none;
 }
 
 .comparison-table .service-cell a::after {
   content: '\2197';
-  font-size: 0.85em;
-  transition: transform 0.25s ease;
+  font-size: 0.8em;
+  opacity: 0.65;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .comparison-table .service-cell a:hover,
 .comparison-table .service-cell a:focus {
-  background: linear-gradient(
-    135deg,
-    rgba(var(--accent-rgb), 0.18) 0%,
-    rgba(var(--accent-rgb), 0.32) 100%
-  );
+  background: rgba(var(--accent-rgb), 0.14);
+  border-color: rgba(var(--accent-rgb), 0.3);
   color: var(--accent-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(var(--accent-rgb), 0.24);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(var(--accent-rgb), 0.18);
 }
 
 .comparison-table .service-cell a:hover::after,
 .comparison-table .service-cell a:focus::after {
-  transform: translateY(-1px) translateX(2px);
+  opacity: 1;
+  transform: translate(2px, -1px);
 }
 
 .comparison-table .service-cell a:focus-visible {
-  outline: 3px solid rgba(var(--accent-rgb), 0.45);
+  outline: 3px solid rgba(var(--accent-rgb), 0.35);
   outline-offset: 3px;
 }
 
