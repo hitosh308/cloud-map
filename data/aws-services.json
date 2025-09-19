@@ -3,301 +3,2827 @@
     {
       "id": "compute",
       "name": "コンピューティング",
-      "description": "仮想サーバーやバッチ処理など計算リソースを柔軟に提供するサービス。",
+      "description": "仮想サーバ、バッチ、アプリ実行基盤、HPC など。",
       "services": [
         {
           "name": "Amazon EC2",
-          "summary": "用途に応じたインスタンスタイプを選べる仮想サーバーサービス。",
-          "details": "Amazon Elastic Compute Cloud (EC2) は、ニーズに合わせた CPU・メモリ・GPU 構成の仮想サーバーを即座に起動できる IaaS。オートスケールや多彩なストレージオプションと組み合わせて高可用なアプリ基盤を構築できます。",
+          "summary": "オンデマンド/予約/スポットで使える仮想サーバ。Nitro による高い分離と性能。",
+          "details": "Amazon EC2 は、オンデマンド/予約/スポットで使える仮想サーバ。Nitro による高い分離と性能。 スケール/可用性/セキュリティをクラウド標準で確保し、運用の自動化とコスト最適化を両立できます。",
           "features": [
-            "数百種類のインスタンスファミリーと最新世代プロセッサに対応",
-            "オンデマンド / リザーブド / スポットの柔軟な料金モデル",
-            "セキュリティグループや IAM と連携したアクセス制御",
-            "CloudWatch / CloudTrail による運用監視と操作履歴管理"
+            "オンデマンド/リザーブド/スポットの柔軟な料金",
+            "自動スケーリング/自己修復",
+            "IAM/セキュリティグループで細かな制御",
+            "CloudWatch/CloudTrail 連携の可観測性",
+            "VPC/PrivateLink によるプライベート接続"
           ],
           "link": "https://aws.amazon.com/ec2/"
         },
         {
-          "name": "AWS Auto Scaling",
-          "summary": "需要に応じてリソースを自動的に追加・削除するスケーリングサービス。",
-          "details": "AWS Auto Scaling は、アプリの利用状況に合わせて EC2 インスタンスや ECS タスク、DynamoDB キャパシティーなどを自動調整。目標追跡やスケジュールベースのポリシーでコストと可用性を最適化します。",
+          "name": "Amazon EC2 Auto Scaling",
+          "summary": "需要に応じて EC2 を自動で増減。",
+          "details": "Amazon EC2 Auto Scaling は、需要に応じて EC2 を自動で増減。 スケール/可用性/セキュリティをクラウド標準で確保し、運用の自動化とコスト最適化を両立できます。",
           "features": [
-            "複数リソースをまとめて管理できるスケーリングプラン",
-            "CPU 使用率やリクエスト数に基づいた動的スケーリング",
-            "予測スケーリングによる需要予測と先読み調整",
-            "CloudWatch アラームと統合したイベント駆動の調整"
+            "オンデマンド/リザーブド/スポットの柔軟な料金",
+            "自動スケーリング/自己修復",
+            "IAM/セキュリティグループで細かな制御",
+            "CloudWatch/CloudTrail 連携の可観測性",
+            "VPC/PrivateLink によるプライベート接続"
           ],
-          "link": "https://aws.amazon.com/autoscaling/"
+          "link": "https://aws.amazon.com/ec2/autoscaling/"
         },
         {
           "name": "AWS Batch",
-          "summary": "HPC やデータ処理をマネージドに実行できるバッチ基盤。",
-          "details": "AWS Batch は、バッチジョブをキューに投入するだけで最適な量のコンピュートを自動プロビジョニング。EC2 や Spot インスタンス、Fargate を利用でき、ジョブ依存関係や優先順位制御もサポートします。",
+          "summary": "フルマネージドで大規模バッチ処理を実行。",
+          "details": "AWS Batch は、フルマネージドで大規模バッチ処理を実行。 スケール/可用性/セキュリティをクラウド標準で確保し、運用の自動化とコスト最適化を両立できます。",
           "features": [
-            "ジョブ定義とキューによる柔軟なスケジューリング",
-            "マルチノード並列ジョブや GPU ワークロードを実行",
-            "CloudWatch Events と連携した自動化",
-            "AWS IAM と VPC 設定でセキュアに運用"
+            "オンデマンド/リザーブド/スポットの柔軟な料金",
+            "自動スケーリング/自己修復",
+            "IAM/セキュリティグループで細かな制御",
+            "CloudWatch/CloudTrail 連携の可観測性",
+            "VPC/PrivateLink によるプライベート接続"
           ],
           "link": "https://aws.amazon.com/batch/"
+        },
+        {
+          "name": "AWS Elastic Beanstalk",
+          "summary": "アプリのデプロイ/スケーリングを自動化する PaaS。",
+          "details": "AWS Elastic Beanstalk は、アプリのデプロイ/スケーリングを自動化する PaaS。 スケール/可用性/セキュリティをクラウド標準で確保し、運用の自動化とコスト最適化を両立できます。",
+          "features": [
+            "オンデマンド/リザーブド/スポットの柔軟な料金",
+            "自動スケーリング/自己修復",
+            "IAM/セキュリティグループで細かな制御",
+            "CloudWatch/CloudTrail 連携の可観測性",
+            "VPC/PrivateLink によるプライベート接続"
+          ],
+          "link": "https://aws.amazon.com/elasticbeanstalk/"
+        },
+        {
+          "name": "EC2 Image Builder",
+          "summary": "OS/AMI のゴールデンイメージを継続的に作成。",
+          "details": "EC2 Image Builder は、OS/AMI のゴールデンイメージを継続的に作成。 スケール/可用性/セキュリティをクラウド標準で確保し、運用の自動化とコスト最適化を両立できます。",
+          "features": [
+            "オンデマンド/リザーブド/スポットの柔軟な料金",
+            "自動スケーリング/自己修復",
+            "IAM/セキュリティグループで細かな制御",
+            "CloudWatch/CloudTrail 連携の可観測性",
+            "VPC/PrivateLink によるプライベート接続"
+          ],
+          "link": "https://aws.amazon.com/image-builder/"
+        },
+        {
+          "name": "AWS ParallelCluster",
+          "summary": "HPC クラスタを自動構築・運用。",
+          "details": "AWS ParallelCluster は、HPC クラスタを自動構築・運用。 スケール/可用性/セキュリティをクラウド標準で確保し、運用の自動化とコスト最適化を両立できます。",
+          "features": [
+            "オンデマンド/リザーブド/スポットの柔軟な料金",
+            "自動スケーリング/自己修復",
+            "IAM/セキュリティグループで細かな制御",
+            "CloudWatch/CloudTrail 連携の可観測性",
+            "VPC/PrivateLink によるプライベート接続"
+          ],
+          "link": "https://aws.amazon.com/hpc/parallelcluster/"
+        },
+        {
+          "name": "AWS Nitro Enclaves",
+          "summary": "機密計算のための隔離環境を EC2 上に提供。",
+          "details": "AWS Nitro Enclaves は、機密計算のための隔離環境を EC2 上に提供。 スケール/可用性/セキュリティをクラウド標準で確保し、運用の自動化とコスト最適化を両立できます。",
+          "features": [
+            "オンデマンド/リザーブド/スポットの柔軟な料金",
+            "自動スケーリング/自己修復",
+            "IAM/セキュリティグループで細かな制御",
+            "CloudWatch/CloudTrail 連携の可観測性",
+            "VPC/PrivateLink によるプライベート接続"
+          ],
+          "link": "https://aws.amazon.com/ec2/nitro/nitro-enclaves/"
         }
       ]
     },
     {
-      "id": "containers-serverless",
-      "name": "コンテナ / サーバレス",
-      "description": "コンテナ化アプリやイベント駆動アプリをマネージドで実行するサービス。",
+      "id": "containers",
+      "name": "コンテナ",
+      "description": "コンテナ実行/オーケストレーション/イメージ管理。",
       "services": [
         {
           "name": "Amazon ECS",
-          "summary": "AWS 上でコンテナワークロードを運用するマネージドコンテナサービス。",
-          "details": "Amazon Elastic Container Service (ECS) は、タスク定義に基づいてコンテナをデプロイし、Fargate や EC2 起動タイプで柔軟に実行。IAM、ELB、CloudWatch とネイティブに統合され、運用をシンプルに保てます。",
+          "summary": "マネージドなコンテナオーケストレーション。",
+          "details": "Amazon ECS は、マネージドなコンテナオーケストレーション。 CI/CD と組み合わせて迅速にリリースし、セキュリティと可観測性を一貫して適用できます。",
           "features": [
-            "Fargate によるサーバーレス実行と EC2 ベースの柔軟な構成",
-            "サービスディスカバリーとロードバランサー連携",
-            "CloudWatch Container Insights による可観測性",
-            "CodePipeline / CodeDeploy と連携した継続的デリバリー"
+            "オートスケールとローリング/Blue-Green デプロイ",
+            "IAM ロールで権限分離（タスク/サービス）",
+            "App Mesh/Observability の統合",
+            "ECR のスキャン/署名と連携",
+            "マルチアカウント/マルチ環境の標準化"
           ],
           "link": "https://aws.amazon.com/ecs/"
         },
         {
           "name": "Amazon EKS",
-          "summary": "フルマネージドな Kubernetes コントロールプレーンを提供。",
-          "details": "Amazon Elastic Kubernetes Service (EKS) は、可用性の高い Kubernetes コントロールプレーンを AWS が管理。EC2 や Fargate、オンプレミス (EKS Anywhere) など多様な実行環境で一貫した運用が可能です。",
+          "summary": "Kubernetes をマネージドで提供。",
+          "details": "Amazon EKS は、Kubernetes をマネージドで提供。 CI/CD と組み合わせて迅速にリリースし、セキュリティと可観測性を一貫して適用できます。",
           "features": [
-            "マルチ AZ 配置の冗長化されたコントロールプレーン",
-            "IAM / OIDC によるセキュアなアクセス制御",
-            "Managed Node Groups や Karpenter でノード管理を自動化",
-            "AWS App Mesh やサービスメッシュと連携"
+            "オートスケールとローリング/Blue-Green デプロイ",
+            "IAM ロールで権限分離（タスク/サービス）",
+            "App Mesh/Observability の統合",
+            "ECR のスキャン/署名と連携",
+            "マルチアカウント/マルチ環境の標準化"
           ],
           "link": "https://aws.amazon.com/eks/"
         },
         {
-          "name": "AWS Lambda",
-          "summary": "イベントに応じてコードを実行するサーバレス コンピューティング。",
-          "details": "AWS Lambda は、サーバー管理不要でコードを実行できる FaaS。イベントソースを設定するだけで自動的にスケールし、実行時間とリクエスト数に応じて課金されます。関数のバージョン管理やエイリアスで安全なリリースを実現。",
+          "name": "AWS Fargate",
+          "summary": "サーバ管理不要で ECS/EKS のコンテナを実行。",
+          "details": "AWS Fargate は、サーバ管理不要で ECS/EKS のコンテナを実行。 CI/CD と組み合わせて迅速にリリースし、セキュリティと可観測性を一貫して適用できます。",
           "features": [
-            "S3 / DynamoDB / API Gateway など多数のイベントソース",
-            "Node.js・Python・Java・Go 等のランタイムを提供",
-            "Provisioned Concurrency によるレイテンシ制御",
-            "X-Ray / CloudWatch Logs と統合したトレーシング"
+            "オートスケールとローリング/Blue-Green デプロイ",
+            "IAM ロールで権限分離（タスク/サービス）",
+            "App Mesh/Observability の統合",
+            "ECR のスキャン/署名と連携",
+            "マルチアカウント/マルチ環境の標準化"
+          ],
+          "link": "https://aws.amazon.com/fargate/"
+        },
+        {
+          "name": "Amazon ECR",
+          "summary": "コンテナイメージのセキュアなレジストリ。",
+          "details": "Amazon ECR は、コンテナイメージのセキュアなレジストリ。 CI/CD と組み合わせて迅速にリリースし、セキュリティと可観測性を一貫して適用できます。",
+          "features": [
+            "オートスケールとローリング/Blue-Green デプロイ",
+            "IAM ロールで権限分離（タスク/サービス）",
+            "App Mesh/Observability の統合",
+            "ECR のスキャン/署名と連携",
+            "マルチアカウント/マルチ環境の標準化"
+          ],
+          "link": "https://aws.amazon.com/ecr/"
+        },
+        {
+          "name": "AWS App Runner",
+          "summary": "ソースやイメージから自動でスケールするアプリ実行基盤。",
+          "details": "AWS App Runner は、ソースやイメージから自動でスケールするアプリ実行基盤。 CI/CD と組み合わせて迅速にリリースし、セキュリティと可観測性を一貫して適用できます。",
+          "features": [
+            "オートスケールとローリング/Blue-Green デプロイ",
+            "IAM ロールで権限分離（タスク/サービス）",
+            "App Mesh/Observability の統合",
+            "ECR のスキャン/署名と連携",
+            "マルチアカウント/マルチ環境の標準化"
+          ],
+          "link": "https://aws.amazon.com/apprunner/"
+        },
+        {
+          "name": "AWS Proton",
+          "summary": "プラットフォームチーム向けの環境/サービステンプレート管理。",
+          "details": "AWS Proton は、プラットフォームチーム向けの環境/サービステンプレート管理。 CI/CD と組み合わせて迅速にリリースし、セキュリティと可観測性を一貫して適用できます。",
+          "features": [
+            "オートスケールとローリング/Blue-Green デプロイ",
+            "IAM ロールで権限分離（タスク/サービス）",
+            "App Mesh/Observability の統合",
+            "ECR のスキャン/署名と連携",
+            "マルチアカウント/マルチ環境の標準化"
+          ],
+          "link": "https://aws.amazon.com/proton/"
+        }
+      ]
+    },
+    {
+      "id": "serverless-integration",
+      "name": "サーバーレス / アプリ連携",
+      "description": "関数、ワークフロー、イベント、メッセージング、API。",
+      "services": [
+        {
+          "name": "AWS Lambda",
+          "summary": "イベント駆動のサーバーレス関数。",
+          "details": "AWS Lambda は、イベント駆動のサーバーレス関数。 イベント/メッセージ/ワークフローを組み合わせ、疎結合で拡張性の高いアーキテクチャを実現します。",
+          "features": [
+            "インフラ管理不要で自動スケール",
+            "イベント駆動/メッセージング/ワークフローの統合",
+            "最小権限の IAM / ポリシー管理",
+            "秒/リクエスト単位の従量課金",
+            "IaC（SAM/CDK/CloudFormation）で自動化"
           ],
           "link": "https://aws.amazon.com/lambda/"
+        },
+        {
+          "name": "AWS Step Functions",
+          "summary": "サーバーレスなワークフローの定義と実行。",
+          "details": "AWS Step Functions は、サーバーレスなワークフローの定義と実行。 イベント/メッセージ/ワークフローを組み合わせ、疎結合で拡張性の高いアーキテクチャを実現します。",
+          "features": [
+            "インフラ管理不要で自動スケール",
+            "イベント駆動/メッセージング/ワークフローの統合",
+            "最小権限の IAM / ポリシー管理",
+            "秒/リクエスト単位の従量課金",
+            "IaC（SAM/CDK/CloudFormation）で自動化"
+          ],
+          "link": "https://aws.amazon.com/step-functions/"
+        },
+        {
+          "name": "Amazon EventBridge",
+          "summary": "SaaS/自社/ AWS サービスのイベント統合バス。",
+          "details": "Amazon EventBridge は、SaaS/自社/ AWS サービスのイベント統合バス。 イベント/メッセージ/ワークフローを組み合わせ、疎結合で拡張性の高いアーキテクチャを実現します。",
+          "features": [
+            "インフラ管理不要で自動スケール",
+            "イベント駆動/メッセージング/ワークフローの統合",
+            "最小権限の IAM / ポリシー管理",
+            "秒/リクエスト単位の従量課金",
+            "IaC（SAM/CDK/CloudFormation）で自動化"
+          ],
+          "link": "https://aws.amazon.com/eventbridge/"
+        },
+        {
+          "name": "EventBridge Scheduler",
+          "summary": "大規模スケジュール実行（クラウド Cron）。",
+          "details": "EventBridge Scheduler は、大規模スケジュール実行（クラウド Cron）。 イベント/メッセージ/ワークフローを組み合わせ、疎結合で拡張性の高いアーキテクチャを実現します。",
+          "features": [
+            "インフラ管理不要で自動スケール",
+            "イベント駆動/メッセージング/ワークフローの統合",
+            "最小権限の IAM / ポリシー管理",
+            "秒/リクエスト単位の従量課金",
+            "IaC（SAM/CDK/CloudFormation）で自動化"
+          ],
+          "link": "https://aws.amazon.com/eventbridge/scheduler/"
+        },
+        {
+          "name": "Amazon SQS",
+          "summary": "大規模分散向けのメッセージキュー。",
+          "details": "Amazon SQS は、大規模分散向けのメッセージキュー。 イベント/メッセージ/ワークフローを組み合わせ、疎結合で拡張性の高いアーキテクチャを実現します。",
+          "features": [
+            "インフラ管理不要で自動スケール",
+            "イベント駆動/メッセージング/ワークフローの統合",
+            "最小権限の IAM / ポリシー管理",
+            "秒/リクエスト単位の従量課金",
+            "IaC（SAM/CDK/CloudFormation）で自動化"
+          ],
+          "link": "https://aws.amazon.com/sqs/"
+        },
+        {
+          "name": "Amazon SNS",
+          "summary": "pub/sub 通知・モバイルプッシュ。",
+          "details": "Amazon SNS は、pub/sub 通知・モバイルプッシュ。 イベント/メッセージ/ワークフローを組み合わせ、疎結合で拡張性の高いアーキテクチャを実現します。",
+          "features": [
+            "インフラ管理不要で自動スケール",
+            "イベント駆動/メッセージング/ワークフローの統合",
+            "最小権限の IAM / ポリシー管理",
+            "秒/リクエスト単位の従量課金",
+            "IaC（SAM/CDK/CloudFormation）で自動化"
+          ],
+          "link": "https://aws.amazon.com/sns/"
+        },
+        {
+          "name": "Amazon MQ",
+          "summary": "ActiveMQ/RabbitMQ のマネージドメッセージブローカ。",
+          "details": "Amazon MQ は、ActiveMQ/RabbitMQ のマネージドメッセージブローカ。 イベント/メッセージ/ワークフローを組み合わせ、疎結合で拡張性の高いアーキテクチャを実現します。",
+          "features": [
+            "インフラ管理不要で自動スケール",
+            "イベント駆動/メッセージング/ワークフローの統合",
+            "最小権限の IAM / ポリシー管理",
+            "秒/リクエスト単位の従量課金",
+            "IaC（SAM/CDK/CloudFormation）で自動化"
+          ],
+          "link": "https://aws.amazon.com/amazon-mq/"
+        },
+        {
+          "name": "Amazon API Gateway",
+          "summary": "スケーラブルな API の公開/保護/監視。",
+          "details": "Amazon API Gateway は、スケーラブルな API の公開/保護/監視。 イベント/メッセージ/ワークフローを組み合わせ、疎結合で拡張性の高いアーキテクチャを実現します。",
+          "features": [
+            "インフラ管理不要で自動スケール",
+            "イベント駆動/メッセージング/ワークフローの統合",
+            "最小権限の IAM / ポリシー管理",
+            "秒/リクエスト単位の従量課金",
+            "IaC（SAM/CDK/CloudFormation）で自動化"
+          ],
+          "link": "https://aws.amazon.com/api-gateway/"
+        },
+        {
+          "name": "AWS AppSync",
+          "summary": "GraphQL API をフルマネージドで提供。",
+          "details": "AWS AppSync は、GraphQL API をフルマネージドで提供。 イベント/メッセージ/ワークフローを組み合わせ、疎結合で拡張性の高いアーキテクチャを実現します。",
+          "features": [
+            "インフラ管理不要で自動スケール",
+            "イベント駆動/メッセージング/ワークフローの統合",
+            "最小権限の IAM / ポリシー管理",
+            "秒/リクエスト単位の従量課金",
+            "IaC（SAM/CDK/CloudFormation）で自動化"
+          ],
+          "link": "https://aws.amazon.com/appsync/"
+        },
+        {
+          "name": "AWS Application Composer",
+          "summary": "サーバーレスアーキテクチャを可視化設計。",
+          "details": "AWS Application Composer は、サーバーレスアーキテクチャを可視化設計。 イベント/メッセージ/ワークフローを組み合わせ、疎結合で拡張性の高いアーキテクチャを実現します。",
+          "features": [
+            "インフラ管理不要で自動スケール",
+            "イベント駆動/メッセージング/ワークフローの統合",
+            "最小権限の IAM / ポリシー管理",
+            "秒/リクエスト単位の従量課金",
+            "IaC（SAM/CDK/CloudFormation）で自動化"
+          ],
+          "link": "https://aws.amazon.com/application-composer/"
         }
       ]
     },
     {
       "id": "storage",
       "name": "ストレージ",
-      "description": "オブジェクト・ファイル・バックアップなど多用途に対応するストレージサービス。",
+      "description": "オブジェクト/ブロック/ファイル、バックアップ、移行。",
       "services": [
         {
           "name": "Amazon S3",
-          "summary": "耐久性 99.999999999% を誇るオブジェクトストレージサービス。",
-          "details": "Amazon Simple Storage Service (S3) は、あらゆる種類のデータを保存できるスケーラブルなオブジェクトストレージ。ストレージクラスを使い分けてコストを最適化し、バージョニングや MFA Delete でデータを保護します。",
+          "summary": "耐久性の高いオブジェクトストレージ。",
+          "details": "Amazon S3 は、耐久性の高いオブジェクトストレージ。 耐久性/可用性/暗号化/ライフサイクルを要件に合わせて選択・自動化できます。",
           "features": [
-            "Standard / Intelligent-Tiering / Glacier など多彩なストレージクラス",
-            "S3 Lifecycle による自動データ移行と削除",
-            "S3 Object Lambda や S3 Select でデータ加工を効率化",
-            "Bucket Policy / ACL / IAM による詳細なアクセス制御"
+            "高耐久・高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "VPC エンドポイント/PrivateLink で安全に接続",
+            "クロスリージョンレプリケーション/バックアップ連携",
+            "大容量データ移行（Snow/DataSync/Transfer）"
           ],
           "link": "https://aws.amazon.com/s3/"
         },
         {
-          "name": "Amazon EFS",
-          "summary": "Linux ワークロード向けのマネージド NFS ファイルシステム。",
-          "details": "Amazon Elastic File System (EFS) は、NFSv4 を介して複数の EC2 インスタンスから共有できるフルマネージド ファイルストレージ。需要に応じて自動スケールし、マルチ AZ 配置で高可用性を確保します。",
+          "name": "Amazon S3 Glacier",
+          "summary": "アーカイブ/低頻度アクセス向け階層ストレージ。",
+          "details": "Amazon S3 Glacier は、アーカイブ/低頻度アクセス向け階層ストレージ。 耐久性/可用性/暗号化/ライフサイクルを要件に合わせて選択・自動化できます。",
           "features": [
-            "スループットモードとパフォーマンスモードを用途に合わせて選択",
-            "マウントターゲットを複数 AZ に展開して冗長化",
-            "AWS Backup によるバックアップと復元",
-            "VPC セキュリティグループでアクセス制御"
+            "高耐久・高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "VPC エンドポイント/PrivateLink で安全に接続",
+            "クロスリージョンレプリケーション/バックアップ連携",
+            "大容量データ移行（Snow/DataSync/Transfer）"
+          ],
+          "link": "https://aws.amazon.com/s3/storage-classes/glacier/"
+        },
+        {
+          "name": "Amazon EBS",
+          "summary": "EC2 向けのブロックストレージ。",
+          "details": "Amazon EBS は、EC2 向けのブロックストレージ。 耐久性/可用性/暗号化/ライフサイクルを要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久・高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "VPC エンドポイント/PrivateLink で安全に接続",
+            "クロスリージョンレプリケーション/バックアップ連携",
+            "大容量データ移行（Snow/DataSync/Transfer）"
+          ],
+          "link": "https://aws.amazon.com/ebs/"
+        },
+        {
+          "name": "Amazon EFS",
+          "summary": "Linux 向けのスケーラブルな NFS。",
+          "details": "Amazon EFS は、Linux 向けのスケーラブルな NFS。 耐久性/可用性/暗号化/ライフサイクルを要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久・高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "VPC エンドポイント/PrivateLink で安全に接続",
+            "クロスリージョンレプリケーション/バックアップ連携",
+            "大容量データ移行（Snow/DataSync/Transfer）"
           ],
           "link": "https://aws.amazon.com/efs/"
         },
         {
-          "name": "Amazon FSx for Lustre",
-          "summary": "HPC や機械学習向けの高性能分散ファイルシステム。",
-          "details": "Amazon FSx for Lustre は、高スループットと低レイテンシを実現するファイルシステムをマネージドで提供。S3 と双方向に同期でき、大規模なトレーニングデータやメディア処理ワークロードに適しています。",
+          "name": "Amazon FSx for Windows File Server",
+          "summary": "Windows 互換のマネージドファイルサーバ。",
+          "details": "Amazon FSx for Windows File Server は、Windows 互換のマネージドファイルサーバ。 耐久性/可用性/暗号化/ライフサイクルを要件に合わせて選択・自動化できます。",
           "features": [
-            "数百 GB/s 規模のスループットとミリ秒未満のレイテンシ",
-            "S3 バケットとの同期と結果の自動エクスポート",
-            "データ圧縮と連続スナップショット",
-            "AWS Direct Connect / VPC Peering で広域接続"
+            "高耐久・高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "VPC エンドポイント/PrivateLink で安全に接続",
+            "クロスリージョンレプリケーション/バックアップ連携",
+            "大容量データ移行（Snow/DataSync/Transfer）"
+          ],
+          "link": "https://aws.amazon.com/fsx/windows/"
+        },
+        {
+          "name": "Amazon FSx for Lustre",
+          "summary": "HPC/分析向けの高速分散ファイル。",
+          "details": "Amazon FSx for Lustre は、HPC/分析向けの高速分散ファイル。 耐久性/可用性/暗号化/ライフサイクルを要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久・高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "VPC エンドポイント/PrivateLink で安全に接続",
+            "クロスリージョンレプリケーション/バックアップ連携",
+            "大容量データ移行（Snow/DataSync/Transfer）"
           ],
           "link": "https://aws.amazon.com/fsx/lustre/"
+        },
+        {
+          "name": "Amazon FSx for NetApp ONTAP",
+          "summary": "ONTAP 互換のフルマネージドファイル。",
+          "details": "Amazon FSx for NetApp ONTAP は、ONTAP 互換のフルマネージドファイル。 耐久性/可用性/暗号化/ライフサイクルを要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久・高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "VPC エンドポイント/PrivateLink で安全に接続",
+            "クロスリージョンレプリケーション/バックアップ連携",
+            "大容量データ移行（Snow/DataSync/Transfer）"
+          ],
+          "link": "https://aws.amazon.com/fsx/netapp-ontap/"
+        },
+        {
+          "name": "Amazon FSx for OpenZFS",
+          "summary": "OpenZFS ベースの低レイテンシファイル。",
+          "details": "Amazon FSx for OpenZFS は、OpenZFS ベースの低レイテンシファイル。 耐久性/可用性/暗号化/ライフサイクルを要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久・高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "VPC エンドポイント/PrivateLink で安全に接続",
+            "クロスリージョンレプリケーション/バックアップ連携",
+            "大容量データ移行（Snow/DataSync/Transfer）"
+          ],
+          "link": "https://aws.amazon.com/fsx/openzfs/"
+        },
+        {
+          "name": "AWS Backup",
+          "summary": "AWS リソースのバックアップ/復元を集中管理。",
+          "details": "AWS Backup は、AWS リソースのバックアップ/復元を集中管理。 耐久性/可用性/暗号化/ライフサイクルを要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久・高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "VPC エンドポイント/PrivateLink で安全に接続",
+            "クロスリージョンレプリケーション/バックアップ連携",
+            "大容量データ移行（Snow/DataSync/Transfer）"
+          ],
+          "link": "https://aws.amazon.com/backup/"
+        },
+        {
+          "name": "AWS Storage Gateway",
+          "summary": "オンプレと S3 を接続するファイル/テープ/ボリュームゲートウェイ。",
+          "details": "AWS Storage Gateway は、オンプレと S3 を接続するファイル/テープ/ボリュームゲートウェイ。 耐久性/可用性/暗号化/ライフサイクルを要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久・高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "VPC エンドポイント/PrivateLink で安全に接続",
+            "クロスリージョンレプリケーション/バックアップ連携",
+            "大容量データ移行（Snow/DataSync/Transfer）"
+          ],
+          "link": "https://aws.amazon.com/storagegateway/"
+        },
+        {
+          "name": "AWS DataSync",
+          "summary": "オンプレ/他クラウドと S3/EFS/FSx 間のデータ転送。",
+          "details": "AWS DataSync は、オンプレ/他クラウドと S3/EFS/FSx 間のデータ転送。 耐久性/可用性/暗号化/ライフサイクルを要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久・高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "VPC エンドポイント/PrivateLink で安全に接続",
+            "クロスリージョンレプリケーション/バックアップ連携",
+            "大容量データ移行（Snow/DataSync/Transfer）"
+          ],
+          "link": "https://aws.amazon.com/datasync/"
+        },
+        {
+          "name": "AWS Snow Family",
+          "summary": "物理デバイスでの大容量データ移行（Snowcone/Snowball/Snowmobile）。",
+          "details": "AWS Snow Family は、物理デバイスでの大容量データ移行（Snowcone/Snowball/Snowmobile）。 耐久性/可用性/暗号化/ライフサイクルを要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久・高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "VPC エンドポイント/PrivateLink で安全に接続",
+            "クロスリージョンレプリケーション/バックアップ連携",
+            "大容量データ移行（Snow/DataSync/Transfer）"
+          ],
+          "link": "https://aws.amazon.com/snow/"
+        },
+        {
+          "name": "AWS Transfer Family",
+          "summary": "SFTP/FTPS/FTP で S3/EFS と安全に転送。",
+          "details": "AWS Transfer Family は、SFTP/FTPS/FTP で S3/EFS と安全に転送。 耐久性/可用性/暗号化/ライフサイクルを要件に合わせて選択・自動化できます。",
+          "features": [
+            "高耐久・高可用とライフサイクル管理",
+            "デフォルト暗号化/CMEK 対応",
+            "VPC エンドポイント/PrivateLink で安全に接続",
+            "クロスリージョンレプリケーション/バックアップ連携",
+            "大容量データ移行（Snow/DataSync/Transfer）"
+          ],
+          "link": "https://aws.amazon.com/aws-transfer-family/"
+        }
+      ]
+    },
+    {
+      "id": "databases",
+      "name": "データベース",
+      "description": "リレーショナル/NoSQL/インメモリ/グラフ/時系列/台帳。",
+      "services": [
+        {
+          "name": "Amazon RDS",
+          "summary": "MySQL/PostgreSQL/MariaDB/Oracle/SQL Server をマネージド提供。",
+          "details": "Amazon RDS は、MySQL/PostgreSQL/MariaDB/Oracle/SQL Server をマネージド提供。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "マネージド運用/自動バックアップ/監視",
+            "高可用/マルチ AZ/グローバルテーブル等の選択肢",
+            "スケールアップ/アウトに対応",
+            "VPC/PrivateLink によるプライベート接続",
+            "DMS/Schema 変換等の移行ツールと連携"
+          ],
+          "link": "https://aws.amazon.com/rds/"
+        },
+        {
+          "name": "Amazon Aurora",
+          "summary": "高性能で高可用な RDS 互換 DB（MySQL/PostgreSQL 互換）。",
+          "details": "Amazon Aurora は、高性能で高可用な RDS 互換 DB（MySQL/PostgreSQL 互換）。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "マネージド運用/自動バックアップ/監視",
+            "高可用/マルチ AZ/グローバルテーブル等の選択肢",
+            "スケールアップ/アウトに対応",
+            "VPC/PrivateLink によるプライベート接続",
+            "DMS/Schema 変換等の移行ツールと連携"
+          ],
+          "link": "https://aws.amazon.com/aurora/"
+        },
+        {
+          "name": "Amazon DynamoDB",
+          "summary": "フルマネージドなキー・バリュー/ドキュメント NoSQL。",
+          "details": "Amazon DynamoDB は、フルマネージドなキー・バリュー/ドキュメント NoSQL。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "マネージド運用/自動バックアップ/監視",
+            "高可用/マルチ AZ/グローバルテーブル等の選択肢",
+            "スケールアップ/アウトに対応",
+            "VPC/PrivateLink によるプライベート接続",
+            "DMS/Schema 変換等の移行ツールと連携"
+          ],
+          "link": "https://aws.amazon.com/dynamodb/"
+        },
+        {
+          "name": "Amazon ElastiCache",
+          "summary": "Redis/Memcached のマネージドインメモリキャッシュ。",
+          "details": "Amazon ElastiCache は、Redis/Memcached のマネージドインメモリキャッシュ。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "マネージド運用/自動バックアップ/監視",
+            "高可用/マルチ AZ/グローバルテーブル等の選択肢",
+            "スケールアップ/アウトに対応",
+            "VPC/PrivateLink によるプライベート接続",
+            "DMS/Schema 変換等の移行ツールと連携"
+          ],
+          "link": "https://aws.amazon.com/elasticache/"
+        },
+        {
+          "name": "Amazon MemoryDB for Redis",
+          "summary": "耐久性重視の Redis 互換インメモリ DB。",
+          "details": "Amazon MemoryDB for Redis は、耐久性重視の Redis 互換インメモリ DB。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "マネージド運用/自動バックアップ/監視",
+            "高可用/マルチ AZ/グローバルテーブル等の選択肢",
+            "スケールアップ/アウトに対応",
+            "VPC/PrivateLink によるプライベート接続",
+            "DMS/Schema 変換等の移行ツールと連携"
+          ],
+          "link": "https://aws.amazon.com/memorydb/"
+        },
+        {
+          "name": "Amazon Neptune",
+          "summary": "グラフ DB（Property/Resource/Gremlin/SPARQL）。",
+          "details": "Amazon Neptune は、グラフ DB（Property/Resource/Gremlin/SPARQL）。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "マネージド運用/自動バックアップ/監視",
+            "高可用/マルチ AZ/グローバルテーブル等の選択肢",
+            "スケールアップ/アウトに対応",
+            "VPC/PrivateLink によるプライベート接続",
+            "DMS/Schema 変換等の移行ツールと連携"
+          ],
+          "link": "https://aws.amazon.com/neptune/"
+        },
+        {
+          "name": "Amazon DocumentDB (with MongoDB compatibility)",
+          "summary": "MongoDB 互換のドキュメント DB。",
+          "details": "Amazon DocumentDB (with MongoDB compatibility) は、MongoDB 互換のドキュメント DB。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "マネージド運用/自動バックアップ/監視",
+            "高可用/マルチ AZ/グローバルテーブル等の選択肢",
+            "スケールアップ/アウトに対応",
+            "VPC/PrivateLink によるプライベート接続",
+            "DMS/Schema 変換等の移行ツールと連携"
+          ],
+          "link": "https://aws.amazon.com/documentdb/"
+        },
+        {
+          "name": "Amazon Timestream",
+          "summary": "時系列データ向け DB。",
+          "details": "Amazon Timestream は、時系列データ向け DB。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "マネージド運用/自動バックアップ/監視",
+            "高可用/マルチ AZ/グローバルテーブル等の選択肢",
+            "スケールアップ/アウトに対応",
+            "VPC/PrivateLink によるプライベート接続",
+            "DMS/Schema 変換等の移行ツールと連携"
+          ],
+          "link": "https://aws.amazon.com/timestream/"
+        },
+        {
+          "name": "Amazon Keyspaces (for Apache Cassandra)",
+          "summary": "Cassandra 互換のマネージド NoSQL。",
+          "details": "Amazon Keyspaces (for Apache Cassandra) は、Cassandra 互換のマネージド NoSQL。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "マネージド運用/自動バックアップ/監視",
+            "高可用/マルチ AZ/グローバルテーブル等の選択肢",
+            "スケールアップ/アウトに対応",
+            "VPC/PrivateLink によるプライベート接続",
+            "DMS/Schema 変換等の移行ツールと連携"
+          ],
+          "link": "https://aws.amazon.com/keyspaces/"
+        },
+        {
+          "name": "Amazon QLDB",
+          "summary": "改ざん耐性のある台帳 DB。",
+          "details": "Amazon QLDB は、改ざん耐性のある台帳 DB。 整合性/スループット/レイテンシ要件に応じて最適なエンジンを選択でき、運用はマネージドで簡素化されます。",
+          "features": [
+            "マネージド運用/自動バックアップ/監視",
+            "高可用/マルチ AZ/グローバルテーブル等の選択肢",
+            "スケールアップ/アウトに対応",
+            "VPC/PrivateLink によるプライベート接続",
+            "DMS/Schema 変換等の移行ツールと連携"
+          ],
+          "link": "https://aws.amazon.com/qldb/"
         }
       ]
     },
     {
       "id": "networking",
-      "name": "ネットワーキング / 配信",
-      "description": "ネットワーク分離やトラフィック分散、グローバル配信を担うサービス。",
+      "name": "ネットワーキング / コンテンツ配信",
+      "description": "VPC/接続/ルーティング/配信/アプリネットワーキング。",
       "services": [
         {
           "name": "Amazon VPC",
-          "summary": "AWS 上にプライベートな仮想ネットワークを構築する基盤サービス。",
-          "details": "Amazon Virtual Private Cloud (VPC) は、IP レンジやサブネット、ルーティングを細かく制御できる仮想ネットワーク。セキュリティグループやネットワーク ACL、VPC エンドポイントで安全な通信経路を確保します。",
+          "summary": "プライベート仮想ネットワーク。",
+          "details": "Amazon VPC は、プライベート仮想ネットワーク。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
           "features": [
-            "サブネット単位でのパブリック / プライベート分離",
-            "VPN / Direct Connect を利用したハイブリッド接続",
-            "Gateway / Interface VPC エンドポイントによる閉域アクセス",
-            "Flow Logs でネットワークトラフィックを可視化"
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
           ],
           "link": "https://aws.amazon.com/vpc/"
         },
         {
-          "name": "Elastic Load Balancing",
-          "summary": "アプリケーションへのトラフィックを自動で複数ターゲットへ分散。",
-          "details": "Elastic Load Balancing (ELB) は、ALB / NLB / GLB といったタイプを提供し、HTTP/HTTPS や TCP/UDP トラフィックを適切に分散。ヘルスチェックやスティッキネス、WAF 連携でアプリの可用性とセキュリティを高めます。",
+          "name": "Elastic Load Balancing (ALB/NLB/GWLB)",
+          "summary": "L4〜L7 のロードバランサ群。",
+          "details": "Elastic Load Balancing (ALB/NLB/GWLB) は、L4〜L7 のロードバランサ群。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
           "features": [
-            "HTTP レイヤのルーティングや WebSocket 対応",
-            "ターゲットグループごとのヘルスチェック",
-            "AWS Certificate Manager と統合した TLS 終端",
-            "Auto Scaling と連携した動的なターゲット登録"
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
           ],
           "link": "https://aws.amazon.com/elasticloadbalancing/"
         },
         {
           "name": "Amazon CloudFront",
-          "summary": "グローバルエッジネットワークから高速配信する CDN サービス。",
-          "details": "Amazon CloudFront は、世界中のエッジロケーションからコンテンツをキャッシュ・配信し、レイテンシを低減。Lambda@Edge や CloudFront Functions でリクエスト処理をカスタマイズしつつ、WAF と統合した保護を実現します。",
+          "summary": "グローバル CDN。",
+          "details": "Amazon CloudFront は、グローバル CDN。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
           "features": [
-            "エッジでのキャッシュ制御と HTTP/3 対応",
-            "Lambda@Edge / Functions によるリクエスト加工",
-            "Origin Shield や複数オリジンに対応したフェイルオーバー",
-            "AWS Shield / AWS WAF と連携した DDoS・アプリ防御"
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
           ],
           "link": "https://aws.amazon.com/cloudfront/"
+        },
+        {
+          "name": "Amazon Route 53",
+          "summary": "可用性の高い DNS とヘルスチェック。",
+          "details": "Amazon Route 53 は、可用性の高い DNS とヘルスチェック。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
+          ],
+          "link": "https://aws.amazon.com/route53/"
+        },
+        {
+          "name": "AWS Global Accelerator",
+          "summary": "エニーキャストで最短経路へトラフィックを誘導。",
+          "details": "AWS Global Accelerator は、エニーキャストで最短経路へトラフィックを誘導。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
+          ],
+          "link": "https://aws.amazon.com/global-accelerator/"
+        },
+        {
+          "name": "AWS Transit Gateway",
+          "summary": "VPC/オンプレ間接続のハブ。",
+          "details": "AWS Transit Gateway は、VPC/オンプレ間接続のハブ。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
+          ],
+          "link": "https://aws.amazon.com/transit-gateway/"
+        },
+        {
+          "name": "AWS Direct Connect",
+          "summary": "専用線接続で低遅延・安定帯域。",
+          "details": "AWS Direct Connect は、専用線接続で低遅延・安定帯域。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
+          ],
+          "link": "https://aws.amazon.com/directconnect/"
+        },
+        {
+          "name": "AWS Site-to-Site VPN / Client VPN",
+          "summary": "IPsec VPN / クライアント VPN。",
+          "details": "AWS Site-to-Site VPN / Client VPN は、IPsec VPN / クライアント VPN。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
+          ],
+          "link": "https://aws.amazon.com/vpn/"
+        },
+        {
+          "name": "AWS PrivateLink",
+          "summary": "サービスへのプライベート接続。",
+          "details": "AWS PrivateLink は、サービスへのプライベート接続。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
+          ],
+          "link": "https://aws.amazon.com/privatelink/"
+        },
+        {
+          "name": "AWS Cloud WAN",
+          "summary": "グローバルな広域ネットワークを一元運用。",
+          "details": "AWS Cloud WAN は、グローバルな広域ネットワークを一元運用。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
+          ],
+          "link": "https://aws.amazon.com/cloud-wan/"
+        },
+        {
+          "name": "Amazon VPC Lattice",
+          "summary": "サービス間通信を統合するアプリケーションネットワーキング。",
+          "details": "Amazon VPC Lattice は、サービス間通信を統合するアプリケーションネットワーキング。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
+          ],
+          "link": "https://aws.amazon.com/vpc-lattice/"
+        },
+        {
+          "name": "AWS App Mesh",
+          "summary": "サイドカー型のサービスメッシュ。",
+          "details": "AWS App Mesh は、サイドカー型のサービスメッシュ。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
+          ],
+          "link": "https://aws.amazon.com/app-mesh/"
+        },
+        {
+          "name": "AWS Verified Access",
+          "summary": "ゼロトラストでアプリへのセキュアアクセス。",
+          "details": "AWS Verified Access は、ゼロトラストでアプリへのセキュアアクセス。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
+          ],
+          "link": "https://aws.amazon.com/verified-access/"
+        },
+        {
+          "name": "Amazon Route 53 ARC",
+          "summary": "アプリ復旧性の監視/ルーティング制御。",
+          "details": "Amazon Route 53 ARC は、アプリ復旧性の監視/ルーティング制御。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
+          ],
+          "link": "https://aws.amazon.com/r53arc/"
+        },
+        {
+          "name": "AWS Cloud Map",
+          "summary": "サービスディスカバリ。",
+          "details": "AWS Cloud Map は、サービスディスカバリ。 低遅延・高スループットの接続とアプリ保護を提供し、グローバル配信も統合できます。",
+          "features": [
+            "グローバルバックボーンとエニーキャスト",
+            "多様な LB/最適ルーティング/アプリネットワーキング",
+            "DDoS/WAF/Network Firewall/Verified Access",
+            "ハイブリッド接続（DX/VPN/Cloud WAN）",
+            "トラブルシュート/モニタリングの可視化"
+          ],
+          "link": "https://aws.amazon.com/cloud-map/"
         }
       ]
     },
     {
-      "id": "database",
-      "name": "データベース",
-      "description": "リレーショナル / NoSQL / フルマネージドデータベースを提供するサービス。",
-      "services": [
-        {
-          "name": "Amazon RDS",
-          "summary": "主要なリレーショナルデータベースをフルマネージドで提供。",
-          "details": "Amazon Relational Database Service (RDS) は、MySQL・PostgreSQL・SQL Server などのデータベースを簡単にセットアップ・運用できる PaaS。自動バックアップやマルチ AZ 配置で高可用性を実現します。",
-          "features": [
-            "マルチ AZ / リードレプリカで可用性とスケーラビリティを確保",
-            "オートスケーリングストレージで容量を自動拡張",
-            "AWS Backup / Snapshots によるデータ保護",
-            "IAM 認証や暗号化でセキュアに運用"
-          ],
-          "link": "https://aws.amazon.com/rds/"
-        },
-        {
-          "name": "Amazon DynamoDB",
-          "summary": "低レイテンシでスケールするフルマネージド NoSQL データベース。",
-          "details": "Amazon DynamoDB は、キー・バリュー / ドキュメントデータモデルを提供し、単位ミリ秒のレイテンシでスケール。オンデマンドキャパシティーモードやグローバルテーブルで大規模アプリを支えます。",
-          "features": [
-            "サーバレスなオンデマンドキャパシティー",
-            "DynamoDB Streams と Lambda でイベント駆動連携",
-            "グローバルテーブルによるマルチリージョン展開",
-            "Point-in-Time Recovery で過去の状態に復元"
-          ],
-          "link": "https://aws.amazon.com/dynamodb/"
-        },
-        {
-          "name": "Amazon Aurora",
-          "summary": "MySQL / PostgreSQL 互換で高性能なクラウドネイティブ RDB。",
-          "details": "Amazon Aurora は、標準的な RDS データベースと比べて最大 5 倍の性能を発揮するクラウドネイティブ RDB。6 重のデータ複製と自動フェイルオーバーにより耐障害性が高く、サーバレスモードも選択できます。",
-          "features": [
-            "Aurora Serverless v2 による秒単位スケーリング",
-            "Global Database で最大 5 リージョンにレプリケーション",
-            "並列クエリエンジンによる分析性能の向上",
-            "バックトラック機能でテーブルを瞬時に巻き戻し"
-          ],
-          "link": "https://aws.amazon.com/rds/aurora/"
-        }
-      ]
-    },
-    {
-      "id": "analytics-ai",
-      "name": "データ分析 / AI",
-      "description": "データウェアハウスや ETL、機械学習モデル開発を支援するサービス。",
+      "id": "analytics",
+      "name": "データ分析",
+      "description": "DWH/ETL/ストリーミング/検索/可視化/データガバナンス。",
       "services": [
         {
           "name": "Amazon Redshift",
-          "summary": "大規模データ分析に特化したクラウドデータウェアハウス。",
-          "details": "Amazon Redshift は、ペタバイト規模のデータを高速に分析できる DWH サービス。RA3 ノードと Redshift Spectrum により、S3 上のデータレイクを横断した分析も可能です。",
+          "summary": "ペタバイト級のクラウドデータウェアハウス。",
+          "details": "Amazon Redshift は、ペタバイト級のクラウドデータウェアハウス。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
           "features": [
-            "MPP アーキテクチャとカラムナ圧縮で高速クエリ",
-            "AQUA キャッシュによるクエリ高速化",
-            "Redshift Spectrum で S3 データレイクを直接分析",
-            "Materialized View や Concurrency Scaling に対応"
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
           ],
           "link": "https://aws.amazon.com/redshift/"
         },
         {
-          "name": "AWS Glue",
-          "summary": "サーバレスなデータ統合・ETL サービス。",
-          "details": "AWS Glue は、データカタログ、ETL ジョブ、ワークフローを統合的に提供するデータ統合基盤。ノーコードの Glue Studio や Glue DataBrew を活用し、データレイクや DWH への取り込みを加速します。",
+          "name": "Amazon Athena",
+          "summary": "S3 データに対するサーバーレス SQL。",
+          "details": "Amazon Athena は、S3 データに対するサーバーレス SQL。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
           "features": [
-            "サーバレス Spark 環境による ETL ジョブ実行",
-            "Glue Data Catalog でメタデータを集中管理",
-            "トリガーとワークフローでパイプラインを自動化",
-            "DataBrew によるノーコードデータクレンジング"
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/athena/"
+        },
+        {
+          "name": "Amazon EMR",
+          "summary": "Hadoop/Spark などビッグデータ処理をマネージド提供。",
+          "details": "Amazon EMR は、Hadoop/Spark などビッグデータ処理をマネージド提供。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/emr/"
+        },
+        {
+          "name": "AWS Glue",
+          "summary": "サーバーレス ETL とデータカタログ。",
+          "details": "AWS Glue は、サーバーレス ETL とデータカタログ。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
           ],
           "link": "https://aws.amazon.com/glue/"
         },
         {
-          "name": "Amazon SageMaker",
-          "summary": "機械学習モデルの開発から運用までを支援する包括的なプラットフォーム。",
-          "details": "Amazon SageMaker は、データ準備・学習・デプロイ・監視を一貫して提供する ML プラットフォーム。SageMaker Studio でノートブックや MLOps 機能を統合し、迅速なモデルライフサイクルを実現します。",
+          "name": "AWS Glue DataBrew",
+          "summary": "ノーコードのデータ整形。",
+          "details": "AWS Glue DataBrew は、ノーコードのデータ整形。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
           "features": [
-            "SageMaker Autopilot による自動機械学習",
-            "Feature Store や Pipelines で MLOps を体系化",
-            "Managed Spot Training で学習コストを最適化",
-            "Clarify / Model Monitor でバイアスや精度を継続的に監視"
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/glue/features/databrew/"
+        },
+        {
+          "name": "AWS Lake Formation",
+          "summary": "データレイクの権限/ガバナンスを簡素化。",
+          "details": "AWS Lake Formation は、データレイクの権限/ガバナンスを簡素化。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/lake-formation/"
+        },
+        {
+          "name": "Amazon Kinesis Data Streams",
+          "summary": "スケーラブルなストリーミング取り込み。",
+          "details": "Amazon Kinesis Data Streams は、スケーラブルなストリーミング取り込み。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/kinesis/data-streams/"
+        },
+        {
+          "name": "Amazon Kinesis Data Firehose",
+          "summary": "ストリーミングデータをバッファ/変換して格納。",
+          "details": "Amazon Kinesis Data Firehose は、ストリーミングデータをバッファ/変換して格納。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/kinesis/data-firehose/"
+        },
+        {
+          "name": "Amazon Kinesis Data Analytics",
+          "summary": "ストリーミング SQL/Apache Flink による解析。",
+          "details": "Amazon Kinesis Data Analytics は、ストリーミング SQL/Apache Flink による解析。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/kinesis/data-analytics/"
+        },
+        {
+          "name": "Amazon Managed Streaming for Apache Kafka (MSK)",
+          "summary": "マネージド Kafka。",
+          "details": "Amazon Managed Streaming for Apache Kafka (MSK) は、マネージド Kafka。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/msk/"
+        },
+        {
+          "name": "Amazon OpenSearch Service",
+          "summary": "検索/ログ解析/可視化。",
+          "details": "Amazon OpenSearch Service は、検索/ログ解析/可視化。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/opensearch-service/"
+        },
+        {
+          "name": "Amazon QuickSight",
+          "summary": "サーバーレス BI とダッシュボード。",
+          "details": "Amazon QuickSight は、サーバーレス BI とダッシュボード。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/quicksight/"
+        },
+        {
+          "name": "AWS Data Exchange",
+          "summary": "外部データのサブスクリプション/配布。",
+          "details": "AWS Data Exchange は、外部データのサブスクリプション/配布。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/data-exchange/"
+        },
+        {
+          "name": "AWS Clean Rooms",
+          "summary": "プライバシー保護を前提に共同分析。",
+          "details": "AWS Clean Rooms は、プライバシー保護を前提に共同分析。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/clean-rooms/"
+        },
+        {
+          "name": "AWS Entity Resolution",
+          "summary": "重複レコードの同定/統合。",
+          "details": "AWS Entity Resolution は、重複レコードの同定/統合。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/entity-resolution/"
+        },
+        {
+          "name": "AWS DataZone",
+          "summary": "データ資産の発見/管理/アクセスガバナンス。",
+          "details": "AWS DataZone は、データ資産の発見/管理/アクセスガバナンス。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/datazone/"
+        },
+        {
+          "name": "Amazon FinSpace",
+          "summary": "金融データ向けの分析/カタログ。",
+          "details": "Amazon FinSpace は、金融データ向けの分析/カタログ。 収集からカタログ/クエリ/可視化/ガバナンスまでを統合し、スケールに応じてサーバーレスに拡張します。",
+          "features": [
+            "サーバーレスまたはマネージドで拡張",
+            "バッチ/ストリーミング双方に対応",
+            "データカタログ/ガバナンスの統合",
+            "可視化/BI/ML との連携",
+            "柔軟な課金（従量/予約/キャパシティ）"
+          ],
+          "link": "https://aws.amazon.com/finspace/"
+        }
+      ]
+    },
+    {
+      "id": "ai-ml",
+      "name": "AI / 機械学習",
+      "description": "学習/推論/MLOps と AI API 群。",
+      "services": [
+        {
+          "name": "Amazon SageMaker",
+          "summary": "データ準備から学習/デプロイ/監視までを統合。",
+          "details": "Amazon SageMaker は、データ準備から学習/デプロイ/監視までを統合。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
           ],
           "link": "https://aws.amazon.com/sagemaker/"
+        },
+        {
+          "name": "Amazon Comprehend",
+          "summary": "自然言語の構文/感情/エンティティ抽出。",
+          "details": "Amazon Comprehend は、自然言語の構文/感情/エンティティ抽出。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/comprehend/"
+        },
+        {
+          "name": "Amazon Translate",
+          "summary": "テキスト翻訳。",
+          "details": "Amazon Translate は、テキスト翻訳。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/translate/"
+        },
+        {
+          "name": "Amazon Transcribe",
+          "summary": "音声認識。",
+          "details": "Amazon Transcribe は、音声認識。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/transcribe/"
+        },
+        {
+          "name": "Amazon Polly",
+          "summary": "テキスト読み上げ合成。",
+          "details": "Amazon Polly は、テキスト読み上げ合成。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/polly/"
+        },
+        {
+          "name": "Amazon Rekognition",
+          "summary": "画像/動画の検出と認識。",
+          "details": "Amazon Rekognition は、画像/動画の検出と認識。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/rekognition/"
+        },
+        {
+          "name": "Amazon Textract",
+          "summary": "スキャン文書の OCR/構造化抽出。",
+          "details": "Amazon Textract は、スキャン文書の OCR/構造化抽出。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/textract/"
+        },
+        {
+          "name": "Amazon Forecast",
+          "summary": "時系列予測。",
+          "details": "Amazon Forecast は、時系列予測。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/forecast/"
+        },
+        {
+          "name": "Amazon Personalize",
+          "summary": "レコメンド。",
+          "details": "Amazon Personalize は、レコメンド。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/personalize/"
+        },
+        {
+          "name": "Amazon Kendra",
+          "summary": "エンタープライズ検索。",
+          "details": "Amazon Kendra は、エンタープライズ検索。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/kendra/"
+        },
+        {
+          "name": "Amazon Fraud Detector",
+          "summary": "不正検知。",
+          "details": "Amazon Fraud Detector は、不正検知。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/fraud-detector/"
+        },
+        {
+          "name": "Amazon Lookout for Equipment",
+          "summary": "設備異常検知。",
+          "details": "Amazon Lookout for Equipment は、設備異常検知。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/lookout-for-equipment/"
+        },
+        {
+          "name": "Amazon Lookout for Metrics",
+          "summary": "異常検知（時系列）。",
+          "details": "Amazon Lookout for Metrics は、異常検知（時系列）。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/lookout-for-metrics/"
+        },
+        {
+          "name": "Amazon Lookout for Vision",
+          "summary": "外観検査。",
+          "details": "Amazon Lookout for Vision は、外観検査。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/lookout-for-vision/"
+        },
+        {
+          "name": "Amazon Lex",
+          "summary": "会話型インターフェース。",
+          "details": "Amazon Lex は、会話型インターフェース。 学習/推論/MLOps を統合し、既製 API とカスタムモデルの双方を選べます。",
+          "features": [
+            "データ準備/学習/推論/監視を一元化",
+            "API/SDK とノーコード両対応",
+            "責任ある AI/セキュリティのガードレール",
+            "分散学習/ハイパーパラメータ最適化",
+            "MLOps/モデルレジストリ/パイプライン"
+          ],
+          "link": "https://aws.amazon.com/lex/"
+        }
+      ]
+    },
+    {
+      "id": "genai",
+      "name": "生成 AI",
+      "description": "基盤モデル、エージェント、ガードレール、企業向けアシスタント。",
+      "services": [
+        {
+          "name": "Amazon Bedrock",
+          "summary": "マルチプロバイダの基盤モデルに安全にアクセスし、アプリやエージェントを構築。",
+          "details": "Amazon Bedrock は、マルチプロバイダの基盤モデルに安全にアクセスし、アプリやエージェントを構築。 基盤モデルの選定/ガードレール/知識ベース/エージェントを統合し、業務に安全に適用できます。",
+          "features": [
+            "モデル選択/チューニング/最適化",
+            "ガードレール/監査/安全制御",
+            "知識ベース/RAG/ツール実行の統合",
+            "低遅延推論/バッチ推論に対応",
+            "エージェント/業務アシスタントを迅速に実装"
+          ],
+          "link": "https://aws.amazon.com/bedrock/"
+        },
+        {
+          "name": "Agents for Amazon Bedrock",
+          "summary": "タスク分解/ツール実行などのエージェントを実運用。",
+          "details": "Agents for Amazon Bedrock は、タスク分解/ツール実行などのエージェントを実運用。 基盤モデルの選定/ガードレール/知識ベース/エージェントを統合し、業務に安全に適用できます。",
+          "features": [
+            "モデル選択/チューニング/最適化",
+            "ガードレール/監査/安全制御",
+            "知識ベース/RAG/ツール実行の統合",
+            "低遅延推論/バッチ推論に対応",
+            "エージェント/業務アシスタントを迅速に実装"
+          ],
+          "link": "https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html"
+        },
+        {
+          "name": "Knowledge Bases for Amazon Bedrock",
+          "summary": "RAG 用のベクトルストア連携と同期。",
+          "details": "Knowledge Bases for Amazon Bedrock は、RAG 用のベクトルストア連携と同期。 基盤モデルの選定/ガードレール/知識ベース/エージェントを統合し、業務に安全に適用できます。",
+          "features": [
+            "モデル選択/チューニング/最適化",
+            "ガードレール/監査/安全制御",
+            "知識ベース/RAG/ツール実行の統合",
+            "低遅延推論/バッチ推論に対応",
+            "エージェント/業務アシスタントを迅速に実装"
+          ],
+          "link": "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html"
+        },
+        {
+          "name": "Guardrails for Amazon Bedrock",
+          "summary": "ハルシネーションや不適切出力を抑制する安全制御。",
+          "details": "Guardrails for Amazon Bedrock は、ハルシネーションや不適切出力を抑制する安全制御。 基盤モデルの選定/ガードレール/知識ベース/エージェントを統合し、業務に安全に適用できます。",
+          "features": [
+            "モデル選択/チューニング/最適化",
+            "ガードレール/監査/安全制御",
+            "知識ベース/RAG/ツール実行の統合",
+            "低遅延推論/バッチ推論に対応",
+            "エージェント/業務アシスタントを迅速に実装"
+          ],
+          "link": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html"
+        },
+        {
+          "name": "Amazon Q Developer",
+          "summary": "開発者のための生成 AI アシスタント。",
+          "details": "Amazon Q Developer は、開発者のための生成 AI アシスタント。 基盤モデルの選定/ガードレール/知識ベース/エージェントを統合し、業務に安全に適用できます。",
+          "features": [
+            "モデル選択/チューニング/最適化",
+            "ガードレール/監査/安全制御",
+            "知識ベース/RAG/ツール実行の統合",
+            "低遅延推論/バッチ推論に対応",
+            "エージェント/業務アシスタントを迅速に実装"
+          ],
+          "link": "https://aws.amazon.com/q/developer/"
+        },
+        {
+          "name": "Amazon Q Business",
+          "summary": "企業データに基づく業務アシスタント。",
+          "details": "Amazon Q Business は、企業データに基づく業務アシスタント。 基盤モデルの選定/ガードレール/知識ベース/エージェントを統合し、業務に安全に適用できます。",
+          "features": [
+            "モデル選択/チューニング/最適化",
+            "ガードレール/監査/安全制御",
+            "知識ベース/RAG/ツール実行の統合",
+            "低遅延推論/バッチ推論に対応",
+            "エージェント/業務アシスタントを迅速に実装"
+          ],
+          "link": "https://aws.amazon.com/q/business/"
+        },
+        {
+          "name": "Amazon Q Apps",
+          "summary": "ノーコードで業務用の Q アプリを作成・共有。",
+          "details": "Amazon Q Apps は、ノーコードで業務用の Q アプリを作成・共有。 基盤モデルの選定/ガードレール/知識ベース/エージェントを統合し、業務に安全に適用できます。",
+          "features": [
+            "モデル選択/チューニング/最適化",
+            "ガードレール/監査/安全制御",
+            "知識ベース/RAG/ツール実行の統合",
+            "低遅延推論/バッチ推論に対応",
+            "エージェント/業務アシスタントを迅速に実装"
+          ],
+          "link": "https://aws.amazon.com/q/apps/"
+        }
+      ]
+    },
+    {
+      "id": "security-id",
+      "name": "セキュリティ / ID / コンプライアンス",
+      "description": "アイデンティティ、鍵/証明書、検出/防御、評価/監査、ゼロトラスト。",
+      "services": [
+        {
+          "name": "AWS Identity and Access Management (IAM)",
+          "summary": "きめ細かい権限管理と一時認証。",
+          "details": "AWS Identity and Access Management (IAM) は、きめ細かい権限管理と一時認証。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/iam/"
+        },
+        {
+          "name": "IAM Identity Center",
+          "summary": "従業員 ID の統合 SSO。",
+          "details": "IAM Identity Center は、従業員 ID の統合 SSO。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/iam/identity-center/"
+        },
+        {
+          "name": "Amazon Cognito",
+          "summary": "アプリのエンドユーザー認証/ユーザー管理（CIAM）。",
+          "details": "Amazon Cognito は、アプリのエンドユーザー認証/ユーザー管理（CIAM）。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/cognito/"
+        },
+        {
+          "name": "AWS KMS",
+          "summary": "鍵の生成/保管/ローテーション。",
+          "details": "AWS KMS は、鍵の生成/保管/ローテーション。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/kms/"
+        },
+        {
+          "name": "AWS CloudHSM",
+          "summary": "FIPS 準拠のマネージド HSM。",
+          "details": "AWS CloudHSM は、FIPS 準拠のマネージド HSM。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/cloudhsm/"
+        },
+        {
+          "name": "AWS Secrets Manager",
+          "summary": "アプリシークレットの安全な保管/ローテーション。",
+          "details": "AWS Secrets Manager は、アプリシークレットの安全な保管/ローテーション。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/secrets-manager/"
+        },
+        {
+          "name": "AWS Certificate Manager (ACM)",
+          "summary": "SSL/TLS 証明書の発行/更新を自動化。",
+          "details": "AWS Certificate Manager (ACM) は、SSL/TLS 証明書の発行/更新を自動化。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/certificate-manager/"
+        },
+        {
+          "name": "AWS Resource Access Manager (RAM)",
+          "summary": "アカウント間のリソース共有。",
+          "details": "AWS Resource Access Manager (RAM) は、アカウント間のリソース共有。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/ram/"
+        },
+        {
+          "name": "AWS WAF",
+          "summary": "アプリ層のウェブ攻撃から防御。",
+          "details": "AWS WAF は、アプリ層のウェブ攻撃から防御。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/waf/"
+        },
+        {
+          "name": "AWS Shield",
+          "summary": "DDoS 保護（Standard/Advanced）。",
+          "details": "AWS Shield は、DDoS 保護（Standard/Advanced）。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/shield/"
+        },
+        {
+          "name": "AWS Network Firewall",
+          "summary": "VPC 向けのマネージドファイアウォール。",
+          "details": "AWS Network Firewall は、VPC 向けのマネージドファイアウォール。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/network-firewall/"
+        },
+        {
+          "name": "Amazon GuardDuty",
+          "summary": "脅威検出と継続監視。",
+          "details": "Amazon GuardDuty は、脅威検出と継続監視。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/guardduty/"
+        },
+        {
+          "name": "Amazon Inspector",
+          "summary": "脆弱性スキャンと SBOM 連携。",
+          "details": "Amazon Inspector は、脆弱性スキャンと SBOM 連携。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/inspector/"
+        },
+        {
+          "name": "Amazon Macie",
+          "summary": "機密データの検出/分類。",
+          "details": "Amazon Macie は、機密データの検出/分類。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/macie/"
+        },
+        {
+          "name": "AWS Detective",
+          "summary": "脅威の根本原因分析を支援。",
+          "details": "AWS Detective は、脅威の根本原因分析を支援。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/detective/"
+        },
+        {
+          "name": "AWS Firewall Manager",
+          "summary": "全アカウントの WAF/Shield/Network Firewall を一括管理。",
+          "details": "AWS Firewall Manager は、全アカウントの WAF/Shield/Network Firewall を一括管理。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/firewall-manager/"
+        },
+        {
+          "name": "AWS Security Hub",
+          "summary": "検出結果を集約しコンプライアンス基準を評価。",
+          "details": "AWS Security Hub は、検出結果を集約しコンプライアンス基準を評価。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/security-hub/"
+        },
+        {
+          "name": "AWS Verified Permissions",
+          "summary": "ポリシー言語 Cedar でアプリ権限を集中管理。",
+          "details": "AWS Verified Permissions は、ポリシー言語 Cedar でアプリ権限を集中管理。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/verified-permissions/"
+        },
+        {
+          "name": "AWS Verified Access",
+          "summary": "ゼロトラストアクセス制御。",
+          "details": "AWS Verified Access は、ゼロトラストアクセス制御。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/verified-access/"
+        },
+        {
+          "name": "AWS Artifact",
+          "summary": "監査レポートとコンプライアンス文書のポータル。",
+          "details": "AWS Artifact は、監査レポートとコンプライアンス文書のポータル。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/artifact/"
+        },
+        {
+          "name": "AWS Audit Manager",
+          "summary": "監査証跡の収集と評価を自動化。",
+          "details": "AWS Audit Manager は、監査証跡の収集と評価を自動化。 ゼロトラスト/データ保護/検出/監査をカバレッジ広く実装できます。",
+          "features": [
+            "アイデンティティ/鍵/証明書のライフサイクル管理",
+            "脅威検出/脆弱性管理/データ保護",
+            "ポリシー基準に沿った評価/監査",
+            "境界制御（SCP/ネットワーク分離）",
+            "セキュリティイベントの集中可視化"
+          ],
+          "link": "https://aws.amazon.com/audit-manager/"
         }
       ]
     },
     {
       "id": "management",
-      "name": "運用・セキュリティ",
-      "description": "監視、自動化、セキュリティ評価を統合的に行うサービス。",
+      "name": "運用管理 / ガバナンス",
+      "description": "モニタリング、変更追跡、構成/パッチ、組織管理、SRE 支援。",
       "services": [
         {
           "name": "Amazon CloudWatch",
-          "summary": "メトリクス・ログ・イベントを収集してシステムの可観測性を向上。",
-          "details": "Amazon CloudWatch は、AWS リソースやアプリのメトリクス・ログ・イベントを集中管理する監視基盤。アラームやダッシュボード、Synthetics などを活用して運用の自動化と品質向上を図れます。",
+          "summary": "メトリクス/ログ/アラーム/ダッシュボードを提供。",
+          "details": "Amazon CloudWatch は、メトリクス/ログ/アラーム/ダッシュボードを提供。 運用品質を観測/自動化し、マルチアカウント運用を標準化します。",
           "features": [
-            "メトリクスとログを統合的に可視化するダッシュボード",
-            "アラームとイベントルールで自動アクションをトリガー",
-            "Synthetics や RUM でユーザー体験を継続監視",
-            "ServiceLens / X-Ray と連携した分散トレーシング"
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "マルチアカウント運用/ガードレール",
+            "変更管理/インベントリ/パッチ適用",
+            "推奨事項/コスト最適化の継続改善"
           ],
           "link": "https://aws.amazon.com/cloudwatch/"
         },
         {
-          "name": "AWS Systems Manager",
-          "summary": "ハイブリッド環境を一元管理し、運用タスクを自動化するサービス。",
-          "details": "AWS Systems Manager は、EC2・オンプレミス・他クラウドのサーバーを統合管理。パッチ適用や設定管理、Run Command によるオーケストレーションを自動化し、運用ガバナンスを高めます。",
+          "name": "AWS CloudTrail",
+          "summary": "API 監査ログ（証跡）と CloudTrail Lake。",
+          "details": "AWS CloudTrail は、API 監査ログ（証跡）と CloudTrail Lake。 運用品質を観測/自動化し、マルチアカウント運用を標準化します。",
           "features": [
-            "Parameter Store / Secrets Manager と連携した構成管理",
-            "Patch Manager や State Manager で標準構成を維持",
-            "Session Manager によるブラウザベースの安全なログイン",
-            "Automation ドキュメントで手順をコード化"
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "マルチアカウント運用/ガードレール",
+            "変更管理/インベントリ/パッチ適用",
+            "推奨事項/コスト最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/cloudtrail/"
+        },
+        {
+          "name": "AWS Config",
+          "summary": "リソース構成とドリフトを継続評価。",
+          "details": "AWS Config は、リソース構成とドリフトを継続評価。 運用品質を観測/自動化し、マルチアカウント運用を標準化します。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "マルチアカウント運用/ガードレール",
+            "変更管理/インベントリ/パッチ適用",
+            "推奨事項/コスト最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/config/"
+        },
+        {
+          "name": "AWS Systems Manager",
+          "summary": "運用/パッチ/自動化/セッションマネージャ等を提供。",
+          "details": "AWS Systems Manager は、運用/パッチ/自動化/セッションマネージャ等を提供。 運用品質を観測/自動化し、マルチアカウント運用を標準化します。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "マルチアカウント運用/ガードレール",
+            "変更管理/インベントリ/パッチ適用",
+            "推奨事項/コスト最適化の継続改善"
           ],
           "link": "https://aws.amazon.com/systems-manager/"
         },
         {
-          "name": "AWS Security Hub",
-          "summary": "AWS アカウント全体のセキュリティ態勢を評価し、改善を促進。",
-          "details": "AWS Security Hub は、各種セキュリティサービスやパートナー製品からの検出結果を集約してセキュリティスコアを算出。CIS や PCI DSS などのベンチマーク準拠状況を可視化し、是正アクションを推進します。",
+          "name": "AWS Organizations",
+          "summary": "マルチアカウントの統制と課金集約。",
+          "details": "AWS Organizations は、マルチアカウントの統制と課金集約。 運用品質を観測/自動化し、マルチアカウント運用を標準化します。",
           "features": [
-            "GuardDuty・Inspector・Macie などの検出結果を集約",
-            "AWS Organizations と統合したマルチアカウント管理",
-            "セキュリティ基準に基づく自動評価とスコアリング",
-            "EventBridge 連携でチケット起票や自動修復を実行"
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "マルチアカウント運用/ガードレール",
+            "変更管理/インベントリ/パッチ適用",
+            "推奨事項/コスト最適化の継続改善"
           ],
-          "link": "https://aws.amazon.com/security-hub/"
+          "link": "https://aws.amazon.com/organizations/"
+        },
+        {
+          "name": "AWS Control Tower",
+          "summary": "Landing Zone のガードレールを自動適用。",
+          "details": "AWS Control Tower は、Landing Zone のガードレールを自動適用。 運用品質を観測/自動化し、マルチアカウント運用を標準化します。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "マルチアカウント運用/ガードレール",
+            "変更管理/インベントリ/パッチ適用",
+            "推奨事項/コスト最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/controltower/"
+        },
+        {
+          "name": "AWS Service Catalog",
+          "summary": "承認済み製品のカタログ化と配布。",
+          "details": "AWS Service Catalog は、承認済み製品のカタログ化と配布。 運用品質を観測/自動化し、マルチアカウント運用を標準化します。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "マルチアカウント運用/ガードレール",
+            "変更管理/インベントリ/パッチ適用",
+            "推奨事項/コスト最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/servicecatalog/"
+        },
+        {
+          "name": "AWS License Manager",
+          "summary": "ライセンスの可視化と制御。",
+          "details": "AWS License Manager は、ライセンスの可視化と制御。 運用品質を観測/自動化し、マルチアカウント運用を標準化します。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "マルチアカウント運用/ガードレール",
+            "変更管理/インベントリ/パッチ適用",
+            "推奨事項/コスト最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/license-manager/"
+        },
+        {
+          "name": "AWS Trusted Advisor",
+          "summary": "コスト/性能/セキュリティ/耐障害性/運用の推奨。",
+          "details": "AWS Trusted Advisor は、コスト/性能/セキュリティ/耐障害性/運用の推奨。 運用品質を観測/自動化し、マルチアカウント運用を標準化します。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "マルチアカウント運用/ガードレール",
+            "変更管理/インベントリ/パッチ適用",
+            "推奨事項/コスト最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/premiumsupport/trustedadvisor/"
+        },
+        {
+          "name": "AWS Well-Architected Tool",
+          "summary": "設計レビューと改善提案を支援。",
+          "details": "AWS Well-Architected Tool は、設計レビューと改善提案を支援。 運用品質を観測/自動化し、マルチアカウント運用を標準化します。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "マルチアカウント運用/ガードレール",
+            "変更管理/インベントリ/パッチ適用",
+            "推奨事項/コスト最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/well-architected-tool/"
+        },
+        {
+          "name": "AWS Service Quotas",
+          "summary": "クォータ（制限）の可視化と申請。",
+          "details": "AWS Service Quotas は、クォータ（制限）の可視化と申請。 運用品質を観測/自動化し、マルチアカウント運用を標準化します。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "マルチアカウント運用/ガードレール",
+            "変更管理/インベントリ/パッチ適用",
+            "推奨事項/コスト最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/service-quotas/"
+        },
+        {
+          "name": "AWS Health Dashboard",
+          "summary": "アカウント/リソースに影響するイベントを通知。",
+          "details": "AWS Health Dashboard は、アカウント/リソースに影響するイベントを通知。 運用品質を観測/自動化し、マルチアカウント運用を標準化します。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "マルチアカウント運用/ガードレール",
+            "変更管理/インベントリ/パッチ適用",
+            "推奨事項/コスト最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/health/"
+        },
+        {
+          "name": "AWS Fault Injection Simulator",
+          "summary": "カオスエンジニアリングで回復性を検証。",
+          "details": "AWS Fault Injection Simulator は、カオスエンジニアリングで回復性を検証。 運用品質を観測/自動化し、マルチアカウント運用を標準化します。",
+          "features": [
+            "メトリクス/ログ/トレースの統合監視",
+            "SLO/アラート/自動修復の実装",
+            "マルチアカウント運用/ガードレール",
+            "変更管理/インベントリ/パッチ適用",
+            "推奨事項/コスト最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/fis/"
+        }
+      ]
+    },
+    {
+      "id": "devtools",
+      "name": "開発者ツール",
+      "description": "ソース/ビルド/デプロイ、IaC、IDE、実験、DevEx。",
+      "services": [
+        {
+          "name": "AWS CodeCommit",
+          "summary": "フルマネージドな Git リポジトリ。",
+          "details": "AWS CodeCommit は、フルマネージドな Git リポジトリ。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/codecommit/"
+        },
+        {
+          "name": "AWS CodeBuild",
+          "summary": "スケーラブルなビルドサービス。",
+          "details": "AWS CodeBuild は、スケーラブルなビルドサービス。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/codebuild/"
+        },
+        {
+          "name": "AWS CodeDeploy",
+          "summary": "段階/Blue-Green などのデプロイ戦略を自動化。",
+          "details": "AWS CodeDeploy は、段階/Blue-Green などのデプロイ戦略を自動化。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/codedeploy/"
+        },
+        {
+          "name": "AWS CodePipeline",
+          "summary": "CI/CD パイプラインを構築。",
+          "details": "AWS CodePipeline は、CI/CD パイプラインを構築。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/codepipeline/"
+        },
+        {
+          "name": "Amazon CodeCatalyst",
+          "summary": "開発環境/CI/CD/イシュー管理を統合した DevOps プラットフォーム。",
+          "details": "Amazon CodeCatalyst は、開発環境/CI/CD/イシュー管理を統合した DevOps プラットフォーム。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/codecatalyst/"
+        },
+        {
+          "name": "AWS Cloud9",
+          "summary": "ブラウザベースのクラウド IDE。",
+          "details": "AWS Cloud9 は、ブラウザベースのクラウド IDE。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/cloud9/"
+        },
+        {
+          "name": "AWS CloudShell",
+          "summary": "ブラウザから CLI を即実行。",
+          "details": "AWS CloudShell は、ブラウザから CLI を即実行。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/cloudshell/"
+        },
+        {
+          "name": "AWS CloudFormation",
+          "summary": "宣言的テンプレートで IaC。",
+          "details": "AWS CloudFormation は、宣言的テンプレートで IaC。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/cloudformation/"
+        },
+        {
+          "name": "AWS CDK",
+          "summary": "プログラミング言語で IaC を表現。",
+          "details": "AWS CDK は、プログラミング言語で IaC を表現。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/cdk/"
+        },
+        {
+          "name": "AWS SAM",
+          "summary": "サーバーレス向けの IaC/ローカル実行。",
+          "details": "AWS SAM は、サーバーレス向けの IaC/ローカル実行。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/serverless/sam/"
+        },
+        {
+          "name": "AWS Amplify",
+          "summary": "フロントエンド/モバイルのフルスタック開発基盤。",
+          "details": "AWS Amplify は、フロントエンド/モバイルのフルスタック開発基盤。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/amplify/"
+        },
+        {
+          "name": "AWS Device Farm",
+          "summary": "実機/仮想端末でのモバイルテスト。",
+          "details": "AWS Device Farm は、実機/仮想端末でのモバイルテスト。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/device-farm/"
+        },
+        {
+          "name": "AWS AppConfig",
+          "summary": "フィーチャーフラグ/設定配布。",
+          "details": "AWS AppConfig は、フィーチャーフラグ/設定配布。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/appconfig/"
+        },
+        {
+          "name": "AWS X-Ray",
+          "summary": "分散トレースでボトルネックを可視化。",
+          "details": "AWS X-Ray は、分散トレースでボトルネックを可視化。 IaC/CI/CD/IDE/実験環境を統合し、開発速度と信頼性を高めます。",
+          "features": [
+            "Git/CI/CD/パッケージを統合",
+            "IaC（CDK/CFN/SAM）で再現性を担保",
+            "IDE/DevEx のクラウド化",
+            "観測性/追跡性（X-Ray 等）",
+            "セキュアなサプライチェーン（署名/スキャン）"
+          ],
+          "link": "https://aws.amazon.com/xray/"
+        }
+      ]
+    },
+    {
+      "id": "migration",
+      "name": "マイグレーション / 転送",
+      "description": "アセスメント、サーバ/DB 移行、データ転送、近代化。",
+      "services": [
+        {
+          "name": "AWS Migration Hub",
+          "summary": "移行の可視化と進捗管理。",
+          "details": "AWS Migration Hub は、移行の可視化と進捗管理。 現状可視化から移行/DR までの最短経路を提供し、段階的な近代化に適合します。",
+          "features": [
+            "現状調査/依存解析/計画の可視化",
+            "最小停止でのサーバ/DB 移行",
+            "大容量データのオンライン/オフライン転送",
+            "DR/フェイルバックの設計容易",
+            "近代化（リホスト/リプラットフォーム/リファクタ）"
+          ],
+          "link": "https://aws.amazon.com/migration-hub/"
+        },
+        {
+          "name": "AWS Application Migration Service (MGN)",
+          "summary": "物理/仮想/クラウドサーバをレプリケートし最小停止で移行。",
+          "details": "AWS Application Migration Service (MGN) は、物理/仮想/クラウドサーバをレプリケートし最小停止で移行。 現状可視化から移行/DR までの最短経路を提供し、段階的な近代化に適合します。",
+          "features": [
+            "現状調査/依存解析/計画の可視化",
+            "最小停止でのサーバ/DB 移行",
+            "大容量データのオンライン/オフライン転送",
+            "DR/フェイルバックの設計容易",
+            "近代化（リホスト/リプラットフォーム/リファクタ）"
+          ],
+          "link": "https://aws.amazon.com/disaster-recovery/"
+        },
+        {
+          "name": "AWS Database Migration Service (DMS)",
+          "summary": "同種/異種 DB の移行/レプリケーション。",
+          "details": "AWS Database Migration Service (DMS) は、同種/異種 DB の移行/レプリケーション。 現状可視化から移行/DR までの最短経路を提供し、段階的な近代化に適合します。",
+          "features": [
+            "現状調査/依存解析/計画の可視化",
+            "最小停止でのサーバ/DB 移行",
+            "大容量データのオンライン/オフライン転送",
+            "DR/フェイルバックの設計容易",
+            "近代化（リホスト/リプラットフォーム/リファクタ）"
+          ],
+          "link": "https://aws.amazon.com/dms/"
+        },
+        {
+          "name": "AWS Mainframe Modernization",
+          "summary": "COBOL 等の近代化/移行基盤。",
+          "details": "AWS Mainframe Modernization は、COBOL 等の近代化/移行基盤。 現状可視化から移行/DR までの最短経路を提供し、段階的な近代化に適合します。",
+          "features": [
+            "現状調査/依存解析/計画の可視化",
+            "最小停止でのサーバ/DB 移行",
+            "大容量データのオンライン/オフライン転送",
+            "DR/フェイルバックの設計容易",
+            "近代化（リホスト/リプラットフォーム/リファクタ）"
+          ],
+          "link": "https://aws.amazon.com/mainframe-modernization/"
+        },
+        {
+          "name": "AWS Application Discovery Service",
+          "summary": "サーバ/依存関係の調査。",
+          "details": "AWS Application Discovery Service は、サーバ/依存関係の調査。 現状可視化から移行/DR までの最短経路を提供し、段階的な近代化に適合します。",
+          "features": [
+            "現状調査/依存解析/計画の可視化",
+            "最小停止でのサーバ/DB 移行",
+            "大容量データのオンライン/オフライン転送",
+            "DR/フェイルバックの設計容易",
+            "近代化（リホスト/リプラットフォーム/リファクタ）"
+          ],
+          "link": "https://aws.amazon.com/application-discovery/"
+        },
+        {
+          "name": "AWS Snow Family",
+          "summary": "データ移行デバイス（Snowcone/Snowball/Snowmobile）。",
+          "details": "AWS Snow Family は、データ移行デバイス（Snowcone/Snowball/Snowmobile）。 現状可視化から移行/DR までの最短経路を提供し、段階的な近代化に適合します。",
+          "features": [
+            "現状調査/依存解析/計画の可視化",
+            "最小停止でのサーバ/DB 移行",
+            "大容量データのオンライン/オフライン転送",
+            "DR/フェイルバックの設計容易",
+            "近代化（リホスト/リプラットフォーム/リファクタ）"
+          ],
+          "link": "https://aws.amazon.com/snow/"
+        },
+        {
+          "name": "AWS DataSync",
+          "summary": "オンライン大量データ転送。",
+          "details": "AWS DataSync は、オンライン大量データ転送。 現状可視化から移行/DR までの最短経路を提供し、段階的な近代化に適合します。",
+          "features": [
+            "現状調査/依存解析/計画の可視化",
+            "最小停止でのサーバ/DB 移行",
+            "大容量データのオンライン/オフライン転送",
+            "DR/フェイルバックの設計容易",
+            "近代化（リホスト/リプラットフォーム/リファクタ）"
+          ],
+          "link": "https://aws.amazon.com/datasync/"
+        },
+        {
+          "name": "AWS Transfer Family",
+          "summary": "SFTP/FTPS/FTP 転送。",
+          "details": "AWS Transfer Family は、SFTP/FTPS/FTP 転送。 現状可視化から移行/DR までの最短経路を提供し、段階的な近代化に適合します。",
+          "features": [
+            "現状調査/依存解析/計画の可視化",
+            "最小停止でのサーバ/DB 移行",
+            "大容量データのオンライン/オフライン転送",
+            "DR/フェイルバックの設計容易",
+            "近代化（リホスト/リプラットフォーム/リファクタ）"
+          ],
+          "link": "https://aws.amazon.com/aws-transfer-family/"
+        },
+        {
+          "name": "AWS Elastic Disaster Recovery",
+          "summary": "レプリケーションで DR を実現。",
+          "details": "AWS Elastic Disaster Recovery は、レプリケーションで DR を実現。 現状可視化から移行/DR までの最短経路を提供し、段階的な近代化に適合します。",
+          "features": [
+            "現状調査/依存解析/計画の可視化",
+            "最小停止でのサーバ/DB 移行",
+            "大容量データのオンライン/オフライン転送",
+            "DR/フェイルバックの設計容易",
+            "近代化（リホスト/リプラットフォーム/リファクタ）"
+          ],
+          "link": "https://aws.amazon.com/disaster-recovery/"
+        }
+      ]
+    },
+    {
+      "id": "business-apps",
+      "name": "ビジネスアプリ / 顧客体験",
+      "description": "CCaaS/コミュニケーション/メール/ローコード/マーケティング。",
+      "services": [
+        {
+          "name": "Amazon Connect",
+          "summary": "クラウドコンタクトセンター（CCaaS）。",
+          "details": "Amazon Connect は、クラウドコンタクトセンター（CCaaS）。 顧客接点の体験を改善し、コミュニケーション/業務アプリを迅速に提供します。",
+          "features": [
+            "オムニチャネル対応",
+            "対話解析/品質向上の機能連携",
+            "スケーラブルな配信基盤",
+            "セキュリティ/コンプライアンス配慮",
+            "運用の可視化と最適化"
+          ],
+          "link": "https://aws.amazon.com/connect/"
+        },
+        {
+          "name": "Amazon Pinpoint",
+          "summary": "セグメント配信/モバイル施策の最適化。",
+          "details": "Amazon Pinpoint は、セグメント配信/モバイル施策の最適化。 顧客接点の体験を改善し、コミュニケーション/業務アプリを迅速に提供します。",
+          "features": [
+            "オムニチャネル対応",
+            "対話解析/品質向上の機能連携",
+            "スケーラブルな配信基盤",
+            "セキュリティ/コンプライアンス配慮",
+            "運用の可視化と最適化"
+          ],
+          "link": "https://aws.amazon.com/pinpoint/"
+        },
+        {
+          "name": "Amazon Simple Email Service (SES)",
+          "summary": "アプリからの大量メール送信。",
+          "details": "Amazon Simple Email Service (SES) は、アプリからの大量メール送信。 顧客接点の体験を改善し、コミュニケーション/業務アプリを迅速に提供します。",
+          "features": [
+            "オムニチャネル対応",
+            "対話解析/品質向上の機能連携",
+            "スケーラブルな配信基盤",
+            "セキュリティ/コンプライアンス配慮",
+            "運用の可視化と最適化"
+          ],
+          "link": "https://aws.amazon.com/ses/"
+        },
+        {
+          "name": "Amazon Chime SDK",
+          "summary": "音声/映像/チャットの組み込み SDK。",
+          "details": "Amazon Chime SDK は、音声/映像/チャットの組み込み SDK。 顧客接点の体験を改善し、コミュニケーション/業務アプリを迅速に提供します。",
+          "features": [
+            "オムニチャネル対応",
+            "対話解析/品質向上の機能連携",
+            "スケーラブルな配信基盤",
+            "セキュリティ/コンプライアンス配慮",
+            "運用の可視化と最適化"
+          ],
+          "link": "https://aws.amazon.com/chime/chime-sdk/"
+        },
+        {
+          "name": "Amazon WorkMail",
+          "summary": "マネージドのビジネスメール/予定表。",
+          "details": "Amazon WorkMail は、マネージドのビジネスメール/予定表。 顧客接点の体験を改善し、コミュニケーション/業務アプリを迅速に提供します。",
+          "features": [
+            "オムニチャネル対応",
+            "対話解析/品質向上の機能連携",
+            "スケーラブルな配信基盤",
+            "セキュリティ/コンプライアンス配慮",
+            "運用の可視化と最適化"
+          ],
+          "link": "https://aws.amazon.com/workmail/"
+        },
+        {
+          "name": "Amazon Honeycode",
+          "summary": "ノーコードで業務アプリを作成。",
+          "details": "Amazon Honeycode は、ノーコードで業務アプリを作成。 顧客接点の体験を改善し、コミュニケーション/業務アプリを迅速に提供します。",
+          "features": [
+            "オムニチャネル対応",
+            "対話解析/品質向上の機能連携",
+            "スケーラブルな配信基盤",
+            "セキュリティ/コンプライアンス配慮",
+            "運用の可視化と最適化"
+          ],
+          "link": "https://www.honeycode.aws/"
+        }
+      ]
+    },
+    {
+      "id": "media",
+      "name": "メディア",
+      "description": "ライブ/配信/トランスコード/制作/対話型動画。",
+      "services": [
+        {
+          "name": "AWS Elemental MediaLive",
+          "summary": "ライブ動画のエンコード。",
+          "details": "AWS Elemental MediaLive は、ライブ動画のエンコード。 ライブ/VoD のワークフローをクラウドで一元化できます。",
+          "features": [
+            "ライブ/VoD ワークフローを管理",
+            "低遅延配信/DRM/広告挿入に対応",
+            "監視/スケーリングの自動化",
+            "CDN/グローバル配信と統合",
+            "制作環境（DCC/レンダリング）と連携"
+          ],
+          "link": "https://aws.amazon.com/medialive/"
+        },
+        {
+          "name": "AWS Elemental MediaConvert",
+          "summary": "ファイルベースのトランスコード。",
+          "details": "AWS Elemental MediaConvert は、ファイルベースのトランスコード。 ライブ/VoD のワークフローをクラウドで一元化できます。",
+          "features": [
+            "ライブ/VoD ワークフローを管理",
+            "低遅延配信/DRM/広告挿入に対応",
+            "監視/スケーリングの自動化",
+            "CDN/グローバル配信と統合",
+            "制作環境（DCC/レンダリング）と連携"
+          ],
+          "link": "https://aws.amazon.com/mediaconvert/"
+        },
+        {
+          "name": "AWS Elemental MediaPackage",
+          "summary": "HLS/DASH などのパッケージング。",
+          "details": "AWS Elemental MediaPackage は、HLS/DASH などのパッケージング。 ライブ/VoD のワークフローをクラウドで一元化できます。",
+          "features": [
+            "ライブ/VoD ワークフローを管理",
+            "低遅延配信/DRM/広告挿入に対応",
+            "監視/スケーリングの自動化",
+            "CDN/グローバル配信と統合",
+            "制作環境（DCC/レンダリング）と連携"
+          ],
+          "link": "https://aws.amazon.com/mediapackage/"
+        },
+        {
+          "name": "AWS Elemental MediaConnect",
+          "summary": "映像伝送の高信頼トランスポート。",
+          "details": "AWS Elemental MediaConnect は、映像伝送の高信頼トランスポート。 ライブ/VoD のワークフローをクラウドで一元化できます。",
+          "features": [
+            "ライブ/VoD ワークフローを管理",
+            "低遅延配信/DRM/広告挿入に対応",
+            "監視/スケーリングの自動化",
+            "CDN/グローバル配信と統合",
+            "制作環境（DCC/レンダリング）と連携"
+          ],
+          "link": "https://aws.amazon.com/mediaconnect/"
+        },
+        {
+          "name": "AWS Elemental MediaTailor",
+          "summary": "サーバサイド広告挿入。",
+          "details": "AWS Elemental MediaTailor は、サーバサイド広告挿入。 ライブ/VoD のワークフローをクラウドで一元化できます。",
+          "features": [
+            "ライブ/VoD ワークフローを管理",
+            "低遅延配信/DRM/広告挿入に対応",
+            "監視/スケーリングの自動化",
+            "CDN/グローバル配信と統合",
+            "制作環境（DCC/レンダリング）と連携"
+          ],
+          "link": "https://aws.amazon.com/mediatailor/"
+        },
+        {
+          "name": "Amazon IVS (Interactive Video Service)",
+          "summary": "低遅延の配信/チャット連携。",
+          "details": "Amazon IVS (Interactive Video Service) は、低遅延の配信/チャット連携。 ライブ/VoD のワークフローをクラウドで一元化できます。",
+          "features": [
+            "ライブ/VoD ワークフローを管理",
+            "低遅延配信/DRM/広告挿入に対応",
+            "監視/スケーリングの自動化",
+            "CDN/グローバル配信と統合",
+            "制作環境（DCC/レンダリング）と連携"
+          ],
+          "link": "https://aws.amazon.com/ivs/"
+        },
+        {
+          "name": "Amazon Nimble Studio",
+          "summary": "クラウドで VFX/アニメ制作環境を構築。",
+          "details": "Amazon Nimble Studio は、クラウドで VFX/アニメ制作環境を構築。 ライブ/VoD のワークフローをクラウドで一元化できます。",
+          "features": [
+            "ライブ/VoD ワークフローを管理",
+            "低遅延配信/DRM/広告挿入に対応",
+            "監視/スケーリングの自動化",
+            "CDN/グローバル配信と統合",
+            "制作環境（DCC/レンダリング）と連携"
+          ],
+          "link": "https://aws.amazon.com/nimble-studio/"
+        },
+        {
+          "name": "Amazon Kinesis Video Streams",
+          "summary": "映像ストリームの取り込み/保存/処理。",
+          "details": "Amazon Kinesis Video Streams は、映像ストリームの取り込み/保存/処理。 ライブ/VoD のワークフローをクラウドで一元化できます。",
+          "features": [
+            "ライブ/VoD ワークフローを管理",
+            "低遅延配信/DRM/広告挿入に対応",
+            "監視/スケーリングの自動化",
+            "CDN/グローバル配信と統合",
+            "制作環境（DCC/レンダリング）と連携"
+          ],
+          "link": "https://aws.amazon.com/kinesis/video-streams/"
+        }
+      ]
+    },
+    {
+      "id": "iot-edge",
+      "name": "IoT / エッジ",
+      "description": "デバイス接続/管理、エッジ処理、産業向け IoT。",
+      "services": [
+        {
+          "name": "AWS IoT Core",
+          "summary": "デバイスのセキュアな接続/メッセージング。",
+          "details": "AWS IoT Core は、デバイスのセキュアな接続/メッセージング。 デバイスの接続/管理/分析/エッジ推論を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/プロビジョニング",
+            "OTA 更新/フリート管理",
+            "ローカル処理/ML 推論",
+            "時系列/イベントの収集と分析",
+            "産業システム/OPC-UA 等との連携"
+          ],
+          "link": "https://aws.amazon.com/iot-core/"
+        },
+        {
+          "name": "AWS IoT Device Management",
+          "summary": "大規模なデバイス群の登録/更新/監視。",
+          "details": "AWS IoT Device Management は、大規模なデバイス群の登録/更新/監視。 デバイスの接続/管理/分析/エッジ推論を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/プロビジョニング",
+            "OTA 更新/フリート管理",
+            "ローカル処理/ML 推論",
+            "時系列/イベントの収集と分析",
+            "産業システム/OPC-UA 等との連携"
+          ],
+          "link": "https://aws.amazon.com/iot-device-management/"
+        },
+        {
+          "name": "AWS IoT Device Defender",
+          "summary": "デバイスとフリートのセキュリティを評価。",
+          "details": "AWS IoT Device Defender は、デバイスとフリートのセキュリティを評価。 デバイスの接続/管理/分析/エッジ推論を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/プロビジョニング",
+            "OTA 更新/フリート管理",
+            "ローカル処理/ML 推論",
+            "時系列/イベントの収集と分析",
+            "産業システム/OPC-UA 等との連携"
+          ],
+          "link": "https://aws.amazon.com/iot-device-defender/"
+        },
+        {
+          "name": "AWS IoT Analytics",
+          "summary": "IoT データの分析パイプライン。",
+          "details": "AWS IoT Analytics は、IoT データの分析パイプライン。 デバイスの接続/管理/分析/エッジ推論を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/プロビジョニング",
+            "OTA 更新/フリート管理",
+            "ローカル処理/ML 推論",
+            "時系列/イベントの収集と分析",
+            "産業システム/OPC-UA 等との連携"
+          ],
+          "link": "https://aws.amazon.com/iot-analytics/"
+        },
+        {
+          "name": "AWS IoT Events",
+          "summary": "IoT イベントの検出/対応。",
+          "details": "AWS IoT Events は、IoT イベントの検出/対応。 デバイスの接続/管理/分析/エッジ推論を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/プロビジョニング",
+            "OTA 更新/フリート管理",
+            "ローカル処理/ML 推論",
+            "時系列/イベントの収集と分析",
+            "産業システム/OPC-UA 等との連携"
+          ],
+          "link": "https://aws.amazon.com/iot-events/"
+        },
+        {
+          "name": "AWS IoT SiteWise",
+          "summary": "産業設備データのモデル化/集約/可視化。",
+          "details": "AWS IoT SiteWise は、産業設備データのモデル化/集約/可視化。 デバイスの接続/管理/分析/エッジ推論を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/プロビジョニング",
+            "OTA 更新/フリート管理",
+            "ローカル処理/ML 推論",
+            "時系列/イベントの収集と分析",
+            "産業システム/OPC-UA 等との連携"
+          ],
+          "link": "https://aws.amazon.com/iot-sitewise/"
+        },
+        {
+          "name": "AWS IoT TwinMaker",
+          "summary": "デジタルツインの構築。",
+          "details": "AWS IoT TwinMaker は、デジタルツインの構築。 デバイスの接続/管理/分析/エッジ推論を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/プロビジョニング",
+            "OTA 更新/フリート管理",
+            "ローカル処理/ML 推論",
+            "時系列/イベントの収集と分析",
+            "産業システム/OPC-UA 等との連携"
+          ],
+          "link": "https://aws.amazon.com/iot-twinmaker/"
+        },
+        {
+          "name": "AWS IoT Greengrass",
+          "summary": "エッジでのローカル処理/ML 実行。",
+          "details": "AWS IoT Greengrass は、エッジでのローカル処理/ML 実行。 デバイスの接続/管理/分析/エッジ推論を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/プロビジョニング",
+            "OTA 更新/フリート管理",
+            "ローカル処理/ML 推論",
+            "時系列/イベントの収集と分析",
+            "産業システム/OPC-UA 等との連携"
+          ],
+          "link": "https://aws.amazon.com/greengrass/"
+        },
+        {
+          "name": "FreeRTOS",
+          "summary": "IoT デバイス向け RTOS。",
+          "details": "FreeRTOS は、IoT デバイス向け RTOS。 デバイスの接続/管理/分析/エッジ推論を安全に統合します。",
+          "features": [
+            "セキュアなデバイス認証/プロビジョニング",
+            "OTA 更新/フリート管理",
+            "ローカル処理/ML 推論",
+            "時系列/イベントの収集と分析",
+            "産業システム/OPC-UA 等との連携"
+          ],
+          "link": "https://aws.amazon.com/freertos/"
+        }
+      ]
+    },
+    {
+      "id": "mobile-frontend-geo",
+      "name": "モバイル / フロントエンド / ジオ",
+      "description": "フロントエンド開発、モバイル配信、地図/位置情報。",
+      "services": [
+        {
+          "name": "AWS Amplify",
+          "summary": "ホスティング/認証/データ/分析を一体提供。",
+          "details": "AWS Amplify は、ホスティング/認証/データ/分析を一体提供。 フロントエンド体験と位置情報をクラウドネイティブに構築できます。",
+          "features": [
+            "ホスティング/認証/データを一体提供",
+            "実機テストと品質向上",
+            "地図/ルーティング/ジオフェンス",
+            "CI/CD と統合した自動デプロイ",
+            "監視/分析との連携"
+          ],
+          "link": "https://aws.amazon.com/amplify/"
+        },
+        {
+          "name": "AWS Device Farm",
+          "summary": "モバイルテスト。",
+          "details": "AWS Device Farm は、モバイルテスト。 フロントエンド体験と位置情報をクラウドネイティブに構築できます。",
+          "features": [
+            "ホスティング/認証/データを一体提供",
+            "実機テストと品質向上",
+            "地図/ルーティング/ジオフェンス",
+            "CI/CD と統合した自動デプロイ",
+            "監視/分析との連携"
+          ],
+          "link": "https://aws.amazon.com/device-farm/"
+        },
+        {
+          "name": "Amazon Location Service",
+          "summary": "地図/位置検索/ルーティング/ジオフェンス。",
+          "details": "Amazon Location Service は、地図/位置検索/ルーティング/ジオフェンス。 フロントエンド体験と位置情報をクラウドネイティブに構築できます。",
+          "features": [
+            "ホスティング/認証/データを一体提供",
+            "実機テストと品質向上",
+            "地図/ルーティング/ジオフェンス",
+            "CI/CD と統合した自動デプロイ",
+            "監視/分析との連携"
+          ],
+          "link": "https://aws.amazon.com/location/"
+        }
+      ]
+    },
+    {
+      "id": "euc",
+      "name": "エンドユーザーコンピューティング",
+      "description": "仮想デスクトップ/アプリ配信/セキュアブラウジング。",
+      "services": [
+        {
+          "name": "Amazon WorkSpaces",
+          "summary": "クラウド VDI。",
+          "details": "Amazon WorkSpaces は、クラウド VDI。 デスクトップ/アプリを安全に配信し、データ持ち出しを抑制します。",
+          "features": [
+            "セキュアな VDI/アプリ配信",
+            "スケーラビリティと従量課金",
+            "ID 連携とポリシー制御",
+            "ローカルデータ持ち出しの抑制",
+            "監視/運用自動化"
+          ],
+          "link": "https://aws.amazon.com/workspaces/"
+        },
+        {
+          "name": "Amazon AppStream 2.0",
+          "summary": "アプリケーションのストリーミング。",
+          "details": "Amazon AppStream 2.0 は、アプリケーションのストリーミング。 デスクトップ/アプリを安全に配信し、データ持ち出しを抑制します。",
+          "features": [
+            "セキュアな VDI/アプリ配信",
+            "スケーラビリティと従量課金",
+            "ID 連携とポリシー制御",
+            "ローカルデータ持ち出しの抑制",
+            "監視/運用自動化"
+          ],
+          "link": "https://aws.amazon.com/appstream2/"
+        },
+        {
+          "name": "Amazon WorkSpaces Web",
+          "summary": "ゼロトラストなブラウジング。",
+          "details": "Amazon WorkSpaces Web は、ゼロトラストなブラウジング。 デスクトップ/アプリを安全に配信し、データ持ち出しを抑制します。",
+          "features": [
+            "セキュアな VDI/アプリ配信",
+            "スケーラビリティと従量課金",
+            "ID 連携とポリシー制御",
+            "ローカルデータ持ち出しの抑制",
+            "監視/運用自動化"
+          ],
+          "link": "https://aws.amazon.com/workspaces/web/"
+        }
+      ]
+    },
+    {
+      "id": "blockchain-ledger",
+      "name": "ブロックチェーン / 台帳",
+      "description": "分散台帳の構築/運用。",
+      "services": [
+        {
+          "name": "Amazon Managed Blockchain",
+          "summary": "Hyperledger Fabric などのネットワークをマネージド提供。",
+          "details": "Amazon Managed Blockchain は、Hyperledger Fabric などのネットワークをマネージド提供。 不可改ざん性/追跡性が求められる業務を簡素化します。",
+          "features": [
+            "不可改ざんな記録",
+            "参加者管理/アクセス制御",
+            "監査と完全な変更履歴",
+            "耐障害性の高い基盤",
+            "既存アプリとの統合 API"
+          ],
+          "link": "https://aws.amazon.com/managed-blockchain/"
+        },
+        {
+          "name": "Amazon QLDB",
+          "summary": "中央集権型の台帳 DB（不可改ざん）。",
+          "details": "Amazon QLDB は、中央集権型の台帳 DB（不可改ざん）。 不可改ざん性/追跡性が求められる業務を簡素化します。",
+          "features": [
+            "不可改ざんな記録",
+            "参加者管理/アクセス制御",
+            "監査と完全な変更履歴",
+            "耐障害性の高い基盤",
+            "既存アプリとの統合 API"
+          ],
+          "link": "https://aws.amazon.com/qldb/"
+        }
+      ]
+    },
+    {
+      "id": "game-tech",
+      "name": "ゲーム",
+      "description": "ゲームサーバ/セッション管理。",
+      "services": [
+        {
+          "name": "Amazon GameLift",
+          "summary": "セッションベースゲームのサーバホスティング/スケーリング。",
+          "details": "Amazon GameLift は、セッションベースゲームのサーバホスティング/スケーリング。 セッション管理/スケーリング/低遅延配信の課題を解きます。",
+          "features": [
+            "マッチメイキング/スケーリング",
+            "ゲームテレメトリの収集/分析",
+            "アンチチート/セキュリティとの統合",
+            "低遅延のグローバル配信",
+            "コスト最適化の推奨"
+          ],
+          "link": "https://aws.amazon.com/gamelift/"
+        }
+      ]
+    },
+    {
+      "id": "robotics",
+      "name": "ロボティクス",
+      "description": "ロボットアプリの開発/シミュレーション。",
+      "services": [
+        {
+          "name": "AWS RoboMaker",
+          "summary": "ROS ベースの開発/シミュレーションを支援。",
+          "details": "AWS RoboMaker は、ROS ベースの開発/シミュレーションを支援。 ROS ベースの開発/シミュレーションをクラウドで進められます。",
+          "features": [
+            "ROS/ Gazebo 等との連携",
+            "シミュレーションで安全に検証",
+            "CI/CD と結合したロボット開発",
+            "フリート運用の標準化",
+            "ログ/可観測性の統合"
+          ],
+          "link": "https://aws.amazon.com/robomaker/"
+        }
+      ]
+    },
+    {
+      "id": "satellite",
+      "name": "衛星",
+      "description": "衛星地上局をクラウドから利用。",
+      "services": [
+        {
+          "name": "AWS Ground Station",
+          "summary": "衛星通信のスケジューリング/受信/処理。",
+          "details": "AWS Ground Station は、衛星通信のスケジューリング/受信/処理。 衛星のタスクスケジュール/ダウンリンク/処理をオンデマンド化します。",
+          "features": [
+            "スケジュール管理の自動化",
+            "弾力的な受信/処理パイプライン",
+            "低遅延の地上局アクセス",
+            "セキュアなデータ取り込み",
+            "分析/配信と連携"
+          ],
+          "link": "https://aws.amazon.com/ground-station/"
+        }
+      ]
+    },
+    {
+      "id": "quantum",
+      "name": "量子テクノロジー",
+      "description": "量子計算の実験/ハイブリッド実行。",
+      "services": [
+        {
+          "name": "Amazon Braket",
+          "summary": "量子デバイス/シミュレータへのアクセス。",
+          "details": "Amazon Braket は、量子デバイス/シミュレータへのアクセス。 量子/古典ハイブリッドでアルゴリズム検証を行えます。",
+          "features": [
+            "複数ベンダの量子デバイスにアクセス",
+            "ハイブリッドジョブで古典計算と統合",
+            "アルゴリズム/回路実験の迅速化",
+            "コストコントロール/キュー管理",
+            "教育/研究用途に適合"
+          ],
+          "link": "https://aws.amazon.com/braket/"
+        }
+      ]
+    },
+    {
+      "id": "industry",
+      "name": "業界ソリューション",
+      "description": "業界要件に合わせたデータ/アプリ/AI サービス。",
+      "services": [
+        {
+          "name": "Amazon HealthLake",
+          "summary": "医療データを FHIR 形式で統合/解析。",
+          "details": "Amazon HealthLake は、医療データを FHIR 形式で統合/解析。 規制/ドメイン要件に合わせたデータモデルやパイプラインを提供します。",
+          "features": [
+            "業界標準データモデル",
+            "テンプレート/パイプラインの提供",
+            "規制/主権要件に配慮",
+            "分析/ML/生成 AI と連携",
+            "導入/運用のベストプラクティス"
+          ],
+          "link": "https://aws.amazon.com/healthlake/"
+        },
+        {
+          "name": "Amazon Omics",
+          "summary": "ゲノム/タンパク質データの解析パイプライン。",
+          "details": "Amazon Omics は、ゲノム/タンパク質データの解析パイプライン。 規制/ドメイン要件に合わせたデータモデルやパイプラインを提供します。",
+          "features": [
+            "業界標準データモデル",
+            "テンプレート/パイプラインの提供",
+            "規制/主権要件に配慮",
+            "分析/ML/生成 AI と連携",
+            "導入/運用のベストプラクティス"
+          ],
+          "link": "https://aws.amazon.com/omics/"
+        },
+        {
+          "name": "AWS Supply Chain",
+          "summary": "需給可視化と在庫最適化。",
+          "details": "AWS Supply Chain は、需給可視化と在庫最適化。 規制/ドメイン要件に合わせたデータモデルやパイプラインを提供します。",
+          "features": [
+            "業界標準データモデル",
+            "テンプレート/パイプラインの提供",
+            "規制/主権要件に配慮",
+            "分析/ML/生成 AI と連携",
+            "導入/運用のベストプラクティス"
+          ],
+          "link": "https://aws.amazon.com/supply-chain/"
+        },
+        {
+          "name": "AWS IoT FleetWise",
+          "summary": "車載データを効率的に収集/正規化。",
+          "details": "AWS IoT FleetWise は、車載データを効率的に収集/正規化。 規制/ドメイン要件に合わせたデータモデルやパイプラインを提供します。",
+          "features": [
+            "業界標準データモデル",
+            "テンプレート/パイプラインの提供",
+            "規制/主権要件に配慮",
+            "分析/ML/生成 AI と連携",
+            "導入/運用のベストプラクティス"
+          ],
+          "link": "https://aws.amazon.com/iot-fleetwise/"
+        },
+        {
+          "name": "AWS Panorama",
+          "summary": "エッジでのコンピュータビジョン。",
+          "details": "AWS Panorama は、エッジでのコンピュータビジョン。 規制/ドメイン要件に合わせたデータモデルやパイプラインを提供します。",
+          "features": [
+            "業界標準データモデル",
+            "テンプレート/パイプラインの提供",
+            "規制/主権要件に配慮",
+            "分析/ML/生成 AI と連携",
+            "導入/運用のベストプラクティス"
+          ],
+          "link": "https://aws.amazon.com/panorama/"
+        },
+        {
+          "name": "Amazon Monitron",
+          "summary": "振動/温度センサーによる予知保全。",
+          "details": "Amazon Monitron は、振動/温度センサーによる予知保全。 規制/ドメイン要件に合わせたデータモデルやパイプラインを提供します。",
+          "features": [
+            "業界標準データモデル",
+            "テンプレート/パイプラインの提供",
+            "規制/主権要件に配慮",
+            "分析/ML/生成 AI と連携",
+            "導入/運用のベストプラクティス"
+          ],
+          "link": "https://aws.amazon.com/monitron/"
+        }
+      ]
+    },
+    {
+      "id": "cfinops",
+      "name": "コスト管理 / FinOps",
+      "description": "コストの可視化/予算/異常検知/配賦。",
+      "services": [
+        {
+          "name": "AWS Cost Explorer",
+          "summary": "コスト/使用量を可視化。",
+          "details": "AWS Cost Explorer は、コスト/使用量を可視化。 可視化/ガードレール/最適化を継続的に運用できます。",
+          "features": [
+            "タグ/アカウントでの粒度の高い可視化",
+            "予算超過の予防/通知",
+            "異常検知で早期対処",
+            "配賦/社内課金の仕組み化",
+            "リソース最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/aws-cost-management/aws-cost-explorer/"
+        },
+        {
+          "name": "AWS Budgets",
+          "summary": "予算設定と通知。",
+          "details": "AWS Budgets は、予算設定と通知。 可視化/ガードレール/最適化を継続的に運用できます。",
+          "features": [
+            "タグ/アカウントでの粒度の高い可視化",
+            "予算超過の予防/通知",
+            "異常検知で早期対処",
+            "配賦/社内課金の仕組み化",
+            "リソース最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/aws-cost-management/aws-budgets/"
+        },
+        {
+          "name": "AWS Cost and Usage Report (CUR)",
+          "summary": "明細ベースのレポート出力。",
+          "details": "AWS Cost and Usage Report (CUR) は、明細ベースのレポート出力。 可視化/ガードレール/最適化を継続的に運用できます。",
+          "features": [
+            "タグ/アカウントでの粒度の高い可視化",
+            "予算超過の予防/通知",
+            "異常検知で早期対処",
+            "配賦/社内課金の仕組み化",
+            "リソース最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/aws-cost-management/aws-cost-and-usage-reporting/"
+        },
+        {
+          "name": "AWS Cost Anomaly Detection",
+          "summary": "異常な支出を自動検知。",
+          "details": "AWS Cost Anomaly Detection は、異常な支出を自動検知。 可視化/ガードレール/最適化を継続的に運用できます。",
+          "features": [
+            "タグ/アカウントでの粒度の高い可視化",
+            "予算超過の予防/通知",
+            "異常検知で早期対処",
+            "配賦/社内課金の仕組み化",
+            "リソース最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/aws-cost-management/aws-cost-anomaly-detection/"
+        },
+        {
+          "name": "AWS Billing Conductor",
+          "summary": "コスト配賦/請求の体系化。",
+          "details": "AWS Billing Conductor は、コスト配賦/請求の体系化。 可視化/ガードレール/最適化を継続的に運用できます。",
+          "features": [
+            "タグ/アカウントでの粒度の高い可視化",
+            "予算超過の予防/通知",
+            "異常検知で早期対処",
+            "配賦/社内課金の仕組み化",
+            "リソース最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/aws-cost-management/billing-conductor/"
+        },
+        {
+          "name": "AWS Compute Optimizer",
+          "summary": "リソース適正化の推奨。",
+          "details": "AWS Compute Optimizer は、リソース適正化の推奨。 可視化/ガードレール/最適化を継続的に運用できます。",
+          "features": [
+            "タグ/アカウントでの粒度の高い可視化",
+            "予算超過の予防/通知",
+            "異常検知で早期対処",
+            "配賦/社内課金の仕組み化",
+            "リソース最適化の継続改善"
+          ],
+          "link": "https://aws.amazon.com/compute-optimizer/"
         }
       ]
     }
