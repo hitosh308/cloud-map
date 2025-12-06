@@ -663,6 +663,15 @@ body {
   text-decoration: none;
 }
 
+.hero-title__link:visited {
+  color: inherit;
+}
+
+.hero-title__link:hover,
+.hero-title__link:focus-visible {
+  text-decoration: none;
+}
+
 .hero-lead {
   margin: 20px auto 0;
   max-width: 760px;
