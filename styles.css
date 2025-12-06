@@ -658,6 +658,11 @@ body {
   letter-spacing: 0.05em;
 }
 
+.hero-title__link {
+  color: inherit;
+  text-decoration: none;
+}
+
 .hero-lead {
   margin: 20px auto 0;
   max-width: 760px;
