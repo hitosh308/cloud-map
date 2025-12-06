@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cloud-map.example.com/index.html</loc>
+    <loc>https://cloud-map.heibon-salaryman.com/index.html</loc>
     <lastmod>2025-12-06</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://cloud-map.example.com/aws.html</loc>
+    <loc>https://cloud-map.heibon-salaryman.com/aws.html</loc>
     <lastmod>2025-12-06</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://cloud-map.example.com/azure.html</loc>
+    <loc>https://cloud-map.heibon-salaryman.com/azure.html</loc>
     <lastmod>2025-12-06</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://cloud-map.example.com/google-cloud.html</loc>
+    <loc>https://cloud-map.heibon-salaryman.com/google-cloud.html</loc>
     <lastmod>2025-12-06</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://cloud-map.example.com/comparison.html</loc>
+    <loc>https://cloud-map.heibon-salaryman.com/comparison.html</loc>
     <lastmod>2025-12-06</lastmod>
     <changefreq>weekly</changefreq>
   </url>
