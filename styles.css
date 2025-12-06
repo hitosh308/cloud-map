@@ -788,6 +788,14 @@ body {
   gap: 72px;
 }
 
+.ad-section {
+  width: min(1100px, 92vw);
+  margin: 0 auto 64px;
+  padding: 8px 0 16px;
+  display: flex;
+  justify-content: center;
+}
+
 .home-section {
   display: flex;
   flex-direction: column;
